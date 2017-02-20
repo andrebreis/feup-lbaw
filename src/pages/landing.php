@@ -23,12 +23,7 @@
     <![endif]-->
   </head>
   <body>
-    <header>
-      <?php include_once("header.html"); ?>
-    </header>
-
-    <footer>
-      <?php include_once("footer.html"); ?>
-    </footer>
+    <h1>Landing</h1>
+    
   </body>
 </html>
