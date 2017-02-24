@@ -6,6 +6,5 @@
   else if($_GET["page"] == "profile")
     include_once("profile.php");
 
-
   include_once("footer.html");
 ?>
