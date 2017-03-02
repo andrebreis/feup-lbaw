@@ -1,0 +1,21 @@
+body {
+  background-image: url("../img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  body #credentials input {
+    display: block;
+    margin: auto; }
+  body #login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 4em;
+    border-style: solid;
+    border-width: 0.5em; }
+    body #login a {
+      margin: 1em;
+      color: white; }
+
+/*# sourceMappingURL=landing.css.map */

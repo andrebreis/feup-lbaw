@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/landing.css" rel="stylesheet">
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -24,7 +26,19 @@
     <![endif]-->
 </head>
 <body>
-<h1>Landing</h1>
+    <div id="login">
+        <div id="credentials">
+            <input type="text" name="username" placeholder="Username">
+            <input type="text" name="password" placeholder="Password">
+        </div>
 
+        <div id="buttons">
+            <input type="submit" class="btn-login" name="submit" value="Login">
+
+            <input type="submit" class="btn-google" name="submit" value="Login with Google">
+        </div>
+        <a href="register.php">Register</a><br>
+        <a href="search.php">Access as a visitor</a>
+    </div>
 </body>
 </html>
