@@ -1,21 +1,16 @@
 body {
-  background-image: url("../img/background.png");
+  background-image: url("../img");
   background-size: cover;
   background-repeat: no-repeat; }
   body #credentials input {
-    display: block;
     margin: auto; }
   body #login {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 4em;
-    border-style: solid;
-    border-width: 0.5em; }
+    text-align: center; }
     body #login a {
-      margin: 1em;
-      color: white; }
+      color: black; }
 
 /*# sourceMappingURL=landing.css.map */
