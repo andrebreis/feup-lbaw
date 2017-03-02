@@ -30,13 +30,12 @@
         <div id="credentials">
             <input type="text" name="username" placeholder="Username">
             <input type="text" name="password" placeholder="Password">
-            <input type="submit" class="btn-login" name="submit" value="Login">
         </div>
 
         <div id="buttons">
-            <input type="submit" class="btn-google" name="submit" value="Login with Google">
-        </div>
-        <a href="register.php">Register</a><br>
+            <input type="submit" class="btn-login" name="submit" value="Login">
+            <input type="submit" class="btn-google" name="submit" value="Login with G">
+        <br><a href="register.php">Register</a><br>
         <a href="search.php">Access as a visitor</a>
     </div>
 </body>
