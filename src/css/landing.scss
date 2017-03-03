@@ -1,19 +1,27 @@
 $gray: #343434;
+$main-color: #017552;
 
 body {
   background-image: url("../img/background.png");
   background-size: cover;
   background-repeat: no-repeat;
 
+  img {
+    transform: translate(-110%, -10%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
+
   div#login {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-35%, 20%);
     text-align: center;
 
     a {
-      color: black;
+      color: $main-color;
     }
 
     input[type=text] {

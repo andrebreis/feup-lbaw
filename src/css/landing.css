@@ -2,14 +2,19 @@ body {
   background-image: url("../img/background.png");
   background-size: cover;
   background-repeat: no-repeat; }
+  body img {
+    transform: translate(-110%, -10%);
+    position: fixed;
+    top: 50%;
+    left: 50%; }
   body div#login {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-35%, 20%);
     text-align: center; }
     body div#login a {
-      color: black; }
+      color: #017552; }
     body div#login input[type=text] {
       margin: 0.5em;
       box-sizing: border-box;

@@ -8,7 +8,6 @@
     <title>ScrumHub</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/landing.css" rel="stylesheet">
 
@@ -26,6 +25,7 @@
     <![endif]-->
 </head>
 <body>
+    <img src="../img/logo.png">
     <div id="login">
         <div id="credentials">
             <input type="text" name="username" placeholder="Username">
