@@ -31,7 +31,7 @@ body #sidebar {
       body #sidebar ul li a {
         display: block;
         color: #343434;
-        padding: 12px 20px;
+        padding: 0.5em 0.5em;
         text-decoration: none;
         font-size: 35px; }
       body #sidebar ul li a:hover {
@@ -44,7 +44,7 @@ body #sidebar {
         color: white; }
 body #main-content {
   width: 100%;
-  margin-left: 2em;
+  margin-left: 4em;
   margin-top: 6em; }
 body .panel-margin {
   margin: 2em; }
