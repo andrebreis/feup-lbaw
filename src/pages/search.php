@@ -1,30 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>ScrumHub</title>
+	<!doctype html>
 
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
+		<title>Search Results</title>
+		<meta name="description" content="The HTML5 Herald">
+		<meta name="author" content="SitePoint">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-<h1>Search</h1>
+		<!-- Bootstrap -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/font-awesome.min.css" rel="stylesheet">
 
-</body>
-</html>
+		<link href="../css/searchResults.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<script>
+		$(document).ready(function () {
+			$('.btn-filter').on('click', function () {
+				var $target = $(this).data('target');
+				if ($target != 'all') {
+					$('.table tr').css('display', 'none');
+					$('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+				} else {
+					$('.table tr').css('display', 'none').fadeIn('slow');
+				}
+			});
+
+		});
+		</script>
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+		<?php include_once "header.html"; ?>
+
+		<?php include_once "footer.html"; ?>
+
+		<div class="container">
+			<div class="row">
+
+				<section class="content">
+					<h1>search results for ...</h1>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="pull-right">
+									<div class="btn-group">
+										<button type="button" class="btn btn-success btn-filter" data-target="user">Users</button>
+										<button type="button" class="btn btn-warning btn-filter" data-target="project">Projects</button>
+										<button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
+									</div>
+								</div>
+								<div class="table-container">
+									<table class="table table-filter">
+										<tbody>
+											<tr data-status="user">
+												<td>
+													<div class="media">
+														<a href="#" class="pull-left">
+															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+														</a>
+														<div class="media-body">
+															<span class="media-meta pull-right">Febrero 13, 2016</span>
+															<h4 class="title">
+																Filipa Barroso
+																<span class="user pull-right">(User)</span>
+															</h4>
+															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr data-status="user">
+												<td>
+													<div class="media">
+														<a href="#" class="pull-left">
+															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+														</a>
+														<div class="media-body">
+															<span class="media-meta">Febrero 13, 2016</span>
+															<h4 class="title">
+																Lorem Impsum
+																<span class="user">(User)</span>
+															</h4>
+															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr data-status="project">
+												<td>
+													<div class="media">
+														<a href="#" class="pull-left">
+															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+														</a>
+														<div class="media-body">
+															<span class="media-meta">Febrero 13, 2016</span>
+															<h4 class="title">
+																Lorem Impsum
+																<span class="project">(Project)</span>
+															</h4>
+															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr data-status="project">
+												<td>
+													<div class="media">
+														<a href="#" class="pull-left">
+															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+														</a>
+														<div class="media-body">
+															<span class="media-meta">Febrero 13, 2016</span>
+															<h4 class="title">
+																Lorem Impsum
+																<span class="project">(Project)</span>
+															</h4>
+															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr data-status="user">
+												<td>
+													<div class="media">
+														<a href="#" class="pull-left">
+															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+														</a>
+														<div class="media-body">
+															<span class="media-meta">Febrero 13, 2016</span>
+															<h4 class="title">
+																Lorem Impsum
+																<span class="user">(User)</span>
+															</h4>
+															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr data-status="project">
+												<td>
+													<div class="media">
+														<a href="#" class="pull-left">
+															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+														</a>
+														<div class="media-body">
+															<span class="media-meta">Febrero 13, 2016</span>
+															<h4 class="title">
+																Lorem Impsum
+																<span class="project">(Project)</span>
+															</h4>
+															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						
+					</section>
+
+				</div>
+			</div>
+		</body>
+		</html>
