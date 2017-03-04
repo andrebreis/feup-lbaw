@@ -3,10 +3,29 @@
   padding: 0em;
 }
 
-#wrapper{
+#content-body{
   display: inline-block;
+}
+
+.wrapper{
+  margin-left: 5.5em;
 }
 
 .progress {
   margin-top: 2em;
+  text-align: center;
+
+  .progress-value{
+    position:absolute;
+    right: 0;
+    left: 0;
+  }
+}
+
+#project-visibility {
+  margin: 2em 0em;
+}
+
+#task-list {
+  margin: 2em 0em;
 }
