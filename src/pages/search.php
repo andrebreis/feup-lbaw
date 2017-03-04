@@ -1,8 +1,5 @@
 <?php include_once "header.html"; ?>
 
-<title>Search Results</title>
-
-
 <script>
 $(document).ready(function () {
 	$('.btn-filter').on('click', function () {
