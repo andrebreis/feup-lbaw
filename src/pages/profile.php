@@ -1,30 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>ScrumHub</title>
+<?php
+include_once "header.html";
+?>
 
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
 <h1>Profile</h1>
 
-</body>
-</html>
+<div class="container">
+    <div class="col-xs-8 col-md-3">
+        <img src="../img/profile-pic.png" alt="Profile picture" style="width:17em;height:17em;">
+    </div>
+
+    <div class="panel panel-default col-xs-8 col-md-5">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Francisca Paupério</div>
+
+        <!-- List group -->
+        <ul class="list-group">
+            <li class="list-group-item">Student</li>
+            <li class="list-group-item">FEUP</li>
+            <li class="list-group-item">Porto, Portugal</li>
+            <li class="list-group-item">franciscapauperio@gmail.com</li>
+
+        </ul>
+    </div>
+</div>
+
+<?php
+include_once "footer.html";
+?>
