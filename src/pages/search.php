@@ -1,181 +1,223 @@
-	<!doctype html>
+<?php include_once "header.html"; ?>
 
-	<html lang="en">
-	<head>
-		<meta charset="utf-8">
-
-		<title>Search Results</title>
-		<meta name="description" content="The HTML5 Herald">
-		<meta name="author" content="SitePoint">
-
-		<!-- Bootstrap -->
-		<link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-
-		<link href="../css/font-awesome.min.css" rel="stylesheet">
-
-		<link href="../css/searchResults.css" rel="stylesheet">
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-		<script>
-		$(document).ready(function () {
-			$('.btn-filter').on('click', function () {
-				var $target = $(this).data('target');
-				if ($target != 'all') {
-					$('.table tr').css('display', 'none');
-					$('.table tr[data-status="' + $target + '"]').fadeIn('slow');
-				} else {
-					$('.table tr').css('display', 'none').fadeIn('slow');
-				}
-			});
-
-		});
-		</script>
+<title>Search Results</title>
 
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+	$('.btn-filter').on('click', function () {
+		var $target = $(this).data('target');
+		if ($target != 'all') {
+			$('.table tr').css('display', 'none');
+			$('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+		} else {
+			$('.table tr').css('display', 'none').fadeIn('slow');
+		}
+	});
 
-	</head>
+});
+</script>
 
-	<body>
-		<?php include_once "header.html"; ?>
 
-		<?php include_once "footer.html"; ?>
 
-		<div class="container">
-			<section class="content">
-				<h1>search results for ...</h1>
-					<div class="col-md-10 col-md-offset-1">
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="pull-right">
-									<div class="btn-group">
-										<button type="button" class="btn btn-success btn-filter" data-target="user">Users</button>
-										<button type="button" class="btn btn-warning btn-filter" data-target="project">Projects</button>
-										<button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
-									</div>
-								</div>
-								<div class="table-container">
-									<table class="table table-filter">
-										<tbody>
-											<tr data-status="user">
-												<td>
-													<div class="media">
-														<a href="#" class="pull-left">
-															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-														</a>
-														<div class="media-body">
-															<h4 class="title">
-																Filipa Barroso
-																<span class="user pull-right">(User)</span>
-															</h4>
-															<div class="location">
-															    <i class="fa fa-map-marker" aria-hidden="true"></i> 
-															    <p class="location">Porto, Portugal</p>
-														    </div>
-														    <div class="email">
-															    <i class="fa fa-envelope" aria-hidden="true"></i>
-															    <p class="email">filipabp123@hotmail.com</p>
-														    </div>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr data-status="user">
-												<td>
-													<div class="media">
-														<a href="#" class="pull-left">
-															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-														</a>
-														<div class="media-body">
-															<span class="media-meta">Febrero 13, 2016</span>
-															<h4 class="title">
-																Lorem Impsum
-																<span class="user">(User)</span>
-															</h4>
-															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr data-status="project">
-												<td>
-													<div class="media">
-														<a href="#" class="pull-left">
-															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-														</a>
-														<div class="media-body">
-															<span class="media-meta">Febrero 13, 2016</span>
-															<h4 class="title">
-																Lorem Impsum
-																<span class="project">(Project)</span>
-															</h4>
-															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr data-status="project">
-												<td>
-													<div class="media">
-														<a href="#" class="pull-left">
-															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-														</a>
-														<div class="media-body">
-															<span class="media-meta">Febrero 13, 2016</span>
-															<h4 class="title">
-																Lorem Impsum
-																<span class="project">(Project)</span>
-															</h4>
-															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr data-status="user">
-												<td>
-													<div class="media">
-														<a href="#" class="pull-left">
-															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-														</a>
-														<div class="media-body">
-															<span class="media-meta">Febrero 13, 2016</span>
-															<h4 class="title">
-																Lorem Impsum
-																<span class="user">(User)</span>
-															</h4>
-															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr data-status="project">
-												<td>
-													<div class="media">
-														<a href="#" class="pull-left">
-															<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-														</a>
-														<div class="media-body">
-															<span class="media-meta">Febrero 13, 2016</span>
-															<h4 class="title">
-																Lorem Impsum
-																<span class="project">(Project)</span>
-															</h4>
-															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-														</div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
+
+
+<div class="container">
+	<section class="content">
+		<h1>search results for ...</h1>
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="pull-right">
+						<div class="btn-group">
+							<button type="button" class="btn btn-success btn-filter" data-target="user">Users</button>
+							<button type="button" class="btn btn-warning btn-filter" data-target="project">Projects</button>
+							<button type="button" class="btn btn-default btn-filter" data-target="all" autofocus="true">All</button>
 						</div>
 					</div>
-				</section>
-
+					<div class="table-container">
+						<table class="table table-filter">
+							<tbody>
+								<tr data-status="user">
+									<td>
+										<div class="media">
+											<a href="#" class="pull-left">
+												<img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13537811_1183966321634129_3091506145273549127_n.jpg?oh=bf9c20af1bb3975821e23474811bf0e9&oe=59719F73" class="media-photo">
+											</a>
+											<div class="media-body">
+												<h4 class="title">
+													Filipa Barroso
+													<span class="user pull-right">(User)</span>
+												</h4>
+												<div class="info">
+													<div class="location">
+														<i class="fa fa-map-marker" aria-hidden="true"></i> 
+														<p>Lousada, Portugal</p>
+													</div>
+													<div class="email">
+														<i class="fa fa-envelope" aria-hidden="true"></i>
+														<p>filipabp123@hotmail.com</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr data-status="user">
+									<td>
+										<div class="media">
+											<a href="#" class="pull-left">
+												<img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13133284_1234825669880650_5349231733758883019_n.jpg?oh=021ebeac93bef82d67d6737483ace5ab&oe=59386706" class="media-photo">
+											</a>
+											<div class="media-body">
+												<h4 class="title">
+													André Reis
+													<span class="user pull-right">(User)</span>
+												</h4>
+												<div class="info">
+													<div class="location">
+														<i class="fa fa-map-marker" aria-hidden="true"></i> 
+														<p>Porto, Portugal</p>
+													</div>
+													<div class="email">
+														<i class="fa fa-envelope" aria-hidden="true"></i>
+														<p>up201403057@fe.up.pt</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr data-status="project">
+									<td>
+										<div class="media">
+											<div class="media-body">
+												<h4 class="title">
+													ScrumHub
+													<span class="project pull-right">(Project)</span>
+												</h4>
+												<span class="media-meta pull-right">Updated on 20 Mar 2016</span>
+												<p class="summary">A project for the LBAW course</p>
+												<div class="info">
+													<div class="state">
+														<i class="fa fa-check-square-o" aria-hidden="true"></i>
+														<p>Under Development</p>
+													</div>
+													<div class="collaborators">
+														<i class="fa fa-users" aria-hidden="true"></i>
+														<p>4 Collaborators</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr data-status="project">
+									<td>
+										<div class="media">
+											<div class="media-body">
+												<h4 class="title">
+													ScrumHub
+													<span class="project pull-right">(Project)</span>
+												</h4>
+												<span class="media-meta pull-right">Updated on 20 Mar 2016</span>
+												<p class="summary">A project for the LBAW course</p>
+												<div class="info">
+													<div class="state">
+														<i class="fa fa-check-square-o" aria-hidden="true"></i>
+														<p>Under Development</p>
+													</div>
+													<div class="collaborators">
+														<i class="fa fa-users" aria-hidden="true"></i>
+														<p>4 Collaborators</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr data-status="user">
+									<td>
+										<div class="media">
+											<a href="#" class="pull-left">
+												<img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/14963290_10154737467449241_2539270162133614668_n.jpg?oh=510db261345afa0728ce012d1d861670&oe=592799DE" class="media-photo">
+											</a>
+											<div class="media-body">
+												<h4 class="title">
+													Francisca Paupério
+													<span class="user pull-right">(User)</span>
+												</h4>
+												<div class="info">
+													<div class="location">
+														<i class="fa fa-map-marker" aria-hidden="true"></i> 
+														<p>Porto, Portugal</p>
+													</div>
+													<div class="email">
+														<i class="fa fa-envelope" aria-hidden="true"></i>
+														<p>francisca@gmail.com</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr data-status="project">
+									<td>
+										<div class="media">
+											<div class="media-body">
+												<h4 class="title">
+													ScrumHub
+													<span class="project pull-right">(Project)</span>
+												</h4>
+												<span class="media-meta pull-right">Updated on 20 Mar 2016</span>
+												<p class="summary">A project for the LBAW course</p>
+												<div class="info">
+													<div class="state">
+														<i class="fa fa-check-square-o" aria-hidden="true"></i>
+														<p>Under Development</p>
+													</div>
+													<div class="collaborators">
+														<i class="fa fa-users" aria-hidden="true"></i>
+														<p>4 Collaborators</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr data-status="user">
+									<td>
+										<div class="media">
+											<a href="#" class="pull-left">
+												<img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/10898254_10203300819863086_1545665381755869624_n.jpg?oh=8cd71e057ad50a6563f61db29c5ff2d1&oe=5930136D" class="media-photo">
+											</a>
+											<div class="media-body">
+												<h4 class="title">
+													Zé Miguel Costa
+													<span class="user pull-right">(User)</span>
+												</h4>
+												<div class="info">
+													<div class="location">
+														<i class="fa fa-map-marker" aria-hidden="true"></i> 
+														<p>Braga, Portugal</p>
+													</div>
+													<div class="email">
+														<i class="fa fa-envelope" aria-hidden="true"></i>
+														<p>zemiguel@gmail.com</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
-		</body>
-		</html>
+		</div>
+	</section>
+
+</div>
+
+<?php include_once "footer.html"; ?>
