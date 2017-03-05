@@ -10,42 +10,18 @@ body {
 
   .container {
     #logo {
-      transform: translate(-160%, 20%);
-      top: 50%;
-      left: 50%;
+      transform: translate(25%, 25%);
+      top: 0%;
+      left: 0%;
       position: fixed;
     }
 
     #search-bar {
-      transform: translate(75%, -50%);
-      margin-top: 40em;
-
-      background-image: url('../assets/searchicon.png');
-      background-position: 10px 10px;
-      background-repeat: no-repeat;
-      padding-left: 40px;
+      transform: translate(50%, 50%);
+      margin-top: 10em;
     }
 
-    div#login {
-      background: rgba(1, 117, 96, 0.3);
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -80%);
-      text-align: center;
-      padding-bottom: 3em;
-      padding-top: 3em;
-      border-width: medium;
-      border-style: solid;
-      border-color: white;
-
-      a {
-        color: white;
-        font-size: 1.5em;
-      }
-    }
-
-    input[type=text] {
+    input {
       margin: 0.5em;
       box-sizing: border-box;
       border: 0.1em solid $gray;
@@ -54,6 +30,16 @@ body {
       height: 2.5em;
     }
 
+    #sign {
+      transform: translate(33em, 35em);
+      border-color: white;
+      border-width: medium;
+      color: white;
+      background: rgba(1, 117, 82, 0.7);
+      width: 20%;
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
   }
 }
 
