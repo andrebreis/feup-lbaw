@@ -26,7 +26,8 @@
     <![endif]-->
 </head>
 <body>
-    <img src="../img/logo.png">
+<div class="container">
+    <img id="logo" src="../assets/logo.png">
     <div id="login">
         <div id="credentials">
             <input type="text" name="username" placeholder="Username">
@@ -34,10 +35,12 @@
         </div>
 
         <div id="buttons">
-            <input type="submit" class="btn-login" name="submit" value="Login">
-            <input type="submit" class="btn-google" name="submit" value="Login with G">
-        <br><a href="register.php">Register</a><br>
-        <a href="search.php">Access as a visitor</a>
+            <br><input type="submit" class="btn-login" name="submit" value="Login">
+            <input type="submit" class="btn-google" name="submit" value="Login with Google">
+            <br><br><a href="register.php">Register</a><br>
+        </div>
     </div>
+    <input id="search-bar" class="col-md-4 col-md-offset-5" type="text" name="search" placeholder="Search...">
+</div>
 </body>
 </html>

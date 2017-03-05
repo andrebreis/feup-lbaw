@@ -6,7 +6,7 @@ include_once "header.html";
 
 <div class="container">
     <div class="col-xs-8 col-md-3">
-        <img src="../img/profile-pic.png" alt="Profile picture" style="width:17em;height:17em;">
+        <img src="../assets/profile-pic.png" alt="Profile picture" style="width:17em;height:17em;">
     </div>
 
     <div class="panel panel-default col-xs-8 col-md-5">

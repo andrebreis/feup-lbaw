@@ -2,26 +2,47 @@ $gray: #343434;
 $main-color: #017552;
 
 body {
-  background-image: url("../img/background.png");
+  background: url("../assets/background.png") fixed no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
 
-  img {
-    transform: translate(-110%, -10%);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-  }
+  .container {
+    #logo {
+      transform: translate(-160%, 20%);
+      top: 50%;
+      left: 50%;
+      position: fixed;
+    }
 
-  div#login {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-35%, 20%);
-    text-align: center;
+    #search-bar {
+      transform: translate(75%, -50%);
+      margin-top: 40em;
 
-    a {
-      color: $main-color;
+      background-image: url('../assets/searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding-left: 40px;
+    }
+
+    div#login {
+      background: rgba(1, 117, 96, 0.3);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -80%);
+      text-align: center;
+      padding-bottom: 3em;
+      padding-top: 3em;
+      border-width: medium;
+      border-style: solid;
+      border-color: white;
+
+      a {
+        color: white;
+        font-size: 1.5em;
+      }
     }
 
     input[type=text] {

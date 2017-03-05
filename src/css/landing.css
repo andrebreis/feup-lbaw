@@ -1,26 +1,42 @@
 body {
-  background-image: url("../img/background.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-  body img {
-    transform: translate(-110%, -10%);
-    position: fixed;
+  background: url("../assets/background.png") fixed no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+  body .container #logo {
+    transform: translate(-160%, 20%);
     top: 50%;
-    left: 50%; }
-  body div#login {
+    left: 50%;
+    position: fixed; }
+  body .container #search-bar {
+    transform: translate(75%, -50%);
+    margin-top: 40em;
+    background-image: url("../assets/searchicon.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px; }
+  body .container div#login {
+    background: rgba(1, 117, 96, 0.3);
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-35%, 20%);
-    text-align: center; }
-    body div#login a {
-      color: #017552; }
-    body div#login input[type=text] {
-      margin: 0.5em;
-      box-sizing: border-box;
-      border: 0.1em solid #343434;
-      border-radius: 0.5em;
-      width: 50%;
-      height: 2.5em; }
+    transform: translate(-50%, -80%);
+    text-align: center;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    border-width: medium;
+    border-style: solid;
+    border-color: white; }
+    body .container div#login a {
+      color: white;
+      font-size: 1.5em; }
+  body .container input[type=text] {
+    margin: 0.5em;
+    box-sizing: border-box;
+    border: 0.1em solid #343434;
+    border-radius: 0.5em;
+    width: 50%;
+    height: 2.5em; }
 
 /*# sourceMappingURL=landing.css.map */
