@@ -15,7 +15,7 @@
 		<link href="../css/projectForum.css" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-		
+
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -34,21 +34,33 @@ include_once "project_navbar.html";
 ?>
 
 <div class="wrapper col-md-8">
-  
+
   <div id="forum-items" class="col-md-12">
 	<div class="container">
 			<div class="row">
 
 				<section class="content">
-				
+
 						<div class="panel panel-default">
 
 							<div class="panel-body">
-							
-								<div class="pull-left">					
-									<h1>Project Forum</h1>
-									
-								</div>								
+									<!-- <div class="col-md-3"> -->
+									<div class="header pull-left">
+										<h1>Project Forum</h1>
+									</div>
+
+								<div class="col-md-3 col-md-push-8">
+									<button id="create-post" type="button" class="btn btn-success">New Post</button>
+								</div>
+									<div id="custom-search-input" class="input-group col-md-3">
+										<input type="text" class="form-control input-md" placeholder="Search Post..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-md" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+											</span>
+								</div>
+
 								<div class="table-container">
 									<table class="table table-filter">
 										<tbody>
@@ -146,11 +158,11 @@ include_once "project_navbar.html";
 															<span class="media-meta pull-right">Febrero 13, 2016</span>
 															<h4 class="title">
 																Lorem Impsum
-																
+
 															</h4>
 															<span class="badge badge-default badge-pill pull-right">14</span>
 															<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-															
+
 														</div>
 													</div>
 												</td>
@@ -159,7 +171,7 @@ include_once "project_navbar.html";
 									</table>
 								</div>
 							</div>
-						
+
 					</section>
 
 				</div>
