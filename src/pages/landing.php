@@ -9,7 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/landing.css" rel="stylesheet">
+    <link href="../css/landing.min.css" rel="stylesheet">
     <link href="../bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.css" rel="stylesheet">
 
 

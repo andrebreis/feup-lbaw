@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,SAAU;EACR,UAAU,EAAE,GAAG;EACf,UAAU,EAAE,MAAM;EAElB,yBAAe;IACb,QAAQ,EAAC,QAAQ;IACjB,KAAK,EAAE,CAAC;IACR,IAAI,EAAE,CAAC;;AAIX,UAAU;EACV,aAAa,EAAE,GAAG",
-"sources": ["milestones.scss"],
-"names": [],
-"file": "milestones.css"
-}
