@@ -12,6 +12,7 @@ body {
   padding: 1.3em 0 .7em 0;
   background: #F2F2F0;
   border-radius: 2%; 
+  margin-bottom: 1em;
 }
 
 .profile-userpic img {
@@ -158,7 +159,7 @@ body {
 
   a{
     color:#16a085;
-    background-color: #FAFAFA;
+    background-color: #FFFFFF;
   }
 
   li{
@@ -211,4 +212,28 @@ body {
 
 #notification_filter:hover{
  border-color: #3AA08B;
+}
+
+#notifications{
+  .profile-content > *{
+    margin: .3em;
+  }
+
+  .tab-content{
+    margin-top: 1.3em;
+  }
+
+  .notification_tabs{
+    a{
+      color:#16a085;
+      background-color: #FFFFFF;
+    }
+
+    li.active > a{
+      background-color:#16a085 !important;
+      color: #FFFFFF !important;
+    }
+
+
+  }
 }
