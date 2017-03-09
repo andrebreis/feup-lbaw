@@ -23,7 +23,7 @@ $(document).ready(function () {
 	<section class="content">
 		<h1>search results for ...</h1>
 		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-default">
+			<div class="panel panel-default panel_results">
 				<div class="panel-body">
 					<div class="pull-right">
 						<div class="btn-group">

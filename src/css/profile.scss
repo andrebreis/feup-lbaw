@@ -1,5 +1,8 @@
 body {
-  background: #F1F3FA;
+  background: #093028; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #093028 , #237A57); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #093028 , #237A57); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /* Profile container */
@@ -10,10 +13,55 @@ body {
 /* Profile sidebar */
 .profile-sidebar {
   padding: 1.3em 0 .7em 0;
-  background: #F2F2F0;
+  background: #FFFFFF;
   border-radius: 2%; 
   margin-bottom: 1em;
 }
+
+.profile-sidebar-mobile {
+  padding: 1.3em 0 .7em 0;
+  background: #FFFFFF;
+  border-radius: 2%; 
+  margin-bottom: 1em;
+
+  .profile-userpic img {
+    
+    width: 6em;
+    height: 6em;
+  }
+
+  .info{
+    margin-top: .5em;
+  }
+
+}
+.menu_mobile_row{
+  margin-bottom: .5em;
+}
+
+.menu_mobile{
+  a{
+    color:#16a085;
+    background-color: #FFFFFF;
+  }
+
+  li.active > a{
+    color:#16a085 !important;
+    background-color: #FFFFFF !important;
+  }
+
+  li{
+    li > a{
+      margin-bottom: .1em;
+    }
+    li.active > a{
+      background-color:#16a085 !important;
+      color: #FFFFFF !important;
+    }
+  }
+}
+
+
 
 .profile-userpic img {
   margin: 0 auto;
@@ -66,7 +114,7 @@ body {
 /* Profile Content */
 .profile-content {
   padding: 1.3em;
-  background: #F2F2F0;
+  background: #FFFFFF;
   min-height: 28.75em;
   border-radius: 1.5%; 
 }
@@ -158,6 +206,9 @@ body {
   margin: 1.5em 0.5em 0.1em 0.5em;
 
   a{
+    border-style: solid;
+    border-color: grey;
+    border-width: 1.5px;
     color:#16a085;
     background-color: #FFFFFF;
   }
@@ -201,32 +252,20 @@ body {
   }
 }
 
-#notification_filter{
-  margin-bottom: .5em;
-}
-
-#notification_filter:focus{
-  background-color:#3AA08B;
-  color: white;
-}
-
-#notification_filter:hover{
- border-color: #3AA08B;
-}
-
 #notifications{
   .profile-content > *{
-    margin: .3em;
+    margin: .5em;
   }
 
   .tab-content{
-    margin-top: 1.3em;
+    margin-top: 2em;
   }
 
   .notification_tabs{
     a{
       color:#16a085;
       background-color: #FFFFFF;
+      margin-bottom:.01em;
     }
 
     li.active > a{
