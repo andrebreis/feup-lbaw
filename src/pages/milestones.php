@@ -1,36 +1,8 @@
-<!doctype html>
 
-	<html lang="en">
-	<head>
-		<meta charset="utf-8">
-
-		<title>Milestones</title>
-		<meta name="description" content="The HTML5 Herald">
-		<meta name="author" content="SitePoint">
-
-		<!-- Bootstrap -->
-		<link href="../css/bootstrap.min.css" rel="stylesheet">
-		<link href="../css/font-awesome.min.css" rel="stylesheet">
-
-		<link href="../css/milestones.css" rel="stylesheet">
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-		
-
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="../js/bootstrap.min.js"></script>
-	</head>
-<body>
 <?php
 include_once "header.html";
 ?>
 
-<?php
-include_once "project_navbar.html";
-?>
 
 <div class="wrapper col-md-8">
   

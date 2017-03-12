@@ -239,6 +239,12 @@ body {
 #new_proj_btn{
   margin-top: 1em;
   border-color: #3AA08B;
+  border-radius: 5%;
+}
+
+#new_proj_btn:hover{
+  background-color:#16a085 !important;
+  color: #FFFFFF !important;
 }
 
 .stats_row > *{   

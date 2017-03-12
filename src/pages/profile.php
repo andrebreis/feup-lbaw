@@ -104,9 +104,8 @@ include_once "header.html";
                     </div>
                 </div>
             </div>
-
-
             <!--end of mobile only-->
+
 
             <div class="col-md-9">
                 <div class="tab-content">

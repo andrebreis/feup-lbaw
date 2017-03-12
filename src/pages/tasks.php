@@ -2,10 +2,6 @@
 include_once "header.html";
 ?>
 
-<?php
-include_once "project_navbar.html";
-?>
-
 <div class="wrapper col-md-8">
     <h1>Tasks</h1>
     <div class="col-md-12">
