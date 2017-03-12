@@ -74,8 +74,11 @@
                     </div>
                     <div class="modal-footer">
                         <div>
-                            <button type="submit" class="btn btn-lg btn-block">Login</button>
+                            <button id="login-btn" type="submit" class="btn btn-lg btn-block">Login</button>
                         </div>
+                        <button class="loginBtn loginBtn--google">
+                            Login with Google
+                        </button>
                         <div>
                             <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
                             <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
@@ -158,6 +161,9 @@
                     <a class="page-scroll" href="#features">Features</a>
                 </li>
                 <li>
+                    <a class="page-scroll" href="#search">Search</a>
+                </li>
+                <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
             </ul>
@@ -172,8 +178,10 @@
         <div class="header-content-inner">
             <h1 id="homeHeading">A better way to work together</h1>
             <hr>
-            <p>ScrumHub is a development platform inspired by the way you work. Manage your projects, and coordinate your teams to raise your productivity.</p>
-            <a  href="#signinup" data-toggle="modal" data-target="#login-modal" class="btn btn-primary btn-xl page-scroll">Sign In/Up</a>
+            <p>ScrumHub is a development platform inspired by the way you work. Manage your projects, and coordinate
+                your teams to raise your productivity.</p>
+            <a href="#signinup" data-toggle="modal" data-target="#login-modal"
+               class="btn btn-primary btn-xl page-scroll">Sign In/Up</a>
             <div id="arrow" class="demo">
                 <a href="#about"><span></span></a>
             </div>
@@ -187,10 +195,16 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">We've got what you need!</h2>
                 <hr class="light">
-                <p class="text-faded">ScrumHub has everything you need to get keep your projects organized and on schedule, without wasting your time! Bring your working team to ScrumHub so you can start organizing your work with them.</p>
-                <a href="#features" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                <p class="text-faded">ScrumHub has everything you need to get keep your projects organized and on
+                    schedule, without wasting your time! Bring your working team to ScrumHub so you can start organizing
+                    your work with them.</p>
+                <a href="#features" data-toggle="modal" data-target="#login-modal"
+                   class="btn btn-primary btn-xl page-scroll">Get Started!</a>
             </div>
         </div>
+    </div>
+    <div id="arrow" class="demo">
+        <a href="#features"><span></span></a>
     </div>
 </section>
 
@@ -209,31 +223,58 @@
                 <div class="service-box">
                     <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
                     <h3>Project Roles</h3>
-                    <p class="text-muted">You can set your team leaders as project coordinators, so they help you coordinate your teams!</p>
+                    <p class="text-muted">You can set your team leaders as project coordinators, so they help you
+                        coordinate your teams!</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
                     <h3>Project Milestones</h3>
-                    <p class="text-muted">Our platform lets you define milestones so you can split your projects in smaller parts.</p>
+                    <p class="text-muted">Our platform lets you define milestones so you can split your projects in
+                        smaller parts.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
                     <h3>Project Tasks</h3>
-                    <p class="text-muted">You can assign tasks to your coworkers so they always know what's left for them to do!</p>
+                    <p class="text-muted">You can assign tasks to your coworkers so they always know what's left for
+                        them to do!</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
                     <h3>Project Forum</h3>
-                    <p class="text-muted">Everyone deserves a word, so everyone can discuss about the project on your project forum.</p>
+                    <p class="text-muted">Everyone deserves a word, so everyone can discuss about the project on your
+                        project forum.</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div id="arrow" class="demo">
+        <a href="#search"><span></span></a>
+    </div>
+</section>
+
+<section class="bg-primary" id="search">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-4 col-xs-offset-2">
+                <div class="input-group search-input-group">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="arrow" class="demo">
+        <a href="#contact"><span></span></a>
     </div>
 </section>
 
@@ -243,7 +284,8 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">Let's Get In Touch!</h2>
                 <hr class="primary">
-                <p>Got any idea to help us improve our platform? That's great! That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                <p>Got any idea to help us improve our platform? That's great! That's great! Give us a call or send us
+                    an email and we will get back to you as soon as possible!</p>
             </div>
             <div class="col-lg-4 col-lg-offset-2 text-center">
                 <i class="fa fa-phone fa-3x sr-contact"></i>
@@ -251,7 +293,7 @@
             </div>
             <div class="col-lg-4 text-center">
                 <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                <p><a href="mailto:your-email@your-domain.com">feedback@scrumhub.com</a></p>
+                <p><a id="link" href="mailto:your-email@your-domain.com">feedback@scrumhub.com</a></p>
             </div>
         </div>
     </div>
