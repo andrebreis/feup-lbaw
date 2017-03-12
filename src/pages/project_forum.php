@@ -23,34 +23,100 @@ include_once "header.html";
                 </div>
             </div>
             <div class="col-md-2 col-xs-4">
-                <button id="new_post_btn" type="button" class="btn btn-default pull-right">Create Post</button>
+                <a href="create_post.php"><button id="new_post_btn" type="button" class="btn btn-default pull-right">Create Post</button></a>
             </div>
         </div>
 
         <div class="row">
             <div class="forum_table col-md-12">
-            <table class="table">
-               <tr>
-                <td>
-                    <div class="media">
-                        <a href="#" class="pull-left">
-                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg"
-                            class="media-photo">
-                        </a>
-                        <div class="media-body">
-                            <span class="media-meta pull-right">Febrero 13, 2016</span>
-                            <h4 class="title">
+                <table class="table">
+                   <tr>
+                    <td>
+                        <div class="forum_table_cell">
+                            <span class="media-meta pull-right">March 12, 2017</span>
+                            <a href="#"><h4 class="title">
                                 Lorem Impsum
-                            </h4>
-                            <span class="badge badge-default badge-pill pull-right">1</span>
+                            </h4></a>
+                            <span class="badge badge-default badge-pill pull-right">2</span>
                             <p class="summary">Ut enim ad minim veniam, quis nostrud
                                 exercitation...</p>
+                            <div class="original_poster">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>op_username</p>
                             </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                            </div>
+                        </td>
+                    </tr>
+                       <tr>
+                    <td>
+                        <div class="forum_table_cell">
+                            <span class="media-meta pull-right">March 12, 2017</span>
+                            <a href="#"><h4 class="title">
+                                Lorem Impsum
+                            </h4></a>
+                            <span class="badge badge-default badge-pill pull-right">2</span>
+                            <p class="summary">Ut enim ad minim veniam, quis nostrud
+                                exercitation...</p>
+                            <div class="original_poster">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>op_username</p>
+                            </div>
+                            </div>
+                        </td>
+                    </tr>
+                       <tr>
+                    <td>
+                        <div class="forum_table_cell">
+                            <span class="media-meta pull-right">March 12, 2017</span>
+                            <a href="#"><h4 class="title">
+                                Lorem Impsum
+                            </h4></a>
+                            <span class="badge badge-default badge-pill pull-right">2</span>
+                            <p class="summary">Ut enim ad minim veniam, quis nostrud
+                                exercitation...</p>
+                            <div class="original_poster">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>op_username</p>
+                            </div>
+                            </div>
+                        </td>
+                    </tr>
+                       <tr>
+                    <td>
+                        <div class="forum_table_cell">
+                            <span class="media-meta pull-right">March 12, 2017</span>
+                            <a href="#"><h4 class="title">
+                                Lorem Impsum
+                            </h4></a>
+                            <span class="badge badge-default badge-pill pull-right">2</span>
+                            <p class="summary">Ut enim ad minim veniam, quis nostrud
+                                exercitation...</p>
+                            <div class="original_poster">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>op_username</p>
+                            </div>
+                            </div>
+                        </td>
+                    </tr>
+                       <tr>
+                    <td>
+                        <div class="forum_table_cell">
+                            <span class="media-meta pull-right">March 12, 2017</span>
+                            <a href="#"><h4 class="title">
+                                Lorem Impsum
+                            </h4></a>
+                            <span class="badge badge-default badge-pill pull-right">2</span>
+                            <p class="summary">Ut enim ad minim veniam, quis nostrud
+                                exercitation...</p>
+                            <div class="original_poster">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>op_username</p>
+                            </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 

@@ -50,8 +50,27 @@
 
 .table{
  margin-top: 2em;
+ tr:hover{
+ background-color: #F2F2F0;
+ }
 }
 
 table {
   table-layout: fixed;
+}
+
+.forum_table_cell{
+ 
+  a{
+    h4{
+    color: #16a085;
+    font-weight: bold;
+  }
+  }
+  .badge{
+    background-color:  #16a085;
+  }
+  .original_poster > *{
+    display: inline-block;
+  }
 }
