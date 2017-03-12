@@ -1,76 +1,76 @@
-.forum{
+.forum {
   margin: 6em 0 2em 0;
   background-color: #FFFFFF;
   padding: 1em;
 }
 
-
-.forum_header{
-  .back{
+.forum_header {
+  .back {
     z-index: 1;
     margin-top: 1.7em;
-    a{
-     color: #16a085;
-   }
- }
+    a {
+      color: #16a085;
+    }
+  }
 
- .title > *{
-  display: inline-block;
-  color: #16a085;
-}
-#new_post_btn{
-  margin-top: 1.4em;
-  border-color: #3AA08B;
-  border-radius: 5%;
+  .title > * {
+    display: inline-block;
+    color: #16a085;
+  }
+  #new_post_btn {
+    margin-top: 1.4em;
+    border-color: #3AA08B;
+    border-radius: 5%;
+  }
+
+  #new_post_btn:hover {
+    background-color: #16a085 !important;
+    color: #FFFFFF !important;
+  }
+
+  .search-input-group {
+    margin-top: 0.8em;
+  }
+  .search-input-group .input-group-addon {
+    border-radius: 0em;
+    background: white !important;
+  }
+  .search-input-group .form-control {
+    border-right: 0;
+    box-shadow: 0 0 0;
+    border-color: #ccc;
+  }
+  .search-input-group button {
+    border: 0;
+    background: transparent;
+    color: #16a085;
+  }
+
 }
 
-#new_post_btn:hover{
-  background-color:#16a085 !important;
-  color: #FFFFFF !important;
-}
-
-.search-input-group{
-  margin-top: 1.4em;
-}
-.search-input-group .input-group-addon{
-  background: white !important; 
-}
-.search-input-group .form-control{
-  border-right:0; 
-  box-shadow:0 0 0; 
-  border-color:#ccc;
-}
-.search-input-group button{
-  border:0;
-  background:transparent;
-  color: #16a085;
-}
-
-}
-
-.table{
- margin-top: 2em;
- tr:hover{
- background-color: #F2F2F0;
- }
+.table {
+  margin-top: 2em;
+  tr:hover {
+    background-color: #F2F2F0;
+  }
 }
 
 table {
   table-layout: fixed;
 }
 
-.forum_table_cell{
- 
-  a{
-    h4{
-    color: #16a085;
-    font-weight: bold;
+.forum_table_cell {
+
+  a {
+    h4 {
+      color: #16a085;
+      font-weight: bold;
+    }
   }
+  .badge {
+    background-color: #16a085;
   }
-  .badge{
-    background-color:  #16a085;
-  }
-  .original_poster > *{
+  .original_poster > * {
     display: inline-block;
   }
 }

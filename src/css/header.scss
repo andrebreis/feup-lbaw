@@ -40,16 +40,30 @@ nav#mainNav {
 
 #signinup {
   color: $dark-white;
+  margin-right: 0.9em;
 }
 
 #signinup:hover {
   color: $white;
 }
 
-#search {
-  width: 25em;
-  border-radius: 2em;
-  background-color: $dark-white;
+.search-input-group{
+  padding: 0.6em;
+}
+
+.search-input-group .input-group-addon{
+  border-radius: 0em;
+  background: white !important;
+}
+.search-input-group .form-control{
+  border-right: 0;
+  box-shadow:0 0 0;
+  border-color:#ccc;
+}
+.search-input-group button{
+  border:0;
+  background:transparent;
+  color: #16a085;
 }
 
 /* GLYPHICON */
