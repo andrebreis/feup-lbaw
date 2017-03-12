@@ -22,7 +22,15 @@ body {
     margin: 1em 0 2em;
     .btn {
       transition: background-color .3s ease;
+	  &:focus{
+	  background: #16a085
+	  }
+        
     }
+	
+  }
+  .title {
+  color: #16a085;
   }
 }
 
@@ -52,8 +60,8 @@ body {
     }
   }
   .media-photo {
-    width: 4.3em;
-    height: 4.3em;
+    width: 6em;
+    height: 6em;
     margin-top: .4em;
     margin-bottom: 1em;
   }
@@ -75,10 +83,10 @@ body {
         font-size: .8em;
         margin-right: 20px;
         &.user {
-          color: #5cb85c;
+          color: #999;
         }
         &.project {
-          color: #f0ad4e;
+          color: #999;
         }
       }
     }

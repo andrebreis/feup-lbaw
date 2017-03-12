@@ -21,14 +21,15 @@ $(document).ready(function () {
 
 <div class="container">
 	<section class="content">
-		<h1>search results for ...</h1>
+		
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default panel_results">
+			<h1 class="title"><b>Search Results for ...</b></h1>
 				<div class="panel-body">
 					<div class="pull-right">
 						<div class="btn-group">
-							<button type="button" class="btn btn-success btn-filter" data-target="user">Users</button>
-							<button type="button" class="btn btn-warning btn-filter" data-target="project">Projects</button>
+							<button type="button" class="btn btn-default btn-filter" data-target="user">Users</button>
+							<button type="button" class="btn btn-default btn-filter" data-target="project">Projects</button>
 							<button type="button" class="btn btn-default btn-filter" data-target="all" autofocus="true">All</button>
 						</div>
 					</div>
@@ -39,13 +40,14 @@ $(document).ready(function () {
 									<td>
 										<div class="media">
 											<a href="#" class="pull-left">
-												<img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13537811_1183966321634129_3091506145273549127_n.jpg?oh=bf9c20af1bb3975821e23474811bf0e9&oe=59719F73" class="media-photo">
+												<img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13537811_1183966321634129_3091506145273549127_n.jpg?oh=bf9c20af1bb3975821e23474811bf0e9&oe=59719F73" class="media-photo" >
 											</a>
 											<div class="media-body">
 												<h4 class="title">
 													Filipa Barroso
 													<span class="user pull-right">(User)</span>
-												</h4>
+												</h4>			
+												<p class="username">fbarroso</p>
 												<div class="info">
 													<div class="location">
 														<i class="fa fa-map-marker" aria-hidden="true"></i> 
@@ -71,6 +73,7 @@ $(document).ready(function () {
 													André Reis
 													<span class="user pull-right">(User)</span>
 												</h4>
+												<p class="username">areis</p>
 												<div class="info">
 													<div class="location">
 														<i class="fa fa-map-marker" aria-hidden="true"></i> 
@@ -144,6 +147,7 @@ $(document).ready(function () {
 													Francisca Paupério
 													<span class="user pull-right">(User)</span>
 												</h4>
+												<p class="username">fpauperio</p>
 												<div class="info">
 													<div class="location">
 														<i class="fa fa-map-marker" aria-hidden="true"></i> 
@@ -193,6 +197,7 @@ $(document).ready(function () {
 													Zé Miguel Costa
 													<span class="user pull-right">(User)</span>
 												</h4>
+												<p class="username">zcosta</p>
 												<div class="info">
 													<div class="location">
 														<i class="fa fa-map-marker" aria-hidden="true"></i> 
