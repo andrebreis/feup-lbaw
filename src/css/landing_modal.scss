@@ -1,12 +1,9 @@
-/* #####################################################################
-   #
-   #   Project       : Modal Login with jQuery Effects
-   #   Author        : Rodrigo Amarante (rodrigockamarante)
-   #   Version       : 1.0
-   #   Created       : 07/28/2015
-   #   Last Change   : 08/02/2015
-   #
-   ##################################################################### */
+$white: #ffffff;
+$dark-white: #e4e4e4;
+$gray: #666666;
+$dark-gray: #222222;
+$green: #237A57;
+$dark-green: #093028;
 
 #login-modal .modal-dialog {
   width: 350px;
@@ -107,6 +104,7 @@
 
 .btn {
   border-radius: 0px;
+  background-color: $green;
 }
 
 .btn:focus,
@@ -128,7 +126,7 @@
 }
 
 .btn-link:hover, .btn-link:focus {
-  color: #2c3e50;
+  color: $green;
   text-decoration: none;
 }
 
