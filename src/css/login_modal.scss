@@ -1,5 +1,5 @@
 $white: #ffffff;
-$dark-white: #e4e4e4;
+$dark-white: #d7d7d7;
 $gray: #666666;
 $dark-gray: #222222;
 $green: #237A57;
@@ -13,10 +13,11 @@ $dark-green: #093028;
   margin-top: 10px;
 }
 
+/*
 #div-login-msg,
 #div-lost-msg,
 #div-register-msg {
-  border: 1px solid #dadfe1;
+  border: 1px solid $dark-white;
   height: 30px;
   line-height: 28px;
   transition: all ease-in-out 500ms;
@@ -43,7 +44,7 @@ $dark-green: #093028;
   float: left;
   line-height: 28px;
   text-align: center;
-  background-color: #dadfe1;
+  background-color: $dark-white;
   margin-right: 5px;
   transition: all ease-in-out 500ms;
 }
@@ -51,7 +52,7 @@ $dark-green: #093028;
 #icon-login-msg.success,
 #icon-lost-msg.success,
 #icon-register-msg.success {
-  background-color: #68c3a3 !important;
+  background-color: $green !important;
 }
 
 #icon-login-msg.error,
@@ -59,6 +60,7 @@ $dark-green: #093028;
 #icon-register-msg.error {
   background-color: #eb575b !important;
 }
+*/
 
 #img_logo {
   max-height: 100px;
@@ -75,7 +77,7 @@ $dark-green: #093028;
 }
 
 .modal-content {
-  background-color: #ececec;
+  background-color: $dark-white;
   border: 1px solid #bdc3c7;
   border-radius: 0px;
   outline: 0;
@@ -105,6 +107,17 @@ $dark-green: #093028;
 .btn {
   border-radius: 0px;
   background-color: $green;
+  color: $dark-white;
+}
+
+button#lost_login_btn,
+#lost_register_btn,
+#login_lost_btn,
+#login_register_btn,
+#register_login_btn,
+#register_lost_btn {
+  background-color: transparent;
+  color: $dark-gray;
 }
 
 .btn:focus,
@@ -116,13 +129,13 @@ $dark-green: #093028;
   outline: none;
 }
 
-.btn-lg, .btn-group-lg>.btn {
+.btn-lg, .btn-group-lg > .btn {
   border-radius: 0px;
 }
 
 .btn-link {
   padding: 5px 10px 0px 0px;
-  color: #95a5a6;
+  color: $dark-white;
 }
 
 .btn-link:hover, .btn-link:focus {
