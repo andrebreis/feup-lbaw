@@ -25,7 +25,9 @@
     <link href="../css/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="../css/creative.min.css" rel="stylesheet">
+    <link href="../css/landing.min.css" rel="stylesheet">
+    <link href="../css/login_modal.min.css" rel="stylesheet">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
