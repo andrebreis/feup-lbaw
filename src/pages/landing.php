@@ -151,6 +151,19 @@
             <a class="navbar-brand page-scroll" href="#page-top">ScrumHub</a>
         </div>
 
+
+        <div class="col-md-3 col-xs-4 col-xs-offset-2">
+            <div class="input-group search-input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <span class="input-group-addon">
+                        <button type="submit">
+                            <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                        </button>
+                    </span>
+            </div>
+        </div>
+
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -159,9 +172,6 @@
                 </li>
                 <li>
                     <a class="page-scroll" href="#features">Features</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#search">Search</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
@@ -177,10 +187,10 @@
     <div class="header-content">
         <div class="header-content-inner">
             <h1 id="homeHeading">A better way to work together</h1>
-            <hr>
+            <hr class="light">
             <p>ScrumHub is a development platform inspired by the way you work. Manage your projects, and coordinate
                 your teams to raise your productivity.</p>
-            <a href="#signinup" data-toggle="modal" data-target="#login-modal"
+            <a data-toggle="modal" data-target="#login-modal"
                class="btn btn-primary btn-xl page-scroll">Sign In/Up</a>
             <div id="arrow" class="demo">
                 <a href="#about"><span></span></a>
@@ -189,26 +199,23 @@
     </div>
 </header>
 
-<section class="bg-primary" id="about">
+<section class="bg-section" id="about">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">We've got what you need!</h2>
-                <hr class="light">
-                <p class="text-faded">ScrumHub has everything you need to get keep your projects organized and on
-                    schedule, without wasting your time! Bring your working team to ScrumHub so you can start organizing
-                    your work with them.</p>
-                <a href="#features" data-toggle="modal" data-target="#login-modal"
-                   class="btn btn-primary btn-xl page-scroll">Get Started!</a>
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">We've got what you need!</h2>
+            <hr class="light">
+            <p id="text">ScrumHub has everything you need to get keep your projects organized and on
+                schedule, without wasting your time! Bring your working team to ScrumHub so you can start organizing
+                your work with them.</p>
+            <a href="#features" class="btn btn-primary btn-xl page-scroll">Get Started!</a>
+            <div id="arrow" class="demo">
+                <a href="#features"><span></span></a>
             </div>
         </div>
     </div>
-    <div id="arrow" class="demo">
-        <a href="#features"><span></span></a>
-    </div>
 </section>
 
-<section id="features">
+<section class="bg-section" id="features">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -221,54 +228,34 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                    <i id="icon" class="fa fa-4x fa-users text-primary sr-icons" aria-hidden="true"></i>
                     <h3>Project Roles</h3>
-                    <p class="text-muted">You can set your team leaders as project coordinators, so they help you
+                    <p id="text" class="text-muted">You can set your team leaders as project coordinators, so they help you
                         coordinate your teams!</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                    <i id="icon" class="fa fa-4x fa-calendar text-primary sr-icons" aria-hidden="true"></i>
                     <h3>Project Milestones</h3>
-                    <p class="text-muted">Our platform lets you define milestones so you can split your projects in
+                    <p id="text" class="text-muted">Our platform lets you define milestones so you can split your projects in
                         smaller parts.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                    <i id="icon" class="fa fa-4x fa-tasks text-primary sr-icons"></i>
                     <h3>Project Tasks</h3>
-                    <p class="text-muted">You can assign tasks to your coworkers so they always know what's left for
+                    <p id="text"class="text-muted">You can assign tasks to your coworkers so they always know what's left for
                         them to do!</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                    <i id="icon" class="fa fa-4x fa-comments-o text-primary sr-icons"></i>
                     <h3>Project Forum</h3>
-                    <p class="text-muted">Everyone deserves a word, so everyone can discuss about the project on your
+                    <p id="text" class="text-muted">Everyone deserves a word, so everyone can discuss about the project on your
                         project forum.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="arrow" class="demo">
-        <a href="#search"><span></span></a>
-    </div>
-</section>
-
-<section class="bg-primary" id="search">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-xs-4 col-xs-offset-2">
-                <div class="input-group search-input-group">
-                    <input type="text" class="form-control" placeholder="Search...">
-                    <span class="input-group-addon">
-                        <button type="submit">
-                            <span><i class="fa fa-search" aria-hidden="true"></i></span>
-                        </button>
-                    </span>
                 </div>
             </div>
         </div>
@@ -278,22 +265,22 @@
     </div>
 </section>
 
-<section id="contact">
+<section class="bg-section" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">Let's Get In Touch!</h2>
                 <hr class="primary">
-                <p>Got any idea to help us improve our platform? That's great! That's great! Give us a call or send us
+                <p id="text">Got any idea to help us improve our platform? That's great! That's great! Give us a call or send us
                     an email and we will get back to you as soon as possible!</p>
             </div>
             <div class="col-lg-4 col-lg-offset-2 text-center">
-                <i class="fa fa-phone fa-3x sr-contact"></i>
-                <p>123-456-6789</p>
+                <i id="icon" class="fa fa-phone fa-3x sr-contact"></i>
+                <p id="text">123-456-6789</p>
             </div>
             <div class="col-lg-4 text-center">
-                <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                <p><a id="link" href="mailto:your-email@your-domain.com">feedback@scrumhub.com</a></p>
+                <i id="icon" class="fa fa-envelope-o fa-3x sr-contact"></i>
+                <p id="text"><a id="link" href="mailto:your-email@your-domain.com">feedback@scrumhub.com</a></p>
             </div>
         </div>
     </div>
