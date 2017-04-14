@@ -2,6 +2,79 @@
 include_once "header.html";
 ?>
 
+
+<script>
+function changetextbox(){
+    if (document.getElementById("select_State").value == 'Other') {
+        document.getElementById("customState").disabled = '';
+    } else {
+        document.getElementById("customState").disabled = 'true';
+    }
+};
+</script>
+
+
+
+<!-- create project modal-->
+<div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="createProjectModalContent">
+            <div class="modal-header">
+                <h3 class="modal-title" id="createProjectModalTitle">Create Project</h3>
+            </div>
+            <div class="modal-body">
+             <form>
+                 <div class="form-group">
+                    <label for="projectName">Project Name</label>
+                    <input type="name" class="form-control" id="projectNameInput" placeholder="Choose a name for your Project">
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Project Description</label>
+                    <input type="description" class="form-control" id="projectDescriptionInput" placeholder="Write a small description of your Project">
+                </div>
+                <div class="form-inline">
+                    <label for="projectVisibility">Project Visibility</label>
+                    <select class="custom-select" id="projectVisibilitySelect">
+                        <option selected>Choose...</option>
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+                <div class="form-group projectStateGroup">
+                    <label for="projectState">Project State</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                             <select id="select_State" class="custom-select" id="projectStateSelect" onchange="changetextbox()">
+                            <option value="none" selected>Choose...</option>
+                            <option value="Waiting for Start">Waiting for Start</option>
+                            <option value="Under Development">Under Development</option>
+                            <option value="Arrested Development">Arrested Development</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        </div>
+                        <div class="col-md-8 col-md-offset-1">
+                            <input disabled="disabled" id="customState" type="state" class="form-control-sm" id="projectStateInput" placeholder="Choose a custom State">
+                        </div>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label for="projectTags">Project Tags</label>
+                    <input type="text" class="form-control" id="projectTagsInput" placeholder="Enter tags" data-role="tagsinput">
+                    <small id="tagsInputHelp" class="form-text text-muted">Add multiple tags by pressing enter after each tag</small>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="modal-footer col-md-4 col-md-offset-4">
+                <button type="button" id="new_proj_btn" class="btn btn-primary create_in_modal">Create Project</button>
+            </div>
+        </div>
+    </div>
+</div> 
+</div>
+<!-- end of create project modal-->
+
+
 <div class="container">
     <div class="row profile">
         <div class="col-md-3 hidden-xs hidden-sm">
@@ -86,21 +159,21 @@ include_once "header.html";
                     </div>
                     <div class="row">
                         <div class="col-xs-8 col-xs-offset-2">
-                        <div class="info">
-                            <div class="email">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <p>haroldme@hotmail.com</p>
-                            </div>
-                            <div class="location">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i> 
-                                <p>Lansing, United States</p>
-                            </div>
-                            <div class="job">
-                                <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                <p>Web Developer</p>
+                            <div class="info">
+                                <div class="email">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <p>haroldme@hotmail.com</p>
+                                </div>
+                                <div class="location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                                    <p>Lansing, United States</p>
+                                </div>
+                                <div class="job">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    <p>Web Developer</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -295,7 +368,7 @@ include_once "header.html";
                                 <div class="myproj_title col-md-11 col-md-offset-1">
                                     <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
                                     <h3>My Projects</h3>
-                                    <button id="new_proj_btn"type="button" class="btn btn-default pull-right">Create Project</button>
+                                    <button id="new_proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">Create Project</button>
                                 </div>
                             </div>
                             <table class="table table-myproj">
