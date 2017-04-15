@@ -49,9 +49,8 @@
 }
 
 .table {
-  margin-top: 2em;
   tr:hover {
-    background-color: #F2F2F0;
+   background-color: #eee;
   }
 }
 
@@ -70,7 +69,51 @@ table {
   .badge {
     background-color: #16a085;
   }
-  .original_poster > * {
-    display: inline-block;
+}
+
+
+/* New Project Form */
+#createPostModalContent{
+  margin-top: 7em;
+  padding:1em;
+  border-radius: 2%; 
+}
+
+
+.modal-title{
+  text-align: center;
+  color: #16a085;
+  font-weight: bold;
+}
+
+.create_in_modal{
+  margin-left: 2em;
+}
+
+
+.original_poster{
+  a{
+    font-size: .9em;
+    color: #16a085;
   }
+}
+.original_poster > * {
+    display: inline-block;
+}
+
+.post_header{
+  overflow:auto;
+  background-color: #eee;
+  margin: 1em 2em 0 2em;
+
+}
+
+
+.forum_post_table{
+  margin: .1em .1em 0 2em !important;
+}
+
+.postTitle{
+  color: #16a085;
+  font-weight: bold;
 }

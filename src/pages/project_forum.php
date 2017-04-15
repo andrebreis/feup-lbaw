@@ -2,6 +2,33 @@
 include_once "header.html";
 ?>
 
+<div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="createPostModalContent">
+            <div class="modal-header">
+                <h3 class="modal-title" id="createPostModalTitle">New Post</h3>
+            </div>
+            <div class="modal-body">
+             <form>
+                 <div class="form-group">
+                    <label for="postTitle">Post Title</label>
+                    <input type="title" class="form-control" id="postTitleInput" placeholder="Choose a title for your Post">
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Post Content</label>
+                    <input type="description" class="form-control" id="postContentInput" placeholder="Write your post here">
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="modal-footer col-md-4 col-md-offset-4">
+                <button type="button" id="new_proj_btn" class="btn btn-primary create_in_modal">Create Post</button>
+            </div>
+        </div>
+    </div>
+</div> 
+</div>
+
 <div class="container">
     <div class="row forum">
         <div class="row forum_header">
@@ -23,7 +50,7 @@ include_once "header.html";
                 </div>
             </div>
             <div class="col-md-2 col-xs-4">
-                <a href="create_post.php"><button id="new_post_btn" type="button" class="btn btn-default pull-right">Create Post</button></a>
+                <button id="new_proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createPostModal">Create Post</button>
             </div>
         </div>
 
@@ -31,18 +58,35 @@ include_once "header.html";
             <div class="forum_table col-md-12">
                 <table class="table">
                    <tr>
-                    <td>
+                     <td>
                         <div class="forum_table_cell">
                             <span class="media-meta pull-right">March 12, 2017</span>
-                            <a href="#"><h4 class="title">
+                            <a href="forum_post.php"><h4 class="title">
                                 Lorem Impsum
                             </h4></a>
+                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+                            </p>
                             <span class="badge badge-default badge-pill pull-right">2</span>
-                            <p class="summary">Ut enim ad minim veniam, quis nostrud
-                                exercitation...</p>
                             <div class="original_poster">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <p>op_username</p>
+                                <a href="profile.php"><h4 class="title"><p>op_username</p></a>
+                            </div>
+                            </div>
+                        </td>
+                    </tr>
+                       <tr>
+                     <td>
+                        <div class="forum_table_cell">
+                            <span class="media-meta pull-right">March 12, 2017</span>
+                            <a href="forum_post.php"><h4 class="title">
+                                Lorem Impsum
+                            </h4></a>
+                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+                            </p>
+                            <span class="badge badge-default badge-pill pull-right">2</span>
+                            <div class="original_poster">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <a href="profile.php"><h4 class="title"><p>op_username</p></a>
                             </div>
                             </div>
                         </td>
@@ -51,66 +95,49 @@ include_once "header.html";
                     <td>
                         <div class="forum_table_cell">
                             <span class="media-meta pull-right">March 12, 2017</span>
-                            <a href="#"><h4 class="title">
+                            <a href="forum_post.php"><h4 class="title">
                                 Lorem Impsum
                             </h4></a>
+                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+                            </p>
                             <span class="badge badge-default badge-pill pull-right">2</span>
-                            <p class="summary">Ut enim ad minim veniam, quis nostrud
-                                exercitation...</p>
                             <div class="original_poster">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <p>op_username</p>
+                                <a href="profile.php"><h4 class="title"><p>op_username</p></a>
                             </div>
                             </div>
                         </td>
                     </tr>
                        <tr>
-                    <td>
+                     <td>
                         <div class="forum_table_cell">
                             <span class="media-meta pull-right">March 12, 2017</span>
-                            <a href="#"><h4 class="title">
+                            <a href="forum_post.php"><h4 class="title">
                                 Lorem Impsum
                             </h4></a>
+                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+                            </p>
                             <span class="badge badge-default badge-pill pull-right">2</span>
-                            <p class="summary">Ut enim ad minim veniam, quis nostrud
-                                exercitation...</p>
                             <div class="original_poster">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <p>op_username</p>
+                                <a href="profile.php"><h4 class="title"><p>op_username</p></a>
                             </div>
                             </div>
                         </td>
                     </tr>
                        <tr>
-                    <td>
+                     <td>
                         <div class="forum_table_cell">
                             <span class="media-meta pull-right">March 12, 2017</span>
-                            <a href="#"><h4 class="title">
+                            <a href="forum_post.php"><h4 class="title">
                                 Lorem Impsum
                             </h4></a>
+                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+                            </p>
                             <span class="badge badge-default badge-pill pull-right">2</span>
-                            <p class="summary">Ut enim ad minim veniam, quis nostrud
-                                exercitation...</p>
                             <div class="original_poster">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <p>op_username</p>
-                            </div>
-                            </div>
-                        </td>
-                    </tr>
-                       <tr>
-                    <td>
-                        <div class="forum_table_cell">
-                            <span class="media-meta pull-right">March 12, 2017</span>
-                            <a href="#"><h4 class="title">
-                                Lorem Impsum
-                            </h4></a>
-                            <span class="badge badge-default badge-pill pull-right">2</span>
-                            <p class="summary">Ut enim ad minim veniam, quis nostrud
-                                exercitation...</p>
-                            <div class="original_poster">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <p>op_username</p>
+                                <a href="profile.php"><h4 class="title"><p>op_username</p></a>
                             </div>
                             </div>
                         </td>
