@@ -39,28 +39,29 @@ function changetextbox(){
                 <h3 class="modal-title" id="createProjectModalTitle">Create Project</h3>
             </div>
             <div class="modal-body">
-             <form>
+             <form action="../actions/create_project.php" method="post">
                  <div class="form-group">
                     <label for="projectName">Project Name</label>
-                    <input type="name" class="form-control" id="projectNameInput" placeholder="Choose a name for your Project">
+                    <input type="name" name="name" class="form-control" id="projectNameInput" placeholder="Choose a name for your Project">
                 </div>
                 <div class="form-group">
                     <label for="projectDescription">Project Description</label>
-                    <input type="description" class="form-control" id="projectDescriptionInput" placeholder="Write a small description of your Project">
+                    <input type="description" name="description" class="form-control" id="projectDescriptionInput" placeholder="Write a small description of your Project">
                 </div>
                 <div class="form-inline">
                     <label for="projectVisibility">Project Visibility</label>
-                    <select class="custom-select" id="projectVisibilitySelect">
+                    <select class="custom-select" name="is-visible" id="projectVisibilitySelect">
                         <option selected>Choose...</option>
-                        <option value="public">Public</option>
-                        <option value="private">Private</option>
+                        <option value="true">Public</option>
+                        <option value="false">Private</option>
                     </select>
                 </div>
                 <div class="form-group projectStateGroup">
                     <label for="projectState">Project State</label>
                     <div class="row">
+                      <!-- TODO: CHANGE THIS TO PHP -->
                         <div class="col-md-3">
-                             <select id="select_State" class="custom-select" id="projectStateSelect" onchange="changetextbox()">
+                             <select id="select-state" class="custom-select" id="projectStateSelect" onchange="changetextbox()">
                             <option value="none" selected>Choose...</option>
                             <option value="Waiting for Start">Waiting for Start</option>
                             <option value="Under Development">Under Development</option>
@@ -69,22 +70,23 @@ function changetextbox(){
                         </select>
                         </div>
                         <div class="col-md-8 col-md-offset-1">
-                            <input disabled="disabled" id="customState" type="state" class="form-control-sm" id="projectStateInput" placeholder="Choose a custom State">
+                            <input disabled="disabled" name="new-state" id="customState" type="state" class="form-control-sm" id="projectStateInput" placeholder="Choose a custom State">
                         </div>
                     </div>
                 </div>
                  <div class="form-group">
                     <label for="projectTags">Project Tags</label>
+                    <!-- TODO: CHANGE THIS TO PHP -->
                     <input type="text" class="form-control" id="projectTagsInput" placeholder="Enter tags" data-role="tagsinput">
                     <small id="tagsInputHelp" class="form-text text-muted">Add multiple tags by pressing enter after each tag</small>
                 </div>
-            </form>
         </div>
-        <div class="row">
-            <div class="modal-footer col-md-4 col-md-offset-4">
-                <button type="button" id="new_proj_btn" class="btn btn-primary create_in_modal">Create Project</button>
-            </div>
-        </div>
+          <div class="row">
+              <div class="modal-footer col-md-4 col-md-offset-4">
+                  <button type="submit" id="new_proj_btn" class="btn btn-primary create_in_modal">Create Project</button>
+              </div>
+          </div>
+        </form>
     </div>
 </div>
 </div>
