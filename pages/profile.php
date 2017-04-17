@@ -1,5 +1,22 @@
 <?php
-include_once "header.html";
+
+include_once("../database/users.php");
+$id = (int)htmlspecialchars($_GET['id']);
+if (!idExists($id)) {
+    header('HTTP/1.0 404 Not Found');
+    header('Location: 404.html');
+    die();
+}
+
+$username = getUserField($id, 'username');
+$email = getUserField($id, 'email');
+$name = getUserField($id, 'name');
+$job = getUserField($id, 'job');
+$profile_picture = getUserField($id, 'picture');
+if ($profile_picture === null)
+    $profile_picture = '../images/assets/default.png';
+
+include_once "header.php";
 ?>
 
 
@@ -12,7 +29,6 @@ function changetextbox(){
     }
 };
 </script>
-
 
 
 <!-- create project modal-->
@@ -70,7 +86,7 @@ function changetextbox(){
             </div>
         </div>
     </div>
-</div> 
+</div>
 </div>
 <!-- end of create project modal-->
 
@@ -81,31 +97,34 @@ function changetextbox(){
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png" class="img-responsive" alt="">
+                    <img src=<?php echo $profile_picture ?> class="img-responsive" alt="">
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        Harold Johnson
+                        <?php echo $name ?>
                     </div>
                     <div class="profile-usertitle-username">
-                        (HTPharold)
+                        (<?php echo $username ?>)
                     </div>
                 </div>
                 <div class="info">
                     <div class="email">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <p>haroldme@hotmail.com</p>
+                        <p><?php echo $email ?></p>
                     </div>
-                    <div class="location">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                    <!-- <div class="location">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <p>Lansing, United States</p>
-                    </div>
-                    <div class="job">
-                        <i class="fa fa-briefcase" aria-hidden="true"></i>
-                        <p>Web Developer</p>
-                    </div>
+                    </div> -->
+                    <?php
+                    if(isset($job))
+                      echo'<div class="job">
+                          <i class="fa fa-briefcase" aria-hidden="true"></i>
+                          <p>' . $job . '</p>
+                      </div>';
+                    ?>
                 </div>
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR MENU -->
@@ -140,19 +159,19 @@ function changetextbox(){
                 </div>
 
                 <div class="profile-sidebar-mobile">
-                    <div class="row"> 
+                    <div class="row">
                         <div class="col-xs-3 col-xs-offset-1">
                             <div class="profile-userpic">
-                                <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png" class="img-responsive" alt="">
+                                <img src=<?php echo $profile_picture ?> class="img-responsive" alt="">
                             </div>
                         </div>
                         <div class="col-xs-7">
                             <div class="profile-usertitle">
                                 <div class="profile-usertitle-name">
-                                    Harold Johnson
+                                    <?php echo $name ?>
                                 </div>
                                 <div class="profile-usertitle-username">
-                                    (HTPharold)
+                                    (<?php echo $username ?>)
                                 </div>
                             </div>
                         </div>
@@ -162,16 +181,23 @@ function changetextbox(){
                             <div class="info">
                                 <div class="email">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p>haroldme@hotmail.com</p>
+                                    <p><?php echo $email ?></p>
                                 </div>
-                                <div class="location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                                <!-- <div class="location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <p>Lansing, United States</p>
-                                </div>
-                                <div class="job">
+                                </div> -->
+                                <!-- <div class="job">
                                     <i class="fa fa-briefcase" aria-hidden="true"></i>
                                     <p>Web Developer</p>
-                                </div>
+                                </div> -->
+                                <?php
+                                if(isset($job))
+                                  echo'<div class="job">
+                                      <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                      <p>' . $job . '</p>
+                                  </div>';
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -368,7 +394,10 @@ function changetextbox(){
                                 <div class="myproj_title col-md-11 col-md-offset-1">
                                     <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
                                     <h3>My Projects</h3>
-                                    <button id="new_proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">Create Project</button>
+                                    <?php
+                                      if($_SESSION['userId'] == $id)
+                                       echo '<button id="new_proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">Create Project</button>';
+                                     ?>
                                 </div>
                             </div>
                             <table class="table table-myproj">

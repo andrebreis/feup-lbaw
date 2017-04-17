@@ -1,4 +1,4 @@
-<?php include_once "header.html"; ?>
+<?php include_once "header.php"; ?>
 
 <script>
 $(document).ready(function () {
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 <div class="container">
 	<section class="content">
-		
+
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default panel_results">
 			<h1 class="title"><b>Search Results for ...</b></h1>
@@ -46,11 +46,11 @@ $(document).ready(function () {
 												<h4 class="title">
 													Filipa Barroso
 													<span class="user pull-right">(User)</span>
-												</h4>			
+												</h4>
 												<p class="username">fbarroso</p>
 												<div class="info">
 													<div class="location">
-														<i class="fa fa-map-marker" aria-hidden="true"></i> 
+														<i class="fa fa-map-marker" aria-hidden="true"></i>
 														<p>Lousada, Portugal</p>
 													</div>
 													<div class="email">
@@ -76,7 +76,7 @@ $(document).ready(function () {
 												<p class="username">areis</p>
 												<div class="info">
 													<div class="location">
-														<i class="fa fa-map-marker" aria-hidden="true"></i> 
+														<i class="fa fa-map-marker" aria-hidden="true"></i>
 														<p>Porto, Portugal</p>
 													</div>
 													<div class="email">
@@ -150,7 +150,7 @@ $(document).ready(function () {
 												<p class="username">fpauperio</p>
 												<div class="info">
 													<div class="location">
-														<i class="fa fa-map-marker" aria-hidden="true"></i> 
+														<i class="fa fa-map-marker" aria-hidden="true"></i>
 														<p>Porto, Portugal</p>
 													</div>
 													<div class="email">
@@ -200,7 +200,7 @@ $(document).ready(function () {
 												<p class="username">zcosta</p>
 												<div class="info">
 													<div class="location">
-														<i class="fa fa-map-marker" aria-hidden="true"></i> 
+														<i class="fa fa-map-marker" aria-hidden="true"></i>
 														<p>Braga, Portugal</p>
 													</div>
 													<div class="email">

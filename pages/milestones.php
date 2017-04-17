@@ -1,5 +1,5 @@
 <?php
-include_once "header.html";
+include_once "header.php";
 ?>
 
 <div class="container">
@@ -21,7 +21,7 @@ include_once "header.html";
 						<p>creator_username</p>
 					</div>
 					<div class="percentage">
-						<i class="fa fa-hourglass-half" aria-hidden="true"></i> 
+						<i class="fa fa-hourglass-half" aria-hidden="true"></i>
 						<p>40% completed</p>
 					</div>
 					<div class="sidebar_collaborators">
@@ -81,7 +81,7 @@ include_once "header.html";
 							<p>creator_username</p>
 						</div>
 						<div class="percentage">
-							<i class="fa fa-hourglass-half" aria-hidden="true"></i> 
+							<i class="fa fa-hourglass-half" aria-hidden="true"></i>
 							<p>50% completed</p>
 						</div>
 						<div class="sidebar_collaborators">
@@ -115,7 +115,7 @@ include_once "header.html";
 							<tbody>
 								<tr>
 									<td onclick="window.location = 'milestone_details.php';">
-										<div class="media">													
+										<div class="media">
 											<div class="media-body">
 												<span class="media-meta pull-right"><small>Deadline: </small><b>Febrero 13, 2016</b> </span>
 												<h4 class="title">
@@ -246,6 +246,3 @@ include_once "header.html";
 <?php
 include_once "footer.html";
 ?>
-
-
-

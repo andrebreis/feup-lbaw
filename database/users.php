@@ -1,0 +1,76 @@
+<?php
+
+include_once('../config/init.php');
+
+/**
+ * Adds the user to the database. The user is created in the USER group.
+ * @param $username string User's chosen name to use as login
+ * @param $password string User's password, it is assumed that it is already hashed.
+ * @param $email string User email
+ * @param $name string User real life name
+ * @return array Error info.
+ */
+function createUser($username, $password, $email, $name) {
+    global $conn;
+    $statement = $conn->prepare('INSERT INTO authenticated_user (username, password, email, name) VALUES(?, ?, ?, ?)');
+    $statement->execute([$username, $password, $email, $name]);
+    return $statement->errorInfo();
+}
+
+/** Queries the database to check if user with $id exists.
+ * @param $id int $id to check
+ * @return bool Returns false if the id does not exist, returning true otherwise.
+ */
+function idExists($id) {
+    global $conn;
+    $statement = $conn->prepare('SELECT * FROM authenticated_user WHERE id = ?');
+    $statement->execute([$id]);
+    return $statement->fetch();
+}
+
+/** Queries the database to check if user with $username exists.
+ * @param $username string $username to check
+ * @return bool Returns false if the username does not exist, returning true otherwise.
+ */
+function usernameExists($username) {
+    global $conn;
+    $statement = $conn->prepare('SELECT * FROM authenticated_user WHERE username = ?');
+    $statement->execute([$username]);
+    return $statement->fetch();
+}
+
+/** Queries the database to check if a user with $email exists.
+ * @param $email string $email to check
+ * @return bool Returns false if the email does not exist, returning true otherwise.
+ */
+function emailExists($email) {
+    global $conn;
+    $statement = $conn->prepare('SELECT * FROM authenticated_user WHERE email = ?');
+    $statement->execute([$email]);
+    return $statement->fetch();
+}
+
+/** Gets ID by username
+ * @param $username string Username
+ * @return int ID
+ */
+function getIdByUsername($username) {
+    global $conn;
+    $statement = $conn->prepare('SELECT id FROM authenticated_user WHERE username = ?');
+    $statement->execute([$username]);
+    return $statement->fetch()['id'];
+}
+
+/** Returns the user's requested field. The field cannot be the user password.
+ * @param $userId int User ID
+ * @param $field string Field
+ * @return string
+ */
+function getUserField($userId, $field) {
+    if ($field === 'password')
+        return null;
+    global $conn;
+    $statement = $conn->prepare('SELECT * FROM authenticated_user WHERE id = ?');
+    $statement->execute([$userId]);
+    return $statement->fetch()[$field];
+}

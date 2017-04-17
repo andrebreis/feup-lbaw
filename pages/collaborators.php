@@ -1,5 +1,5 @@
 <?php
-include_once "header.html";
+include_once "header.php";
 ?>
 
 <div class="container">
@@ -21,7 +21,7 @@ include_once "header.html";
             <p>creator_username</p>
           </div>
           <div class="percentage">
-            <i class="fa fa-hourglass-half" aria-hidden="true"></i> 
+            <i class="fa fa-hourglass-half" aria-hidden="true"></i>
             <p>40% completed</p>
           </div>
           <div class="sidebar_collaborators">
@@ -81,7 +81,7 @@ include_once "header.html";
               <p>creator_username</p>
             </div>
             <div class="percentage">
-              <i class="fa fa-hourglass-half" aria-hidden="true"></i> 
+              <i class="fa fa-hourglass-half" aria-hidden="true"></i>
               <p>50% completed</p>
             </div>
             <div class="sidebar_collaborators">
@@ -121,7 +121,7 @@ include_once "header.html";
             <h5>(HTPharold)</h5>
             <div class="info">
               <div class="location">
-                <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <p>Lansing, United States</p>
               </div>
               <div class="email">
@@ -141,7 +141,7 @@ include_once "header.html";
             <h5>(HTPharold)</h5>
             <div class="info">
               <div class="location">
-                <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <p>Lansing, United States</p>
               </div>
               <div class="email">
@@ -163,7 +163,7 @@ include_once "header.html";
             <h5>(HTPharold)</h5>
             <div class="info">
               <div class="location">
-                <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <p>Lansing, United States</p>
               </div>
               <div class="email">
@@ -183,7 +183,7 @@ include_once "header.html";
             <h5>(HTPharold)</h5>
             <div class="info">
               <div class="location">
-                <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <p>Lansing, United States</p>
               </div>
               <div class="email">

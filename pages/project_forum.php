@@ -1,5 +1,5 @@
 <?php
-include_once "header.html";
+include_once "header.php";
 ?>
 
 <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -26,7 +26,7 @@ include_once "header.html";
             </div>
         </div>
     </div>
-</div> 
+</div>
 </div>
 
 <div class="container">
@@ -45,7 +45,7 @@ include_once "header.html";
                     <span class="input-group-addon">
                         <button type="submit">
                             <span><i class="fa fa-search" aria-hidden="true"></i></span>
-                        </button>  
+                        </button>
                     </span>
                 </div>
             </div>
