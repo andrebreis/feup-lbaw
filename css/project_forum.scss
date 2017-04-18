@@ -97,7 +97,7 @@ table {
     color: #16a085;
   }
 }
-.original_poster > * {
+.original_poster > * , .likes > *{
     display: inline-block;
 }
 
@@ -116,4 +116,26 @@ table {
 .postTitle{
   color: #16a085;
   font-weight: bold;
+}
+
+#user_photo{
+  width: 1.5em;
+  height: 1.5em;
+}
+
+
+.likes_post{
+  margin-left: 1em;
+}
+
+#like_btn{
+  border-color: #16a085;
+  background-color: white;
+  color: #16a085;
+  border-radius: 15%;
+}
+
+#like_btn.active.focus, #like_btn.active:focus, #like_btn.focus, #like_btn:active.focus, #like_btn:active:focus, #like_btn:focus, #like_btn:hover{
+  background-color: #16a085; 
+  color: white;
 }

@@ -155,9 +155,10 @@
           </div>
 
 
+        <form action="search.php" method="get">
           <div class="col-md-3 col-xs-4 col-xs-offset-2">
               <div class="input-group search-input-group">
-                  <input type="text" class="form-control" placeholder="Search...">
+                  <input type="text" name="query" class="form-control" placeholder="Search...">
                   <span class="input-group-addon">
                           <button type="submit">
                               <span><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -165,6 +166,7 @@
                       </span>
               </div>
           </div>
+        </form>
 
 
           <!-- Collect the nav links, forms, and other content for toggling -->

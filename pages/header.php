@@ -154,9 +154,10 @@ if(!isset($_SESSION['username'])){
         <div class="row">
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <form action="search.php" method="get">
                 <div class="col-md-3 col-xs-4 col-xs-offset-2">
                     <div class="input-group search-input-group">
-                        <input type="text" class="form-control" placeholder="Search...">
+                        <input type="text" name="query" class="form-control" placeholder="Search...">
                         <span class="input-group-addon">
                         <button type="submit">
                             <span><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -164,6 +165,7 @@ if(!isset($_SESSION['username'])){
                     </span>
                     </div>
                 </div>
+              </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <?php

@@ -21,3 +21,21 @@ function createProject($creatorId, $name, $description, $isVisible) {
     echo $projectId;
     return $statement->errorInfo();
 }
+
+/** 
+ * Searches all projects given the query sentence
+ * @param $query string The search string.
+ * @return array All results.
+ */
+function searchProjects($query) {
+    global $conn;
+    
+    $statement = $conn->prepare(
+      'SELECT project.id, project.name, description, state.name AS state_name, collaborators.nr AS num_collaborators 
+      FROM project LEFT JOIN state ON project.state_id = state.id, 
+      (SELECT project_id, count(*) AS nr FROM project_user_role GROUP BY project_id) AS collaborators 
+      WHERE collaborators.project_id = project.id AND (to_tsvector(\'english\', project.name || \' \' || project.description) @@ to_tsquery(\'english\', ?) 
+      OR project.name ILIKE \'%\' || ? || \'%\')');
+    $statement->execute([$query, $query]);
+    return $statement->fetchAll();
+}

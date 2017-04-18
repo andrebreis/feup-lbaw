@@ -74,3 +74,33 @@ function getUserField($userId, $field) {
     $statement->execute([$userId]);
     return $statement->fetch()[$field];
 }
+
+/** Returns the projects the user participates in.
+ * @param $userId int User ID
+ * @return string
+ */
+function getUserProjects($userId) {
+    global $conn;
+    $statement = $conn->prepare('SELECT project.id, project.name, description, state.name AS state_name, collaborators.nr AS num_collaborators 
+      FROM project INNER JOIN project_user_role ON project.id = project_user_role.project_id LEFT JOIN state ON project.state_id = state.id, 
+      (SELECT project_id, count(*) AS nr FROM project_user_role GROUP BY project_id) AS collaborators 
+      WHERE collaborators.project_id = project.id AND project_user_role.user_id = ?');
+    $statement->execute([$userId]);
+    return $statement->fetchAll();
+}
+
+/** 
+ * Searches all users given the query sentence
+ * @param $query string The search string.
+ * @return array All results.
+ */
+function searchUsers($query) {
+    global $conn;
+    
+    $statement = $conn->prepare(
+      'SELECT id, username, name, picture, email FROM authenticated_user WHERE to_tsvector(\'english\', username || \' \' || name) @@ to_tsquery(\'english\', ?) 
+      OR name ILIKE \'%\' || ? || \'%\' 
+      OR username ILIKE \'%\' || ? || \'%\'');
+    $statement->execute([$query, $query, $query]);
+    return $statement->fetchAll();
+}
