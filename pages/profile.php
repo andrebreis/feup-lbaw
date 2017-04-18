@@ -16,13 +16,15 @@ $profile_picture = getUserField($id, 'picture');
 if ($profile_picture === null)
     $profile_picture = '../images/assets/default.png';
 
+$projects = getUserProjects($_GET['id']);
+
 include_once "header.php";
 ?>
 
 
 <script>
 function changetextbox(){
-    if (document.getElementById("select_State").value == 'Other') {
+    if (document.getElementById("select-state").value == 'Other') {
         document.getElementById("customState").disabled = '';
     } else {
         document.getElementById("customState").disabled = 'true';
@@ -257,7 +259,8 @@ function changetextbox(){
                             </div>
                             <table class="table table-popular">
                                 <tbody>
-                                    <tr data-status="project">
+                                  TODO: ADD POPULAR PROJECTS
+                                    <!-- <tr data-status="project">
                                         <td onclick="window.location = 'project_dashboard.php';">
                                             <div class="media">
                                                 <div class="media-body">
@@ -382,7 +385,7 @@ function changetextbox(){
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -404,7 +407,35 @@ function changetextbox(){
                             </div>
                             <table class="table table-myproj">
                                 <tbody>
-                                    <tr data-status="project">
+                                  <?php 
+                                  foreach ($projects as $project) {
+                                    $state_name = $project['state_name'];
+                                    if(!isset($state_name))
+                                      $state_name = "Undefined";
+                                    echo '<tr data-status="project">
+                                        <td onclick="window.location=\'project_dashboard.php?id=' . $project['id'] . '\';">
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <h4 class="title">' . $project['name'] . '</h4>
+                                                    <p class="summary">' . $project['description'] . '</p>
+                                                    <div class="info">
+                                                        <div class="state">
+                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                                            <p>' . $state_name . '</p>
+                                                        </div>
+                                                        <div class="collaborators">
+                                                            <i class="fa fa-users" aria-hidden="true"></i>
+                                                            <p>' . $project['num_collaborators'] . 'Collaborators</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    ';
+                                  }
+                                  ?>
+                                    <!-- <tr data-status="project">
                                         <td onclick="window.location = 'project_dashboard.php';">
                                             <div class="media">
                                                 <div class="media-body">
@@ -424,8 +455,8 @@ function changetextbox(){
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr>
-                                    <tr data-status="project">
+                                    </tr> -->
+                                    <!-- <tr data-status="project">
                                         <td onclick="window.location = 'project_dashboard.php';">
                                             <div class="media">
                                                 <div class="media-body">
@@ -487,7 +518,7 @@ function changetextbox(){
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>

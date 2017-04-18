@@ -1,33 +1,6 @@
 <?php
-include_once "header.html";
+include_once "header.php";
 ?>
-
-<div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" id="createPostModalContent">
-            <div class="modal-header">
-                <h3 class="modal-title" id="createPostModalTitle">New Post</h3>
-            </div>
-            <div class="modal-body">
-             <form>
-                 <div class="form-group">
-                    <label for="postTitle">Post Title</label>
-                    <input type="title" class="form-control" id="postTitleInput" placeholder="Choose a title for your Post">
-                </div>
-                <div class="form-group">
-                    <label for="postContent">Post Content</label>
-                    <input type="description" class="form-control" id="postContentInput" placeholder="Write your post here">
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <div class="modal-footer col-md-4 col-md-offset-4">
-                <button type="button" id="new_proj_btn" class="btn btn-primary create_in_modal">Create Post</button>
-            </div>
-        </div>
-    </div>
-</div> 
-</div>
 
 <div class="container">
     <div class="row forum">
@@ -38,16 +11,6 @@ include_once "header.html";
             <div class="title col-md-3 col-xs-9">
                 <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
                 <h2> Project Forum</h2>
-            </div>
-            <div class="col-md-6 col-xs-8">
-                <div class="input-group search-input-group">
-                    <input type="text" class="form-control"  placeholder="Search Post" >
-                    <span class="input-group-addon">
-                        <button type="submit">
-                            <span><i class="fa fa-search" aria-hidden="true"></i></span>
-                        </button>  
-                    </span>
-                </div>
             </div>
         </div>
 
@@ -61,8 +24,12 @@ include_once "header.html";
                 </div>
                 <div class="original_poster col-md-12">
                     <span class="media-meta pull-right">March 12, 2017</span>
-                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <img id="user_photo" src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png" class="media-photo">
                     <a href="profile.php"><h4 class="title"><p>op_username</p></a>
+                </div>
+                <div class="likes likes_post">
+                    <a id="like_btn" href="#" data-toggle="tooltip" title="Like Post" class="btn btn-xs btn-primary"><span class="fa fa-arrow-up"></span></a>
+                    <h5>15 likes</h5>
                 </div>
             </div>
         </div>
@@ -76,8 +43,12 @@ include_once "header.html";
                             <p class="comment" style="text-align: justify;"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
                             <div class="original_poster">
                                 <span class="media-meta pull-right">March 12, 2017</span>
-                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <img id="user_photo" src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png" class="media-photo">
                                 <a href="profile.php"><h4 class="title"><p>op_username</p></a>
+                            </div>
+                            <div class="likes">
+                                <a id="like_btn" href="#" data-toggle="tooltip" title="Like Post" class="btn btn-xs btn-primary"><span class="fa fa-arrow-up"></span></a>
+                                <h5>15 likes</h5>
                             </div>
                         </div>
                     </td>
@@ -88,8 +59,12 @@ include_once "header.html";
                             <p class="comment" style="text-align: justify;"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
                             <div class="original_poster">
                                 <span class="media-meta pull-right">March 12, 2017</span>
-                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <img id="user_photo" src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png" class="media-photo">
                                 <a href="profile.php"><h4 class="title"><p>op_username</p></a>
+                            </div>
+                             <div class="likes">
+                                <a id="like_btn" href="#" data-toggle="tooltip" title="Like Post" class="btn btn-xs btn-primary"><span class="fa fa-arrow-up"></span></a>
+                                <h5>15 likes</h5>
                             </div>
                         </div>
                     </td>
@@ -100,8 +75,12 @@ include_once "header.html";
                             <p class="comment" style="text-align: justify;"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
                             <div class="original_poster">
                                 <span class="media-meta pull-right">March 12, 2017</span>
-                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <img id="user_photo" src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png" class="media-photo">
                                 <a href="profile.php"><h4 class="title"><p>op_username</p></a>
+                            </div>
+                             <div class="likes">
+                                <a id="like_btn" href="#" data-toggle="tooltip" title="Like Post" class="btn btn-xs btn-primary"><span class="fa fa-arrow-up"></span></a>
+                                <h5>15 likes</h5>
                             </div>
                         </div>
                     </td>
