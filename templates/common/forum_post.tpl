@@ -1,7 +1,3 @@
-<?php
-include_once "header.php";
-?>
-
 <div class="container">
     <div class="row forum">
         <div class="row forum_header">
@@ -101,7 +97,3 @@ include_once "header.php";
 </div>
 
 </div>
-
-<?php
-include_once "footer.html";
-?>

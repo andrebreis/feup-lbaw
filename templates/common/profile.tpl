@@ -18,13 +18,12 @@ if ($profile_picture === null)
 
 $projects = getUserProjects($_GET['id']);
 
-include_once "header.php";
 ?>
 
 
 <script>
 function changetextbox(){
-    if (document.getElementById("select-state").value == 'Other') {
+    if (document.getElementById("select_State").value == 'Other') {
         document.getElementById("customState").disabled = '';
     } else {
         document.getElementById("customState").disabled = 'true';
@@ -760,7 +759,3 @@ function changetextbox(){
             </div>
         </div>
     </div>
-
-    <?php
-    include_once "footer.html";
-    ?>

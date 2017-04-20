@@ -14,10 +14,11 @@ include_once('../utils/session_utils.php');
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
 
-if ($username && $password) {
-  login($username, $password);
+if (login($username, $password)) {
   header('Location: ../pages/profile.php?id=' . $_SESSION['userId']);
   die();
-} else
+} else{
+    // header('Location: ')
     echo 'The username and the password do not match.';
+}
 ?>

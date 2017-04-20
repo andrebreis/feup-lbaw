@@ -1,7 +1,3 @@
-<?php
-include_once "header.php";
-?>
-
 <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="createPostModalContent">
@@ -168,7 +164,3 @@ include_once "header.php";
 </div>
 
 </div>
-
-<?php
-include_once "footer.html";
-?>

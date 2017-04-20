@@ -7,8 +7,6 @@ $query = htmlspecialchars($_GET["query"]);
 
 $users = searchUsers($query);
 $projects = searchProjects($query);
-
-include_once "header.php"; 
 ?>
 
 <script>

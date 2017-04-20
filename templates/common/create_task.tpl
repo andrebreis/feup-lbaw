@@ -1,7 +1,3 @@
-<?php
-include_once "header.php";
-?>
-
 <style>
 .wrapper {
      margin: 6em 0 2em 0;
@@ -47,7 +43,3 @@ include_once "header.php";
        </div>
     </div>
 </div>
-
-<?php
-include_once "footer.html";
-?>

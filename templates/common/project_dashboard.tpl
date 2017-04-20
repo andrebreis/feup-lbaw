@@ -1,7 +1,3 @@
-<?php
-include_once "header.php";
-?>
-
 <div class="container">
   <div class="row project">
     <div class="col-md-3 hidden-xs hidden-sm">
@@ -159,7 +155,3 @@ include_once "header.php";
     </div>
   </div>
 </div>
-
-<?php
-include_once "footer.html";
-?>
