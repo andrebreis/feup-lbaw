@@ -16,7 +16,7 @@ $isVisible = $_POST['is-visible'];
 
 if ($name && $description && $isVisible) {
   createProject($_SESSION['userId'] , $name, $description, $isVisible);
-  header('Location: ../pages/profile.php?id=' . $_SESSION['userId']);
+  header('Location: ../pages/index.php?page=profile.php&id=' . $_SESSION['userId']);
   die();
 }
 ?>

@@ -8,10 +8,10 @@ else {
   else if ($_GET['page'] === 'create_post.php') $smarty->display('../templates/common/create_post.tpl');
   else if ($_GET['page'] === 'create_task.php') $smarty->display('../templates/common/create_task.tpl');
   else if ($_GET['page'] === 'forum_post.php') $smarty->display('../templates/common/forum_post.tpl');
-  else if ($_GET['page'] === 'profile.php') $smarty->display('../templates/common/profile.tpl');
+  else if ($_GET['page'] === 'profile.php') include_once('profile.php');
   else if ($_GET['page'] === 'project_dashboard.php') $smarty->display('../templates/common/project_dashboard.tpl');
   else if ($_GET['page'] === 'project_forum.php') $smarty->display('../templates/common/project_forum.tpl');
-  else if ($_GET['page'] === 'search.php') $smarty->display('../templates/common/search.tpl');
+  else if ($_GET['page'] === 'search.php') include_once('search.php');
   else if ($_GET['page'] === 'settings.php') $smarty->display('../templates/common/settings.tpl');
   else if ($_GET['page'] === 'tasks.php') $smarty->display('../templates/common/tasks.tpl');
   else if ($_GET['page'] === '403.html') $smarty->display('../templates/common/403.html');

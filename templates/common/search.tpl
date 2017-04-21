@@ -1,14 +1,3 @@
-<?php 
-
-include_once("../database/users.php");
-include_once("../database/projects.php");
-
-$query = htmlspecialchars($_GET["query"]);
-
-$users = searchUsers($query);
-$projects = searchProjects($query);
-?>
-
 <script>
 $(document).ready(function () {
 	$('.btn-filter').on('click', function () {
@@ -41,62 +30,63 @@ $(document).ready(function () {
 					</div>
 					<div class="table-container">
 						<table class="table table-filter">
-							<tbody>
-								<?php 
-									foreach ($users as $user) {
-										$picture = $user['picture'];
-										if(!isset($picture))
-											$picture = '../images/assets/default.png';
-										echo '<tr data-status="user">
-											<td>
+							<tbody> 
+								{foreach from=$users item=user} 
+										{assign var='picture' value=$user.picture}
+										{if !isset($picture)}
+												{assign var='picture' value='../images/assets/default.png'}
+										{/if}
+										<tr data-status="user">
+											<td onclick="window.location='index.php?page=profile.php&id={$user.id}'">
 												<div class="media"> 
 												<a href="#" class="pull-left">
-														<img src=' . $picture . ' class="media-photo" >
+														<img src="{$picture}" class="media-photo" >
 													</a>
 													<div class="media-body">
 														<h4 class="title">
-															' . $user['name'] . '
+															{$user.name}
 														</h4>
-														<p class="username">' . $user['username'] . '</p>
+														<p class="username">{$user.username}</p>
 														<div class="info">
 															<div class="email">
 																<i class="fa fa-envelope" aria-hidden="true"></i>
-																<p>' . $user['email'] . '</p>
+																<p>{$user.email}</p>
 															</div>
 														</div>
 													</div>
 												</div>
 											</td>
-										</tr> ';
-									}
-									foreach ($projects as $project) {
-										$state_name = $project['state_name'];
-										if(!isset($state_name))
-											$state_name = "Undefined";
-										echo '<tr data-status="project">
-											<td>
+										</tr> 
+										{/foreach}
+									
+									{foreach from=$projects item=project}
+										{assign var='state_name' value=$project.state_name}
+										{if !isset($state_name)}
+												{assign var='state_name' value='Undefined'}
+										{/if}
+									<tr data-status="project">
+											<td onclick="window.location='index.php?page=project_dashboard.php&id={$project.id}'">
 												<div class="media">
 													<div class="media-body">
 														<h4 class="title">
-															'. $project['name'] .'
+															{$project.name}
 														</h4>
-														<p class="summary">'. $project['description'] .'</p>
+														<p class="summary">{$project.description}</p>
 														<div class="info">
 															<div class="state">
 																<i class="fa fa-check-square-o" aria-hidden="true"></i>
-																<p>'. $state_name .'</p>
+																<p>{$state_name}</p>
 															</div>
 															<div class="collaborators">
 																<i class="fa fa-users" aria-hidden="true"></i>
-																<p>'. $project['num_collaborators'] .' Collaborators</p>
-															</div>
+																<p>{$project.num_collaborators} Collaborators</p>
+															</div>	
 														</div>
 													</div>
 												</div>
 											</td>
-										</tr>';
-									}
-								 ?>
+										</tr>
+									  {/foreach}
 							</tbody>
 						</table>
 					</div>
@@ -106,5 +96,3 @@ $(document).ready(function () {
 	</section>
 
 </div>
-
-<?php include_once "footer.html"; ?>

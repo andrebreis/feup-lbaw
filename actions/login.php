@@ -15,7 +15,7 @@ $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
 
 if (login($username, $password)) {
-  header('Location: ../pages/profile.php?id=' . $_SESSION['userId']);
+  header('Location: ../pages/index.php?page=profile.php&id=' . $_SESSION['userId']);
   die();
 } else{
     // header('Location: ')

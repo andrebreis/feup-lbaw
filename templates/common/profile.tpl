@@ -1,26 +1,3 @@
-<?php
-
-include_once("../database/users.php");
-$id = (int)htmlspecialchars($_GET['id']);
-if (!idExists($id)) {
-    header('HTTP/1.0 404 Not Found');
-    header('Location: 404.html');
-    die();
-}
-
-$username = getUserField($id, 'username');
-$email = getUserField($id, 'email');
-$name = getUserField($id, 'name');
-$job = getUserField($id, 'job');
-$profile_picture = getUserField($id, 'picture');
-if ($profile_picture === null)
-    $profile_picture = '../images/assets/default.png';
-
-$projects = getUserProjects($_GET['id']);
-
-?>
-
-
 <script>
 function changetextbox(){
     if (document.getElementById("select_State").value == 'Other') {
@@ -52,8 +29,7 @@ function changetextbox(){
                 <div class="form-inline">
                     <label for="projectVisibility">Project Visibility</label>
                     <select class="custom-select" name="is-visible" id="projectVisibilitySelect">
-                        <option selected>Choose...</option>
-                        <option value="true">Public</option>
+                        <option selected value="true">Public</option>
                         <option value="false">Private</option>
                     </select>
                 </div>
@@ -100,34 +76,33 @@ function changetextbox(){
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src=<?php echo $profile_picture ?> class="img-responsive" alt="">
+                    <img src="{$profile_picture}" class="img-responsive" alt="">
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        <?php echo $name ?>
+                        {$name}
                     </div>
                     <div class="profile-usertitle-username">
-                        (<?php echo $username ?>)
+                        ({$username})
                     </div>
                 </div>
                 <div class="info">
                     <div class="email">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <p><?php echo $email ?></p>
+                        <p>{$email}</p>
                     </div>
                     <!-- <div class="location">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <p>Lansing, United States</p>
                     </div> -->
-                    <?php
-                    if(isset($job))
-                      echo'<div class="job">
+                    {if isset($job)}
+                      <div class="job">
                           <i class="fa fa-briefcase" aria-hidden="true"></i>
-                          <p>' . $job . '</p>
-                      </div>';
-                    ?>
+                          <p>{$job}</p>
+                      </div>
+                      {/if}
                 </div>
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR MENU -->
@@ -165,16 +140,16 @@ function changetextbox(){
                     <div class="row">
                         <div class="col-xs-3 col-xs-offset-1">
                             <div class="profile-userpic">
-                                <img src=<?php echo $profile_picture ?> class="img-responsive" alt="">
+                                <img src="{$profile_picture}" class="img-responsive" alt="">
                             </div>
                         </div>
                         <div class="col-xs-7">
                             <div class="profile-usertitle">
                                 <div class="profile-usertitle-name">
-                                    <?php echo $name ?>
+                                  {$name}
                                 </div>
                                 <div class="profile-usertitle-username">
-                                    (<?php echo $username ?>)
+                                    ({$username})
                                 </div>
                             </div>
                         </div>
@@ -184,7 +159,7 @@ function changetextbox(){
                             <div class="info">
                                 <div class="email">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p><?php echo $email ?></p>
+                                    <p>{$email}</p>
                                 </div>
                                 <!-- <div class="location">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -194,13 +169,12 @@ function changetextbox(){
                                     <i class="fa fa-briefcase" aria-hidden="true"></i>
                                     <p>Web Developer</p>
                                 </div> -->
-                                <?php
-                                if(isset($job))
-                                  echo'<div class="job">
+                                {if isset($job)}
+                                  <div class="job">
                                       <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                      <p>' . $job . '</p>
-                                  </div>';
-                                ?>
+                                      <p>{$job}</p>
+                                  </div>
+                                {/if}
                             </div>
                         </div>
                     </div>
@@ -398,126 +372,39 @@ function changetextbox(){
                                 <div class="myproj_title col-md-11 col-md-offset-1">
                                     <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
                                     <h3>My Projects</h3>
-                                    <?php
-                                      if($_SESSION['userId'] == $id)
-                                       echo '<button id="new_proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">Create Project</button>';
-                                     ?>
+                                      {if $_SESSION['userId'] == $_GET['id']}
+                                       <button id="new_proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">Create Project</button>
+                                       {/if}
                                 </div>
                             </div>
                             <table class="table table-myproj">
                                 <tbody>
-                                  <?php 
-                                  foreach ($projects as $project) {
-                                    $state_name = $project['state_name'];
-                                    if(!isset($state_name))
-                                      $state_name = "Undefined";
-                                    echo '<tr data-status="project">
-                                        <td onclick="window.location=\'project_dashboard.php?id=' . $project['id'] . '\';">
+                                  {foreach from=$projects  item=project} 
+                                    {assign var='state_name' value=$project.state_name}
+                                   {if !isset($state_name)}
+                                      {assign var='state_name' value='Undefined'}
+                                    {/if}
+                                    <tr data-status="project">
+                                        <td onclick="window.location='index.php?page=project_dashboard.php&id={$project.id}';">
                                             <div class="media">
                                                 <div class="media-body">
-                                                    <h4 class="title">' . $project['name'] . '</h4>
-                                                    <p class="summary">' . $project['description'] . '</p>
+                                                    <h4 class="title">{$project.name}</h4>
+                                                    <p class="summary">{$project.description}</p>
                                                     <div class="info">
                                                         <div class="state">
                                                             <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                                            <p>' . $state_name . '</p>
+                                                            <p>{$state_name}</p>
                                                         </div>
                                                         <div class="collaborators">
                                                             <i class="fa fa-users" aria-hidden="true"></i>
-                                                            <p>' . $project['num_collaborators'] . 'Collaborators</p>
+                                                            <p>{$project.num_collaborators} Collaborators</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
-                                    ';
-                                  }
-                                  ?>
-                                    <!-- <tr data-status="project">
-                                        <td onclick="window.location = 'project_dashboard.php';">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h4 class="title">ScrumHub</h4>
-                                                    <span class="media-meta pull-right">Updated on 20 Mar 2016</span>
-                                                    <p class="summary">A project for the LBAW course</p>
-                                                    <div class="info">
-                                                        <div class="state">
-                                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                                            <p>Under Development</p>
-                                                        </div>
-                                                        <div class="collaborators">
-                                                            <i class="fa fa-users" aria-hidden="true"></i>
-                                                            <p>4 Collaborators</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr> -->
-                                    <!-- <tr data-status="project">
-                                        <td onclick="window.location = 'project_dashboard.php';">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h4 class="title">Christmas Party</h4>
-                                                    <span class="media-meta pull-right">Updated on 22 Dec 2016</span>
-                                                    <p class="summary">preparing decorations, food and drinks for a Christmas party</p>
-                                                    <div class="info">
-                                                        <div class="state">
-                                                            <i class="fa fa-check-square" aria-hidden="true"></i>
-                                                            <p>Finished</p>
-                                                        </div>
-                                                        <div class="collaborators">
-                                                            <i class="fa fa-users" aria-hidden="true"></i>
-                                                            <p>3 Collaborators</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr data-status="project">
-                                        <td onclick="window.location = 'project_dashboard.php';">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h4 class="title">RaspberryPi Workshop</h4>
-                                                    <span class="media-meta pull-right">Updated on 15 Feb 2017</span>
-                                                    <p class="summary">RaspberryPi Workshop for IoT Week</p>
-                                                    <div class="info">
-                                                        <div class="state">
-                                                            <i class="fa fa-check-square" aria-hidden="true"></i>
-                                                            <p>Finished</p>
-                                                        </div>
-                                                        <div class="collaborators">
-                                                            <i class="fa fa-users" aria-hidden="true"></i>
-                                                            <p>11 Collaborators</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr data-status="project">
-                                        <td onclick="window.location = 'project_dashboard.php';">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h4 class="title">Pokémon Go Hacking App</h4>
-                                                    <span class="media-meta pull-right">Updated on 30 Feb 2017</span>
-                                                    <p class="summary">App to track Pokémon using a radar</p>
-                                                    <div class="info">
-                                                        <div class="state">
-                                                            <i class="fa fa-check-square" aria-hidden="true"></i>
-                                                            <p>Under Development</p>
-                                                        </div>
-                                                        <div class="collaborators">
-                                                            <i class="fa fa-users" aria-hidden="true"></i>
-                                                            <p>3 Collaborators</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr> -->
+                                  {/foreach}
                                 </tbody>
                             </table>
                         </div>

@@ -148,7 +148,7 @@ if(!isset($_SESSION['username'])){
                     data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="landing.php">ScrumHub</a>
+            <a class="navbar-brand page-scroll" href="index.php">ScrumHub</a>
         </div>
 
         <div class="row">

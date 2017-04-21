@@ -26,11 +26,11 @@ if (($ret = signupVerify($username, $password, $password_repeat, $email, $name))
         login($username, $password);
         // echo json_encode(true);
         header('HTTP/1.0 200 Success');
-        header('Location: ../pages/profile.php');
+        header('Location: ../pages/index.php?page=profile.php');
     }
 } else {
       header('HTTP/1.0 403 Forbidden');
-      header('Location: ../pages/403.html');
+      header('Location: ../pages/index.php?page=403.html');
     // echo json_encode($ret);
   }
 ?>
