@@ -4,10 +4,11 @@ if(!isset($_GET['page']))
   $smarty->display('../templates/common/landing.tpl');
 else {
   $smarty->display('../templates/common/header.tpl');
-  if ($_GET['page'] === 'collaborators.php') $smarty->display('../templates/collaborators.tpl');
+  if ($_GET['page'] === 'collaborators.php') $smarty->display('../templates/common/collaborators.tpl');
   else if ($_GET['page'] === 'create_post.php') $smarty->display('../templates/common/create_post.tpl');
   else if ($_GET['page'] === 'create_task.php') $smarty->display('../templates/common/create_task.tpl');
   else if ($_GET['page'] === 'forum_post.php') $smarty->display('../templates/common/forum_post.tpl');
+  else if ($_GET['page'] === 'mlestones.php') $smarty->display('../templates/common/milestones.tpl');
   else if ($_GET['page'] === 'profile.php') include_once('profile.php');
   else if ($_GET['page'] === 'project_dashboard.php') $smarty->display('../templates/common/project_dashboard.tpl');
   else if ($_GET['page'] === 'project_forum.php') $smarty->display('../templates/common/project_forum.tpl');

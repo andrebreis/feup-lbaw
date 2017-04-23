@@ -154,7 +154,7 @@
           </div>
 
 
-        <form action="search.php" method="get">
+        <form action="index.php?page=search" method="get">
           <div class="col-md-3 col-xs-4 col-xs-offset-2">
               <div class="input-group search-input-group">
                   <input type="text" name="query" class="form-control" placeholder="Search...">

@@ -29,7 +29,7 @@
     <div class="row forum">
         <div class="row forum_header">
             <div class="back col-md-1 col-xs-3">
-                <a href="project_dashboard.php" data-toggle="tooltip" title="Back to Project Dashboard"><i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i></a>
+                <a href="index.php?page=project_dashboard.php&id={$smarty.get.id}" data-toggle="tooltip" title="Back to Project Dashboard"><i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i></a>
             </div>
             <div class="title col-md-3 col-xs-9">
                 <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
@@ -57,7 +57,7 @@
                      <td>
                         <div class="forum_table_cell">
                             <span class="media-meta pull-right">March 12, 2017</span>
-                            <a href="forum_post.php"><h4 class="title">
+                            <a href="index.php?page=forum_post.php&projectid={$smarty.get.id}&"><h4 class="title">
                                 Lorem Impsum
                             </h4></a>
                             <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>

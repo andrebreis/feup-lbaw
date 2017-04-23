@@ -16,7 +16,7 @@
   include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
 
   $smarty = new Smarty;
-  $smarty->template_dir = $BASE_DIR . 'templates/';
+  $smarty->template_dir = $BASE_DIR . 'templates/common/';
   $smarty->compile_dir = $BASE_DIR . 'templates_c/';
   $smarty->assign('BASE_URL', $BASE_URL);
 
