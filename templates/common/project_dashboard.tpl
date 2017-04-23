@@ -10,7 +10,17 @@
 
           <div class="row">
             <div class="project_maintitle col-md-12">
+              <div class="col-md-9">
               <h2><b>ScrumHub</b></h2>
+            </div>
+              <div class="col-md-2">
+                {if !$isCollaborator}
+                <form action="../actions/join_project.php" method="post">
+                  <input type="hidden" name="projectId" value="{$smarty.get.id}">
+                  <button type="submit">Join Project</button>
+                </form>
+                {/if}
+            </div>
             </div>
           </div>
 

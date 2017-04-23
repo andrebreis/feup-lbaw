@@ -104,3 +104,30 @@ function searchUsers($query) {
     $statement->execute([$query, $query, $query]);
     return $statement->fetchAll();
 }
+
+/** 
+ * Lists the user as a collaborator for given project
+ * @param $user given user id
+ * @param $projectId given project id
+ * @return array error info
+ */
+function joinProject($userId, $projectId) {
+    global $conn;
+    
+    $statement = $conn->prepare('INSERT INTO project_user_role (user_id, project_id, role) VALUES(?, ?, ?)');
+    $statement->execute([$userId, $projectId, 'Collaborator']);
+    return $statement->errorInfo();
+}
+
+/** Queries the database to check if user with given id collaborates to given project
+ * @param $userId int $userId to check
+ * @param $projectId int $projectId to check
+ * @return bool Returns false if the user isnt a contributor, returning true otherwise.
+ */
+function isProjectCollaborator($userId, $projectId) {
+    global $conn;
+    
+    $statement = $conn->prepare('SELECT * FROM project_user_role WHERE user_id = ? and project_id = ?');
+    $statement->execute([$userId, $projectId]);
+    return $statement->fetch();
+}
