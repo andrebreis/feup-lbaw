@@ -45,6 +45,7 @@
 
   <body id="page-top">
 
+  {if !isset($USERNAME)}
   <!-- BEGIN # MODAL LOGIN -->
   <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
        style="display: none;">
@@ -139,6 +140,7 @@
       </div>
   </div>
   <!-- END # MODAL LOGIN -->
+  {/if}
 
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -192,8 +194,13 @@
               <hr class="light">
               <p>ScrumHub is a development platform inspired by the way you work. Manage your projects, and coordinate
                   your teams to raise your productivity.</p>
+                  {if !isset($USERNAME)}
               <a data-toggle="modal" data-target="#login-modal"
                  class="btn btn-primary btn-xl page-scroll">Sign In/Up</a>
+                  {else}
+                  <a href="index.php?page=profile.php&id={$ID}"
+                     class="btn btn-primary btn-xl page-scroll">Back to Profile</a>
+                  {/if}
               <div id="arrow" class="demo">
                   <a href="#about"><span></span></a>
               </div>

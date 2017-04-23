@@ -1,6 +1,4 @@
 <?php
-  include_once('../config/init.php');
-
   session_set_cookie_params(3600, '/~lbaw1626'); //FIXME
   session_start();
 
@@ -27,6 +25,7 @@
   $smarty->assign('SUCCESS_MESSAGES', $_SESSION['success_messages']);
   $smarty->assign('FORM_VALUES', $_SESSION['form_values']);
   $smarty->assign('USERNAME', $_SESSION['username']);
+  $smarty->assign('ID', $_SESSION['userId']);
 
   unset($_SESSION['success_messages']);
   unset($_SESSION['error_messages']);
