@@ -3,7 +3,7 @@ include_once('../config/init.php');
 if(!isset($_GET['page']))
   $smarty->display('../templates/common/landing.tpl');
 else {
-  include_once('../templates/common/header.tpl');
+  $smarty->display('../templates/common/header.tpl');
   if ($_GET['page'] === 'collaborators.php') $smarty->display('../templates/collaborators.tpl');
   else if ($_GET['page'] === 'create_post.php') $smarty->display('../templates/common/create_post.tpl');
   else if ($_GET['page'] === 'create_task.php') $smarty->display('../templates/common/create_task.tpl');

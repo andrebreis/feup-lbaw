@@ -48,9 +48,8 @@
 <body>
 
 
-<?php
-if(!isset($_SESSION['username'])){
-  echo '<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+{if !isset($USERNAME)}
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
            style="display: none;">
           <div class="modal-dialog">
               <div class="modal-content">
@@ -136,9 +135,8 @@ if(!isset($_SESSION['username'])){
 
               </div>
           </div>
-      </div>';
-    }
-?>
+      </div>
+      {/if}
 
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -168,16 +166,13 @@ if(!isset($_SESSION['username'])){
               </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <?php
-                          if(isset($_SESSION['username'])){
-                            echo '<form id="logout_form" action="../actions/logout.php">
-                                    <button id="logout" class="form-button" type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
-                                  </form>';
-                                }
-                          else {
-                            echo '<a id="signinup" href="#signinup" data-toggle="modal" data-target="#login-modal">Sign In/Up</a>';
-                          }
-                            ?>
+                          {if isset($USERNAME)}
+                            <form id="logout_form" action="../actions/logout.php">
+                                    <button id="logout" class="btn btn-link btn-sm" type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
+                            </form>
+                          {else}
+                            <a id="signinup" href="#signinup" data-toggle="modal" data-target="#login-modal">Sign In/Up</a>
+                            {/if}
                     </li>
                 </ul>
             </div>

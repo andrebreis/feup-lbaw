@@ -47,6 +47,16 @@ nav#mainNav {
   color: $white;
 }
 
+#logout {
+  background-color: inherit;
+  margin: 10px 15px 0.9em 0;
+  color: $dark-white;
+}
+
+#logout:hover {
+  color: $white;
+}
+
 .search-input-group {
   padding: 0.6em;
 }
