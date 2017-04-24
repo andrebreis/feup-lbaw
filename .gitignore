@@ -111,3 +111,7 @@ modules.xml
 src/\.idea/watcherTasks\.xml
 
 src/\.idea/
+
+templates_c/
+
+config/init\.php
