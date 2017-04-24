@@ -1,4 +1,4 @@
-<?
+<?php
 include_once("../database/users.php");
 $id = (int)htmlspecialchars($_GET['id']);
 if (!idExists($id)) {

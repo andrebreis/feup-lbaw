@@ -14,11 +14,18 @@
               <h2><b>ScrumHub</b></h2>
             </div>
               <div class="col-md-2">
+                {if isset($USERNAME)}
                 {if !$isCollaborator}
                 <form action="../actions/join_project.php" method="post">
                   <input type="hidden" name="projectId" value="{$smarty.get.id}">
                   <button type="submit">Join Project</button>
                 </form>
+                {else}
+                <form action="../actions/leave_project.php" method="post">
+                  <input type="hidden" name="projectId" value="{$smarty.get.id}">
+                  <button type="submit">Leave Project</button>
+                </form>
+                {/if}
                 {/if}
             </div>
             </div>

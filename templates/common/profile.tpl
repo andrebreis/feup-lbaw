@@ -411,11 +411,31 @@ function changetextbox(){
                     </div>
                     <!--end of my projects tab-->
 
+                    <!--overview tab
+                    <div id="overview" class="tab-pane fade active">
+                        <div class="profile-content">
+                            <div class="row">
+                                <div class="stat_title col-md-4 col-md-offset-1">
+                                    <i id="graph_chart" class="fa fa-bar-chart fa-2x" aria-hidden="true"></i>
+                                    <h3>Statistics</h3>
+                                </div> -->
+
+                    <!--my projects tab
+                    <div id="my_projects" class="tab-pane fade">
+                        <div class="profile-content">
+                            <div class="row">
+                                <div class="myproj_title col-md-11 col-md-offset-1">
+                                    <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
+                                    <h3>My Projects</h3>
+                                        <button id="new_proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">Create Project</button>
+                                </div>
+                            </div>-->
+
                     <!--notifications tab-->
                     <div id="notifications" class="tab-pane fade">
                         <div class="profile-content">
                             <div class="row">
-                                <div class="settings_title col-md-12">
+                                <div class="settings_title col-md-offset-1">
                                     <i class="fa fa-exclamation-circle fa-2x" aria-hidden="true"></i>
                                     <h3>Notifications</h3>
                                 </div>

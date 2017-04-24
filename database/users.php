@@ -119,6 +119,21 @@ function joinProject($userId, $projectId) {
     return $statement->errorInfo();
 }
 
+/** 
+ * Removes the user from given project
+ * @param $user given user id
+ * @param $projectId given project id
+ * @return array error info
+ */
+function leaveProject($userId, $projectId) {
+    global $conn;
+    
+    $statement = $conn->prepare('DELETE FROM project_user_role WHERE user_id = ? AND project_id = ?');
+    $statement->execute([$userId, $projectId]);
+    // var_dump($statement->errorInfo());
+    return $statement->errorInfo();
+}
+
 /** Queries the database to check if user with given id collaborates to given project
  * @param $userId int $userId to check
  * @param $projectId int $projectId to check

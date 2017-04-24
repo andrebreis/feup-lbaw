@@ -154,9 +154,10 @@
           </div>
 
 
-        <form action="index.php?page=search" method="get">
+        <form action="index.php" method="get">
           <div class="col-md-3 col-xs-4 col-xs-offset-2">
               <div class="input-group search-input-group">
+                  <input type="hidden" name="page" value="search.php">
                   <input type="text" name="query" class="form-control" placeholder="Search...">
                   <span class="input-group-addon">
                           <button type="submit">
