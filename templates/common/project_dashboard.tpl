@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row project">
     <div class="col-md-3 hidden-xs hidden-sm">
-      
+
       {include file='project_sidebar.tpl'}
 
       <div class="col-md-9">
@@ -11,7 +11,7 @@
           <div class="row">
             <div class="project_maintitle col-md-12">
               <div class="col-md-9">
-              <h2><b>ScrumHub</b></h2>
+              <h2><b>{$name}</b></h2>
             </div>
               <div class="col-md-2">
                 {if isset($USERNAME)}
@@ -33,7 +33,7 @@
 
           <div class="row">
             <div class="project_description col-md-12">
-              <p>Maecenas ipsum velit, consectetuer eu, lobortis ut, dictum at, dui. In rutrum. Sed ac dolor sit amet purus malesuada congue. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Suspendisse sagittis ultrices augue. Mauris metus. Nunc dapibus tortor vel mi dapibus sollicitudin. Etiam posuere lacus quis dolor. Praesent id justo in neque elementum ultrices</p>
+              <p>{$description}</p>
             </div>
           </div>
 
@@ -41,7 +41,7 @@
             <div class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
               aria-valuemin="0" aria-valuemax="100" style="width:40%">
-               <span>40% (Under Development)</span>
+               <span>{$completion}%</span>
             </div>
           </div>
         </div>

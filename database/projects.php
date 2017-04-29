@@ -39,3 +39,16 @@ function searchProjects($query) {
     $statement->execute([$query, $query]);
     return $statement->fetchAll();
 }
+
+/**
+ *
+ * @param
+ * @return
+ */
+function getProjectField($projectId, $field) {
+    global $conn;
+
+    $statement = $conn->prepare('SELECT * FROM project WHERE id = ?');
+    $statement->execute([$projectId]);
+    return $statement->fetch()[$field];
+}
