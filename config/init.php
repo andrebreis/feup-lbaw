@@ -3,7 +3,7 @@ session_set_cookie_params(3600, '/'); //FIXME
 session_start();
 error_reporting(E_ERROR | E_WARNING); // E_NOTICE by default
 
-$BASE_DIR = '/Users/Francisca/Desktop/MIEIC/3Ano/2semestre/LBAW/ScrumbHub'; //FIXME
+$BASE_DIR = '/Users/Francisca/Desktop/MIEIC/3Ano/2semestre/LBAW/ScrumbHub/'; //FIXME
 $BASE_URL = '/~lbaw1626/'; //FIXME
 
 $conn = new PDO('pgsql:host=dbm.fe.up.pt;dbname=lbaw1626', 'lbaw1626', 'mi98ol58'); //FIXME
