@@ -14,7 +14,7 @@
 							<h3>Milestones</h3>
 						</div>
 						<div class="col-md-3">
-							<button id="create_milestone" type="button" class="btn btn-default">Create Milestone</button>
+							<button id="proj_btn" type="button" class="btn btn-default">Create Milestone</button>
 						</div>
 					</div>
 
@@ -22,7 +22,7 @@
 						<table class="table table-filter">
 							<tbody>
 								<tr>
-									<td onclick="window.location = 'milestone_details.php';">
+									<td onclick="window.location = 'index.php?page=milestone_details.php';">
 										<div class="media">
 											<div class="media-body">
 												<span class="media-meta pull-right"><small>Deadline: </small><b>Febrero 13, 2016</b> </span>
@@ -42,7 +42,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td onclick="window.location = 'milestone_details.php';">
+								<td onclick="window.location = 'index.php?page=milestone_details.php';">
 									<div class="media">
 										<div class="media-body">
 											<span class="media-meta pull-right"><small>Deadline: </small><b>Febrero 13, 2016</b> </span>
@@ -82,7 +82,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td onclick="window.location = 'milestone_details.php';">
+						<td onclick="window.location = 'index.php?page=milestone_details.php';">
 							<div class="media">
 								<div class="media-body">
 									<span class="media-meta pull-right"><small>Deadline: </small><b>Febrero 13, 2016</b> </span>
@@ -102,7 +102,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td onclick="window.location = 'milestone_details.php';">
+					<td onclick="window.location = 'index.php?page=milestone_details.php';">
 						<div class="media">
 							<div class="media-body">
 								<span class="media-meta pull-right"><small>Deadline: </small><b>Febrero 13, 2016</b> </span>
@@ -122,7 +122,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td onclick="window.location = 'milestone_details.php';">
+				<td onclick="window.location = 'index.php?page=milestone_details.php';">
 					<div class="media">
 						<div class="media-body">
 							<span class="media-meta pull-right"><small>Deadline: </small><b>Febrero 13, 2016</b> </span>

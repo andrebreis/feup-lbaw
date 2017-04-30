@@ -9,12 +9,13 @@
 				<div class="project-content">
 
 					<div class="row">
-						<div class="milestones_title col-md-8 col-md-offset-1">
-							<i id="graph_chart" class="fa fa-calendar fa-2x" aria-hidden="true"></i>
-							<h3>Milestone Name</h3>
+						<div class="tasks_title col-md-8 col-md-offset-1">
+							<i id="graph_chart" class="fa fa-tasks fa-2x" aria-hidden="true"></i>
+							<h3>Task Name</h3>
 							<span class="deadline pull-right"><small>Deadline: </small><b>Febrero 13, 2016</b> </span>
 						</div>
 					</div>
+
 					<div class="row">
 						<div class="col-md-12">
 							<div class="progress">
