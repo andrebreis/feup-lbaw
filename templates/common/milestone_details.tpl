@@ -31,7 +31,8 @@
                     <div class="row">
                         <div class="col-md-offset-1">
                             <button id="icon_btn" class="btn btn-arrow btn-sm" type="submit"><i class="fa fa-arrow-left"
-                                                                                                aria-hidden="true"></i>
+                                                                                                aria-hidden="true"
+                                                                                                onclick="window.location = 'index.php?page=milestones.php&id={$ID}'"></i>
                             </button>
                         </div>
                     </div>
