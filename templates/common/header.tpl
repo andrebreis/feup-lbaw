@@ -17,12 +17,15 @@
     <link href="../css/header.min.css" rel="stylesheet">
     <link href="../css/milestone_details.min.css" rel="stylesheet">
 
-
     <link href="../lib/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.css" rel="stylesheet">
+    <link href="../lib/bootstrap-datepicker-1/css/bootstrap-datepicker.css" rel="stylesheet">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../lib/bootstrap-sass-3.3.7/assets/javascripts/bootstrap.min.js"></script>
+
+    <script src="../lib//bootstrap-datepicker-1/js/bootstrap-datepicker.js"></script>
+
 
     <link href="../css/login_modal.min.css" rel="stylesheet">
     <script src="../javascript/login_modal.js"></script>
@@ -30,7 +33,6 @@
     <!-- bootstrap tags plugin -->
     <script src="../lib/bootstrap-tagsinput/src/bootstrap-tagsinput.js"></script>
     <link rel="stylesheet" href="../lib/bootstrap-tagsinput/src/bootstrap-tagsinput.css">
-
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

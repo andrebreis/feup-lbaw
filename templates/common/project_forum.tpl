@@ -18,7 +18,7 @@
         </div>
         <div class="row">
             <div class="modal-footer col-md-4 col-md-offset-4">
-                <button type="button" id="new_post_btn" class="btn btn-primary create_in_modal">Create Post</button>
+                <button type="button" id="proj_btn" class="btn btn-primary create_in_modal">Create Post</button>
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="col-md-2 col-xs-4">
-                <button id="new_post_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createPostModal">Create Post</button>
+                <button id="proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createPostModal">Create Post</button>
             </div>
         </div>
 
