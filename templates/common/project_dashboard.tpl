@@ -19,7 +19,7 @@
                                 <form action="../actions/join_project.php" method="post">
                                     <input type="hidden" name="projectId" value="{$smarty.get.id}">
                                     <div class="col-md-3">
-                                        <button id="proj_btn" type="button" class="btn btn-default">Join
+                                        <button id="proj_btn" type="submit" class="btn btn-default">Join
                                             Project
                                         </button>
                                     </div>
@@ -28,7 +28,7 @@
                                 <form action="../actions/leave_project.php" method="post">
                                     <input type="hidden" name="projectId" value="{$smarty.get.id}">
                                     <div class="col-md-3">
-                                        <button id="proj_btn" type="button" class="btn btn-default">Leave
+                                        <button id="proj_btn" type="submit" class="btn btn-default">Leave
                                             Project
                                         </button>
                                     </div>

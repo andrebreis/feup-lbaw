@@ -1,6 +1,6 @@
 <script>
 function changetextbox(){
-    if (document.getElementById("select_State").value == 'Other') {
+    if (document.getElementById("select-state").value == 'Other') {
         document.getElementById("customState").disabled = '';
     } else {
         document.getElementById("customState").disabled = 'true';
