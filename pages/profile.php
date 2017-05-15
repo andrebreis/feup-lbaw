@@ -21,13 +21,14 @@ if (!isset($profile_picture))
     $profile_picture = '../images/assets/default.png';
 
 $projects = getUserProjects($_GET['id']);
+$messages = getUserMessages($_GET['id']);
 
-$smarty->assign('user_id', $id);
 $smarty->assign('username', $username);
 $smarty->assign('email', $email);
 $smarty->assign('name', $name);
 $smarty->assign('job', $job);
 $smarty->assign('profile_picture', $profile_picture);
 $smarty->assign('projects', $projects);
+$smarty->assign('messages', $messages);
 
 $smarty->display('../templates/common/profile.tpl');

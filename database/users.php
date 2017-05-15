@@ -146,3 +146,14 @@ function isProjectCollaborator($userId, $projectId) {
     $statement->execute([$userId, $projectId]);
     return $statement->fetch();
 }
+
+function getUserMessages($userId) {   
+  global $conn;
+
+  $statement = $conn->prepare('SELECT thread.subject, authenticated_user.id, authenticated_user.username, message.text, message.seen, report, invite 
+                              FROM message INNER JOIN thread ON thread.id = message.thread_id 
+                              INNER JOIN authenticated_user ON message.sender_id = authenticated_user.id LEFT JOIN report ON message.id = report.message_id LEFT JOIN invite ON message.id = invite.message_id 
+                              WHERE ? IN (SELECT user_id FROM user_thread WHERE thread_id = thread.id);');
+  $statement->execute([$userId]);
+  return $statement->fetchAll();
+}

@@ -454,57 +454,29 @@ $(document).on("keypress", "form", function(event) {
                                     <div id="messages" class="tab-pane fade in active">
                                         <table class="table table-myproj">
                                             <tbody>
+                                              {foreach from=$messages  item=message}
+                                              {if !isset($message.invite)}
+                                              {if !isset($message.report)} 
                                                 <tr data-status="message">
                                                     <td>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="title">Message 1</h4>
+                                                                <h4 class="title">{$message.subject}</h4>
                                                                 <span class="media-meta pull-right">20 Feb 2017</span>
-                                                                <p class="summary">Hey Harold! When can we meet to...</p>
+                                                                <p class="summary">{$message.text|truncate:20}</p>
                                                                 <div class="info">
                                                                     <div class="sender">
                                                                         <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
+                                                                        <p>{$message.username}</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr data-status="message">
-                                                    <td>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="title">Message 2</h4>
-                                                                <span class="media-meta pull-right">15 Feb 2017</span>
-                                                                <p class="summary">Hey Harold! When can we meet to...</p>
-                                                                <div class="info">
-                                                                    <div class="sender">
-                                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr data-status="message">
-                                                    <td>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="title">Message 3</h4>
-                                                                <span class="media-meta pull-right">29 Jan 2017</span>
-                                                                <p class="summary">Hey Harold! When can we meet to...</p>
-                                                                <div class="info">
-                                                                    <div class="sender">
-                                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                {/if}
+                                                {/if}
+                                                {/foreach}
                                             </tbody>
                                         </table>
                                     </div>
@@ -514,74 +486,27 @@ $(document).on("keypress", "form", function(event) {
                                     <div id="invites" class="tab-pane fade">
                                         <table class="table table-myproj">
                                             <tbody>
+                                              {foreach from=$messages  item=message}
+                                              {if isset($message.invite)}
                                                 <tr data-status="message">
                                                     <td>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="title">Invite 1</h4>
+                                                                <h4 class="title">{$message.subject}</h4>
                                                                 <span class="media-meta pull-right">20 Feb 2017</span>
-                                                                <p class="summary">Hey there! Would you like to join...</p>
+                                                                <p class="summary">{$message.text|truncate:20}</p>
                                                                 <div class="info">
                                                                     <div class="sender">
                                                                         <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
+                                                                        <p>{$message.username}</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr data-status="message">
-                                                    <td>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="title">Invite 2</h4>
-                                                                <span class="media-meta pull-right">15 Feb 2017</span>
-                                                                <p class="summary">Hey there! Would you like to join...</p>
-                                                                <div class="info">
-                                                                    <div class="sender">
-                                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr data-status="message">
-                                                    <td>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="title">Invite 3</h4>
-                                                                <span class="media-meta pull-right">29 Jan 2017</span>
-                                                                <p class="summary">Hey there! Would you like to join...</p>
-                                                                <div class="info">
-                                                                    <div class="sender">
-                                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr data-status="message">
-                                                    <td>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="title">Invite 4</h4>
-                                                                <span class="media-meta pull-right">11 Jan 2017</span>
-                                                                <p class="summary">Hey there! Would you like to join...</p>
-                                                                <div class="info">
-                                                                    <div class="sender">
-                                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                {/if}
+                                                {/foreach}
                                             </tbody>
                                         </table>
                                     </div>
@@ -591,57 +516,27 @@ $(document).on("keypress", "form", function(event) {
                                     <div id="reports" class="tab-pane fade">
                                         <table class="table table-myproj">
                                             <tbody>
+                                              {foreach from=$messages  item=message}
+                                              {if isset($message.report)}
                                                 <tr data-status="message">
                                                     <td>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="title">Report 1</h4>
+                                                                <h4 class="title">{$message.subject}</h4>
                                                                 <span class="media-meta pull-right">20 Feb 2017</span>
-                                                                <p class="summary">I think this user is...</p>
+                                                                <p class="summary">{$message.text|truncate:20}</p>
                                                                 <div class="info">
                                                                     <div class="sender">
                                                                         <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
+                                                                        <p>{$message.username}</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr data-status="message">
-                                                    <td>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="title">Report 2</h4>
-                                                                <span class="media-meta pull-right">15 Feb 2017</span>
-                                                                <p class="summary">I think this user is ...</p>
-                                                                <div class="info">
-                                                                    <div class="sender">
-                                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr data-status="message">
-                                                    <td>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="title">Report 3</h4>
-                                                                <span class="media-meta pull-right">29 Jan 2017</span>
-                                                                <p class="summary">I think this user is ...</p>
-                                                                <div class="info">
-                                                                    <div class="sender">
-                                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>sender_username</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                {/if}
+                                                {/foreach}
                                             </tbody>
                                         </table>
                                     </div>
