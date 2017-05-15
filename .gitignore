@@ -115,3 +115,5 @@ src/\.idea/
 templates_c/
 
 config/init\.php
+
+config/initlocal\.php
