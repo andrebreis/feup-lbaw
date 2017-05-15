@@ -2,6 +2,48 @@
     $('.datepicker').datepicker();
 </script>
 
+<div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="createTaskModalContent">
+            <div class="modal-header">
+                <h3 class="modal-title" id="createTaskModalTitle">New Task</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="taskTitle">Task Title</label>
+                        <input type="title" class="form-control" id="taskTitleInput"
+                               placeholder="Choose a title for your task">
+                    </div>
+                    <div class="form-group">
+                        <label for="taskContent">Task Description</label>
+                        <input type="description" class="form-control" id="taskContentInput" placeholder="Describe your task here">
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDeadline">Task Deadline</label>
+                        <div class="input-group date" data-provide="datepicker">
+                            <input type="text" class="form-control">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="modal-footer col-md-4 col-md-offset-4">
+                    <button type="button" id="proj_btn" class="btn btn-default create_in_modal">Create Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row project">
+        <div class="col-md-3 hidden-xs hidden-sm">
+
             {include_php file='../../pages/project_sidebar.php'}
 
             <div class="col-md-9">
