@@ -3,7 +3,9 @@ include_once("../database/users.php");
 
 $id = (int)htmlspecialchars($_GET['id']);
 
-if (!idExists($id)) {
+if(!isset($_GET['id']) && isset($_SESSION['userId']))
+  $id = $_SESSION['userId'];
+else if (!idExists($id)) {
     header('HTTP/1.0 404 Not Found');
     header('Location: index.php?page=404.html');
     die();
@@ -20,6 +22,7 @@ if (!isset($profile_picture))
 
 $projects = getUserProjects($_GET['id']);
 
+$smarty->assign('user_id', $id);
 $smarty->assign('username', $username);
 $smarty->assign('email', $email);
 $smarty->assign('name', $name);
