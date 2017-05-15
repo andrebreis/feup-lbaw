@@ -2,6 +2,7 @@
   margin: 0.5em 0 2em 0;
   background-color: #FFFFFF;
   padding: 1em;
+  border-radius: 1%;
 }
 
 .forum_header {
@@ -46,6 +47,7 @@
     color: #16a085;
   }
 
+
 }
 
 .table {
@@ -76,7 +78,7 @@ table {
 #createPostModalContent{
   margin-top: 7em;
   padding:1em;
-  border-radius: 2%; 
+  border-radius: 2%;
 }
 
 
@@ -136,6 +138,6 @@ table {
 }
 
 #like_btn.active.focus, #like_btn.active:focus, #like_btn.focus, #like_btn:active.focus, #like_btn:active:focus, #like_btn:focus, #like_btn:hover{
-  background-color: #16a085; 
+  background-color: #16a085;
   color: white;
 }
