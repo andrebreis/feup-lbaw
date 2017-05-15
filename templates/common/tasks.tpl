@@ -24,7 +24,7 @@
                         <table class="table table-filter">
                             <tbody>
                             <tr>
-                                <td onclick="window.location = 'index.php?page=task_details.php';">
+                                <td onclick="window.location = 'index.php?page=task_details.php&id={$smarty.get.id}';">
                                     <div class="media">
                                         <div class="media-body">
                                             <span class="media-meta pull-right"><small>Deadline: </small><b>Febrero 13, 2016</b> </span>

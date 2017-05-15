@@ -5,8 +5,6 @@ if(!isset($_GET['page']))
 else {
   $smarty->display('../templates/common/header.tpl');
   if ($_GET['page'] === 'collaborators.php') $smarty->display('../templates/common/collaborators.tpl');
-  else if ($_GET['page'] === 'create_post.php') $smarty->display('../templates/common/create_post.tpl');
-  else if ($_GET['page'] === 'create_task.php') $smarty->display('../templates/common/create_task.tpl');
   else if ($_GET['page'] === 'forum_post.php') $smarty->display('../templates/common/forum_post.tpl');
   else if ($_GET['page'] === 'milestones.php') $smarty->display('../templates/common/milestones.tpl');
   else if ($_GET['page'] === 'milestone_details.php') $smarty->display('../templates/common/milestone_details.tpl');
