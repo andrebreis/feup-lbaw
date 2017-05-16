@@ -1,4 +1,5 @@
 
+			{include file='project_sidebar.tpl'}
 
 			{include_php file='../../pages/project_sidebar.php'}
 
