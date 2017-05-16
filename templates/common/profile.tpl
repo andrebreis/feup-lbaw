@@ -681,7 +681,6 @@ $(document).on('change', '.file', function(){
                                             <label for="confirmpass">Confirm Password</label>
                                             <input type="confirmpass" name="confirmpass" class="form-control" id="confirmPassInput" placeholder="Confirm your new password">
                                         </div>
-                                        <button type="button" id="new_proj_btn" class="btn btn-primary">Change Password</button>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -697,7 +696,7 @@ $(document).on('change', '.file', function(){
                                         <input type="newLastName" name="newLastName" class="form-control" id="newUsernameInput" placeholder="Last name">
                                     </form>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check displayEmail">
                                   <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox" value="">
                                     Display E-mail
@@ -719,6 +718,7 @@ $(document).on('change', '.file', function(){
                                 </span>
                             </div>
                         </div>
+                        <button type="button" id="new_proj_btn" class="btn btn-primary col-md-2 col-md-offset-5">Save Changes</button>
                     </div>
 
                 </div>
