@@ -537,6 +537,7 @@ $(document).on('change', '.file', function(){
                                                                                 <p>sender_username</p>
                                                                             </div>
                                                                         </div>
+                                                                        <button type="button" id="new_proj_btn" class="btn btn-primary col-md-2">Accept Invite</button>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -554,6 +555,7 @@ $(document).on('change', '.file', function(){
                                                                                 <p>sender_username</p>
                                                                             </div>
                                                                         </div>
+                                                                        <button type="button" id="new_proj_btn" class="btn btn-primary col-md-2">Accept Invite</button>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -571,6 +573,7 @@ $(document).on('change', '.file', function(){
                                                                                 <p>sender_username</p>
                                                                             </div>
                                                                         </div>
+                                                                        <button type="button" id="new_proj_btn" class="btn btn-primary col-md-2">Accept Invite</button>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -588,6 +591,7 @@ $(document).on('change', '.file', function(){
                                                                                 <p>sender_username</p>
                                                                             </div>
                                                                         </div>
+                                                                        <button type="button" id="new_proj_btn" class="btn btn-primary col-md-2">Accept Invite</button>
                                                                     </div>
                                                                 </div>
                                                             </td>
