@@ -2,7 +2,7 @@
     <div class="row project">
         <div class="col-md-3 hidden-xs hidden-sm">
 
-            {include file='project_sidebar.tpl'}
+            {include_php file='../../pages/project_sidebar.php'}
 
             <div class="col-md-9">
                 <!--overview tab-->

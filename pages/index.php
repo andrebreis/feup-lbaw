@@ -13,7 +13,7 @@ else {
   else if ($_GET['page'] === 'project_forum.php') $smarty->display('../templates/common/project_forum.tpl');
   else if ($_GET['page'] === 'search.php') include_once('search.php');
   else if ($_GET['page'] === 'settings.php') $smarty->display('../templates/common/settings.tpl');
-  else if ($_GET['page'] === 'tasks.php') $smarty->display('../templates/common/tasks.tpl');
+  else if ($_GET['page'] === 'tasks.php') include_once('tasks.php');
   else if ($_GET['page'] === 'task_details.php') $smarty->display('../templates/common/task_details.tpl');
   else if ($_GET['page'] === '403.html') $smarty->display('../templates/common/403.tpl');
   else include_once('../templates/common/404.html');

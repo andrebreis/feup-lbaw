@@ -2,7 +2,6 @@
   margin: 0.5em 0 2em 0;
   background-color: #FFFFFF;
   padding: 1em;
-  border-radius: 1%;
 }
 
 .forum_header {
@@ -47,7 +46,6 @@
     color: #16a085;
   }
 
-
 }
 
 .table {
@@ -78,7 +76,7 @@ table {
 #createPostModalContent{
   margin-top: 7em;
   padding:1em;
-  border-radius: 2%;
+  border-radius: 2%; 
 }
 
 
@@ -99,14 +97,16 @@ table {
     color: #16a085;
   }
 }
-.original_poster > * , .likes > *{
+.original_poster > * , .likes > *, .comment_footer > *{
     display: inline-block;
 }
 
 .post_header{
   overflow:auto;
   background-color: #eee;
+  border-radius: 1%;
   margin: 1em 2em 0 2em;
+  padding: .5em;
 
 }
 
@@ -121,14 +121,15 @@ table {
 }
 
 #user_photo{
-  width: 1.5em;
-  height: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
 }
 
 
 .likes_post{
   margin-left: 1em;
 }
+
 
 #like_btn{
   border-color: #16a085;
@@ -138,6 +139,27 @@ table {
 }
 
 #like_btn.active.focus, #like_btn.active:focus, #like_btn.focus, #like_btn:active.focus, #like_btn:active:focus, #like_btn:focus, #like_btn:hover{
-  background-color: #16a085;
+  background-color: #16a085; 
   color: white;
+}
+
+.comment_date{
+  margin-left: .5em;
+}
+
+.comments > *{
+  margin: 1em 1em 1em 4em;
+}
+
+.comments_box{
+  margin-top: 2em;
+}
+
+#commentInput{
+  margin-top: .5em;
+}
+
+.media{
+  padding: .2em;
+  border-top: 1px solid #B2B2B2;
 }

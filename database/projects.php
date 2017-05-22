@@ -52,3 +52,44 @@ function getProjectField($projectId, $field) {
     $statement->execute([$projectId]);
     return $statement->fetch()[$field];
 }
+
+/**
+ *
+ * @param
+ * @return
+ */
+function getProjectCollaborators($projectId) {
+    global $conn;
+
+    $statement = $conn->prepare('SELECT count(*) FROM project_user_role WHERE project_id = ?');
+    $statement->execute([$projectId]);
+    return $statement->fetch()['count'];
+}
+
+/**
+ *
+ * @param
+ * @return
+ */
+function getProjectState($projectId) {
+    global $conn;
+
+    $statement = $conn->prepare('SELECT state.name FROM project LEFT JOIN state ON project.state_id = state.id WHERE project.id = ?');
+    $statement->execute([$projectId]);
+    return $statement->fetch()['name'];
+}
+
+/**
+ *
+ * @param
+ * @return
+ */
+function getProjectTasks($projectId) {
+    global $conn;
+
+    $statement = $conn->prepare('SELECT title, visible, state.name, end_date
+                                 FROM task LEFT JOIN state ON task.state_id = state.id LEFT JOIN milestone ON task.milestone_id = milestone.id
+                                 WHERE task.project_id = ?');
+    $statement->execute([$projectId]);
+    return $statement->fetchAll();
+}

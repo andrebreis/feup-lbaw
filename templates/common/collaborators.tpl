@@ -14,7 +14,7 @@
                             <h3>Collaborators</h3>
                         </div>
                         <div class="col-md-3">
-                            <button id="create_btn" type="button" class="btn btn-default">Add Collaborator</button>
+                            <button id="proj_btn" type="button" class="btn btn-default">Add Collaborator</button>
                         </div>
                     </div>
 

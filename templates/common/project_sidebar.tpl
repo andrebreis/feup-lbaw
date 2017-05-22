@@ -17,28 +17,47 @@ $(document).ready(function () {
 });
 </script>
 
+{php}
+include_once("../database/users.php");
+include_once("../database/projects.php");
+
+$id = (int)htmlspecialchars($_GET['id']);
+
+$name = getProjectField($id, 'name');
+$completion = getProjectField($id, 'completion');
+$visible = getProjectField($id, 'visible');
+$state_name = getProjectState($id);
+$num_collaborators = getProjectCollaborators($id);
+
+$smarty->assign('name', $name);
+$smarty->assign('completion', $completion);
+$smarty->assign('visible', $visible);
+$smarty->assign('state_name', $state_name);
+$smarty->assign('num_collaborators', $num_collaborators);
+{/php}
+
 <div class="project-sidebar">
   <!-- SIDEBAR PROJECT TITLE -->
   <div class="project-title">
     <div class="project-title-name">
-      ScrumHub
+      {$name}
     </div>
+    {if isset($state_name)}
     <div class="project-title-state">
-      Under Development
+      {$state_name}
     </div>
+    {/if}
   </div>
   <div class="info">
-    <div class="creator">
-      <i class="fa fa-address-card" aria-hidden="true"></i>
-      <p>creator_username</p>
-    </div>
+    {if isset($completion)}
     <div class="percentage">
       <i class="fa fa-hourglass-half" aria-hidden="true"></i>
-      <p>40% completed</p>
+      <p>{$completion}% Completed</p>
     </div>
+    {/if}
     <div class="sidebar_collaborators">
       <i class="fa fa-users" aria-hidden="true"></i>
-      <p>4 Collaborators</p>
+      <p>{$num_collaborators} Collaborators</p>
     </div>
   </div>
   <!-- END SIDEBAR PROJECT TITLE -->
@@ -81,24 +100,24 @@ $(document).ready(function () {
     <!-- SIDEBAR PROJECT TITLE -->
     <div class="project-title">
       <div class="project-title-name">
-        ScrumHub
+        {$name}
       </div>
+      {if isset($state_name)}
       <div class="project-title-state">
-        Under Development
+        {$state_name}
       </div>
+      {/if}
     </div>
     <div class="info">
-      <div class="creator">
-        <i class="fa fa-address-card" aria-hidden="true"></i>
-        <p>creator_username</p>
-      </div>
+      {if isset($completion)}
       <div class="percentage">
         <i class="fa fa-hourglass-half" aria-hidden="true"></i>
-        <p>50% completed</p>
+        <p>{$completion}% completed</p>
       </div>
+      {/if}
       <div class="sidebar_collaborators">
         <i class="fa fa-users" aria-hidden="true"></i>
-        <p>4 Collaborators</p>
+        <p>{$num_collaborators} Collaborators</p>
       </div>
     </div>
     <!-- END SIDEBAR PROJECT TITLE -->

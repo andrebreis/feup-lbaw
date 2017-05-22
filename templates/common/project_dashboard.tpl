@@ -44,14 +44,16 @@
                         </div>
                     </div>
 
+                    {if isset($completion)}
                     <div class="row">
                         <div class="progress">
                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
                                  aria-valuemin="0" aria-valuemax="100" style="width:{$completion}%">
-                                <span>{$completion}%</span>
+                                <span>{$completion}% {$state_name}</span>
                             </div>
                         </div>
                     </div>
+                    {/if}
 
                     <div class="row">
                         <div class="stat_title col-md-4 col-md-offset-1">
