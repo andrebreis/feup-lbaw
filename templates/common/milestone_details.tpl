@@ -103,10 +103,7 @@
 
 <div class="row">
     <div class="col-md-offset-1">
-        <button id="icon_btn" class="btn btn-arrow btn-sm" type="submit"><i class="fa fa-arrow-left"
-            aria-hidden="true"
-            onclick="window.location = 'index.php?page=milestones.php&id={$ID}'"></i>
-        </button>
+        <button id="icon_btn" onclick="window.history.go(-1);" class="btn btn-arrow btn-sm fa fa-arrow-left" type="submit"></button>
     </div>
 </div>
 </div>
