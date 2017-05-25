@@ -15,5 +15,3 @@ $smarty->assign('completion', $completion);
 $smarty->assign('visible', $visible);
 $smarty->assign('state_name', $state_name);
 $smarty->assign('num_collaborators', $num_collaborators);
-
-$smarty->display('../templates/common/project_sidebar.tpl');
