@@ -5,7 +5,7 @@ if(!isset($_GET['page']))
 else {
   $smarty->display('../templates/common/header.tpl');
   if ($_GET['page'] === 'collaborators.php') include_once ('collaborators.php');
-  else if ($_GET['page'] === 'forum_post.php') $smarty->display('../templates/common/forum_post.tpl');
+  else if ($_GET['page'] === 'forum_post.php') include_once ('forum_post.php');
   else if ($_GET['page'] === 'milestones.php') include_once('milestones.php');
   else if ($_GET['page'] === 'milestone_details.php') include_once('milestone_details.php');
   else if ($_GET['page'] === 'profile.php') include_once('profile.php');

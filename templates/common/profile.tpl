@@ -128,6 +128,7 @@
                     {/if}
                 </div>
                 <!-- END SIDEBAR USER TITLE -->
+
                 <!-- SIDEBAR MENU -->
                 <ul class="menu-side nav nav-pills nav-stacked">
                     <li class="active"><a data-toggle="tab" href="#overview"><b>Overview</b></a></li>
@@ -184,14 +185,6 @@
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <p>{$email}</p>
                             </div>
-                            <!-- <div class="location">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <p>Lansing, United States</p>
-                            </div> -->
-                            <!-- <div class="job">
-                                <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                <p>Web Developer</p>
-                            </div> -->
                             {if isset($job)}
                                 <div class="job">
                                     <i class="fa fa-briefcase" aria-hidden="true"></i>
@@ -276,111 +269,6 @@
                                         </div>
                                     </div>
                                 </td>
-                            </tr>
-                            <tr data-status="project">
-                                <td onclick="window.location = 'project_dashboard.php';">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <h4 class="title">ScrumHub</h4>
-                                            <span class="media-meta pull-right">Updated on 20 Mar 2016</span>
-                                            <p class="summary">A project for the LBAW course</p>
-                                            <div class="info">
-                                                <div class="state">
-                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                                    <p>Under Development</p>
-                                                </div>
-                                                <div class="collaborators">
-                                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                                    <p>4 Collaborators</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr data-status="project">
-                                <td onclick="window.location = 'project_dashboard.php';">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <h4 class="title">ScrumHub</h4>
-                                            <span class="media-meta pull-right">Updated on 20 Mar 2016</span>
-                                            <p class="summary">A project for the LBAW course</p>
-                                            <div class="info">
-                                                <div class="state">
-                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                                    <p>Under Development</p>
-                                                </div>
-                                                <div class="collaborators">
-                                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                                    <p>4 Collaborators</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr data-status="project">
-                                <td onclick="window.location = 'project_dashboard.php';">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <h4 class="title">ScrumHub</h4>
-                                            <span class="media-meta pull-right">Updated on 20 Mar 2016</span>
-                                            <p class="summary">A project for the LBAW course</p>
-                                            <div class="info">
-                                                <div class="state">
-                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                                    <p>Under Development</p>
-                                                </div>
-                                                <div class="collaborators">
-                                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                                    <p>4 Collaborators</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr data-status="project">
-                                <td onclick="window.location = 'project_dashboard.php';">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <h4 class="title">Christmas Party</h4>
-                                            <span class="media-meta pull-right">Updated on 22 Dec 2016</span>
-                                            <p class="summary">preparing decorations, food and drinks for a Christmas party</p>
-                                            <div class="info">
-                                                <div class="state">
-                                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                                    <p>Finished</p>
-                                                </div>
-                                                <div class="collaborators">
-                                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                                    <p>3 Collaborators</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr data-status="project">
-                                <td onclick="window.location = 'project_dashboard.php';">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <h4 class="title">RaspberryPi Workshop</h4>
-                                            <span class="media-meta pull-right">Updated on 15 Feb 2017</span>
-                                            <p class="summary">RaspberryPi Workshop for IoT Week</p>
-                                            <div class="info">
-                                                <div class="state">
-                                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                                    <p>Finished</p>
-                                                </div>
-                                                <div class="collaborators">
-                                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                                    <p>11 Collaborators</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
                             </tr> -->
                             </tbody>
                         </table>
@@ -435,26 +323,6 @@
                     </div>
                 </div>
                 <!--end of my projects tab-->
-
-                <!--overview tab
-                <div id="overview" class="tab-pane fade active">
-                    <div class="profile-content">
-                        <div class="row">
-                            <div class="stat_title col-md-4 col-md-offset-1">
-                                <i id="graph_chart" class="fa fa-bar-chart fa-2x" aria-hidden="true"></i>
-                                <h3>Statistics</h3>
-                            </div> -->
-
-                <!--my projects tab
-                <div id="my_projects" class="tab-pane fade">
-                    <div class="profile-content">
-                        <div class="row">
-                            <div class="myproj_title col-md-11 col-md-offset-1">
-                                <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
-                                <h3>My Projects</h3>
-                                    <button id="new_proj_btn" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">Create Project</button>
-                            </div>
-                        </div>-->
 
                 <!--notifications tab-->
                 <div id="notifications" class="tab-pane fade">
@@ -564,85 +432,87 @@
                                 </div>
                             </div>
                         </div>
-                        <!--end of account settings tab-->
+                    </div>
+                </div>
+                <!--end of account settings tab-->
 
-                        <!--account settings tab-->
-                        <div id="account_settings" class="tab-pane fade">
-                            <div class="profile-content">
-                                <div class="row">
-                                    <div class="settings_title col-md-11 col-md-offset-1">
-                                        <i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
-                                        <h3>Account Settings</h3>
-                                    </div>
+                <!--account settings tab-->
+                <div id="account_settings" class="tab-pane fade">
+                    <div class="profile-content">
+                        <div class="row">
+                            <div class="settings_title col-md-11 col-md-offset-1">
+                                <i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+                                <h3>Account Settings</h3>
+                            </div>
+                        </div>
+                        <div class="row changePasswordGroup">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="newpass">Change Password</label>
+                                    <input type="newpass" name="newpass" class="form-control" id="newPassInput"
+                                           placeholder="Type a new password">
                                 </div>
-                                <div class="row changePasswordGroup">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="newpass">Change Password</label>
-                                            <input type="newpass" name="newpass" class="form-control" id="newPassInput"
-                                                   placeholder="Type a new password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="confirmpass">Confirm Password</label>
-                                            <input type="confirmpass" name="confirmpass" class="form-control"
-                                                   id="confirmPassInput" placeholder="Confirm your new password">
-                                        </div>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="confirmpass">Confirm Password</label>
+                                    <input type="confirmpass" name="confirmpass" class="form-control"
+                                           id="confirmPassInput" placeholder="Confirm your new password">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="newUsername">Change Username</label>
-                                            <input type="newUsername" name="newUsername" class="form-control"
-                                                   id="newUsernameInput" placeholder="Type a new username">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="newUsername">Change Display Name</label>
-                                            <form class="form-inline">
-                                                <input type="newFirstName" name="newFirstName" class="form-control"
-                                                       id="newUsernameInput" placeholder="First name">
-                                                <input type="newLastName" name="newLastName" class="form-control"
-                                                       id="newUsernameInput" placeholder="Last name">
-                                            </form>
-                                        </div>
-                                        <div class="form-check displayEmail">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                Display E-mail
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="newJob">Change Job</label>
-                                            <input type="newJob" name="newJob" class="form-control"
-                                                   id="newUsernameInput" placeholder="Type a new job">
-                                        </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="newUsername">Change Username</label>
+                                    <input type="newUsername" name="newUsername" class="form-control"
+                                           id="newUsernameInput" placeholder="Type a new username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newUsername">Change Display Name</label>
+                                    <form class="form-inline">
+                                        <input type="newFirstName" name="newFirstName" class="form-control"
+                                               id="newUsernameInput" placeholder="First name">
+                                        <input type="newLastName" name="newLastName" class="form-control"
+                                               id="newUsernameInput" placeholder="Last name">
+                                    </form>
+                                </div>
+                                <div class="form-check displayEmail">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Display E-mail
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newJob">Change Job</label>
+                                    <input type="newJob" name="newJob" class="form-control"
+                                           id="newUsernameInput" placeholder="Type a new job">
+                                </div>
 
-                                        <div class="form-group">
-                                            <label for="newImage">Change Profile Picture</label>
-                                            <input type="file" name="img[]" class="file">
-                                            <div class="input-group col-xs-12">
+                                <div class="form-group">
+                                    <label for="newImage">Change Profile Picture</label>
+                                    <input type="file" name="img[]" class="file">
+                                    <div class="input-group col-xs-12">
                                                 <span class="input-group-addon"><i
                                                             class="glyphicon glyphicon-picture"></i></span>
-                                                <input type="text" class="form-control" disabled
-                                                       placeholder="Upload Image">
-                                                <span class="input-group-btn">
+                                        <input type="text" class="form-control" disabled
+                                               placeholder="Upload Image">
+                                        <span class="input-group-btn">
                                     <button class="browse btn btn-primary" type="button"><i
                                                 class="glyphicon glyphicon-search"></i> Browse</button>
                                 </span>
-                                            </div>
-                                        </div>
-                                        <button type="button" id="new_proj_btn"
-                                                class="btn btn-primary col-md-2 col-md-offset-5">Save Changes
-                                        </button>
                                     </div>
-
                                 </div>
-
+                                <button type="button" id="new_proj_btn"
+                                        class="btn btn-primary col-md-2 col-md-offset-5">Save Changes
+                                </button>
                             </div>
+
                         </div>
-                        <!--end of account settings tab-->
+
                     </div>
-                    <!--end of tabs content-->
                 </div>
+                <!--end of account settings tab-->
             </div>
+            <!--end of tabs content-->
         </div>
+    </div>
+</div>

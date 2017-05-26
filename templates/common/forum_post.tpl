@@ -8,9 +8,9 @@
             <!--overview tab-->
             <div class="project-content">
                 <div class="row forum_header">
-                    <div class="title col-md-5 col-xs-9">
+                    <div class="title col-md-4 col-md-offset-1">
                         <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
-                        <h2> Project Forum</h2>
+                        <h3> Project Forum</h3>
                     </div>
                 </div>
 

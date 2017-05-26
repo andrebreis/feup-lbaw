@@ -85,12 +85,10 @@
                                         <td>
                                             <div class="forum_table_cell">
                                                 <span class="media-meta pull-right">March 12, 2017</span>
-                                                <a href="index.php?page=forum_post.php&projectid={$smarty.get.id}&"><h4
-                                                            class="title">
-                                                        {$post.title}
-                                                    </h4></a>
+                                                <a href="index.php?page=forum_post.php&project&id={$smarty.get.id}">
+                                                    <h4 class="title">{$post.title}</h4>
+                                                </a>
                                                 <p class="summary">{$post.text} </p>
-                                                </p>
                                                 <span class="badge badge-default badge-pill pull-right">2</span>
                                                 <div class="original_poster">
                                                     <img id="user_photo"
