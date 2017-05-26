@@ -19,51 +19,30 @@
                     </div>
 
                     <!--list of coordinators-->
-                    <div class="row">
-                        <div class="proj_user col-md-5 col-md-offset-1">
+                    {foreach from=$collaborators  item=collaborator}
+                        <div class="proj_user col-md-4 col-md-offset-1">
                             <a href="profile.php" class="pull-left">
-                                <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                <img src="{$collaborator.picture}"
                                      class="media-photo">
                             </a>
                             <h4 class="title">
-                                Harold Johnson
-                                <span class="coordinator pull-right">Coordinator</span>
+                                {$collaborator.name}
+                                {if $collaborator.role=="Coordinator"}
+                                    <span class="coordinator pull-right">{$collaborator.role}</span>
+                                {else}
+                                    <span class="collaborator pull-right">{$collaborator.role}</span>
+                                {/if}
                             </h4>
-                            <h5>(HTPharold)</h5>
+                            <h5>({$collaborator.username})</h5>
                             <div class="info">
-                                <div class="location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <p>Lansing, United States</p>
-                                </div>
                                 <div class="email">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p>haroldme@hotmail.com</p>
+                                    <p>{$collaborator.email}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="proj_user col-md-5">
-                            <a href="profile.php" class="pull-left">
-                                <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
-                                     class="media-photo">
-                            </a>
-                            <h4 class="title">
-                                Harold Johnson
-                                <span class="collaborator pull-right">Collaborator</span>
-                            </h4>
-                            <h5>(HTPharold)</h5>
-                            <div class="info">
-                                <div class="location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <p>Lansing, United States</p>
-                                </div>
-                                <div class="email">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p>haroldme@hotmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
+                    {/foreach}
+                    <!--<div class="row">
                         <div class="proj_user col-md-5 col-md-offset-1">
                             <a href="profile.php" class="pull-left">
                                 <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
@@ -106,7 +85,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!--end of list of coordinators-->
 
                 </div>
