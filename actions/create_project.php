@@ -19,4 +19,3 @@ if ($name && $description && $isVisible) {
   header('Location: ../pages/index.php?page=profile.php&id=' . $_SESSION['userId']);
   die();
 }
-?>

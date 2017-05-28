@@ -19,7 +19,6 @@ function createProject($creatorId, $name, $description, $isVisible)
 
     $statement = $conn->prepare('INSERT INTO project_user_role (project_id, user_id, role) VALUES(?, ?, ?)');
     $statement->execute([$projectId, $creatorId, 'Coordinator']);
-    echo $projectId;
     return $statement->errorInfo();
 }
 
@@ -133,12 +132,12 @@ function getProjectCollaborators($projectId)
  *
  * @param
  * @return
- */
+*/
 function getProjectMilestones($projectId)
 {
     global $conn;
 
-    $statement = $conn->prepare();
+    $statement = $conn->prepare('SELECT end_date, begin_date, milestone.name FROM milestone WHERE milestone.project_id=?');
     $statement->execute([$projectId]);
     return $statement->fetchAll();
 }

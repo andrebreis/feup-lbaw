@@ -11,6 +11,8 @@ $visible = getProjectField($id, 'visible');
 $state_name = getProjectState($id);
 $num_collaborators = getNumProjectCollaborators($id);
 
+$now = time();
+
 $milestones = getProjectMilestones($id);
 
 $smarty->assign('isCollaborator', $isCollaborator);
@@ -20,6 +22,8 @@ $smarty->assign('completion', $completion);
 $smarty->assign('visible', $visible);
 $smarty->assign('state_name', $state_name);
 $smarty->assign('num_collaborators', $num_collaborators);
+
+$smarty->assign('now', $now);
 
 $smarty->assign('milestones', $milestones);
 

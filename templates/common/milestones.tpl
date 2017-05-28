@@ -76,15 +76,14 @@
                                                 <span class="media-meta pull-right"><small>Deadline: </small><b>{$milestone.end_date}</b> </span>
                                                 {/if}
                                                 <h4 class="title">
-                                                    {$milestone.title}
+                                                    {$milestone.name}
                                                 </h4>
                                                 <div class="progress">
                                                     <div style="padding-left: 0.5em;">
-                                                        <span class="progress-value">{$milestone.completion}% - {$milestone.name}</span>
+                                                        <span class="progress-value">{((($now-strtotime($milestone.begin_date))*100) / (strtotime($milestone.end_date)-strtotime($milestone.begin_date)))}%</span>
                                                     </div>
                                                     <div class="progress-bar progress-bar-success" role="progressbar"
-                                                         aria-valuenow="{$milestone.completion}"
-                                                         aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                                         aria-valuemin="0" aria-valuemax="100" style="width:{(($now-strtotime($milestone.begin_date))*100) / (strtotime($milestone.end_date)-strtotime($milestone.begin_date))}%">
                                                     </div>
                                                 </div>
                                             </div>
