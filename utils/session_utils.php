@@ -53,8 +53,8 @@ function signupVerify($username, $password, $password_repeat, $email, $name) {
         $errors[] = array('error' => 'username', 'message' => 'A username must be least 4 characters long.');
     else if (usernameExists($username))
         $errors[] = array('error' => 'username', 'message' => 'Username already exists.');
-    if (strlen($password) < 6)
-        $errors[] = array('error' => 'password', 'message' => 'A password must be at least 6 characters long.');
+    if (strlen($password) < 4)
+        $errors[] = array('error' => 'password', 'message' => 'A password must be at least 4 characters long.');
     if ($password !== $password_repeat)
         $errors[] = array('error' => 'password-repeat', 'message' => 'Passwords do not match.');
     if (!filter_var($email))

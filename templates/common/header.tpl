@@ -106,7 +106,7 @@
                           </div>
                       </form>
 
-                      <form id="register-form" action="../actions/sign_up.php" method="post" style="display:none;">
+                      <form id="register-form" style="display:none;">
                           <div class="modal-body">
                               <input id="register_name1" name="first-name" class="form-control" type="text"
                                      placeholder="First Name" required>
@@ -117,7 +117,7 @@
                               <input id="register_email" name="email" class="form-control" type="text" placeholder="E-Mail" required>
                               <input id="register_password" name="password" class="form-control" type="password" placeholder="Password"
                                      required>
-                              <input id="register_password" name="password-repeat" class="form-control" type="password" placeholder="Repeat Password"
+                              <input id="register_password_repeat" name="password-repeat" class="form-control" type="password" placeholder="Repeat Password"
                                      required>
                           </div>
                           <div class="modal-footer">
