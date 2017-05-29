@@ -249,3 +249,11 @@ function getMilestoneTasks($milestoneId)
     $statement->execute([$milestoneId]);
     return $statement->fetchAll();
 }
+
+function createTask($creatorId, $projectId, $name, $description, $effort, $priority) {
+  global $conn;
+  
+  $statement = $conn->prepare('INSERT INTO task (creator_id, project_id, title, text, effort, priority, visible)
+  VALUES (?, ?, ?, ?, ?, ?, true)');
+  $statement->execute([$creatorId, $projectId, $name, $description, $effort, $priority]);
+}

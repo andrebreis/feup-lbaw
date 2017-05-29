@@ -5,43 +5,35 @@ $('.datepicker').datepicker();
 <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="createTaskModalContent">
+          <form method="post" action="../actions/create_task.php">
             <div class="modal-header">
                 <h3 class="modal-title" id="createTaskModalTitle">New Task</h3>
             </div>
             <div class="modal-body">
-                <form>
+                  <input type="hidden" name="id" value="{$smarty.get.id}">
                     <div class="form-group">
                         <label for="taskTitle">Task Title</label>
-                        <input type="title" class="form-control" id="taskTitleInput"
-                        placeholder="Choose a title for your task">
+                        <input type="text" name="title" class="form-control" id="taskTitleInput"
+                        placeholder="Choose a title for your task" required>
                     </div>
                     <div class="form-group">
                         <label for="taskContent">Task Description</label>
-                        <textarea type="description" class="form-control" id="taskContentInput" placeholder="Describe your task here"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="taskDeadline">Task Deadline</label>
-                        <div class="input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </div>
-                        </div>
+                        <input type="text" name="description" class="form-control" id="taskContentInput" placeholder="Describe your task here" required>
                     </div>
                     <div class="form-group">
                         <label for="effort-input">Task Effort</label>
-                        <input class="form-control" type="number" value="5" id="effort-input" min="0" max="10">
+                        <input class="form-control" name="effort" type="number" value="5" id="effort-input" min="0" max="10" required>
                         <small id="effortHelp" class="form-text text-muted">Choose a number between 0 and 10</small>
                     </div>
                     <div class="form-group">
                         <label for="taskPriority">Task Priority</label>
                         <!-- TODO: CHANGE THIS TO PHP -->
-                        <select id="prioritySelect" class="form-control" onchange="changetextbox()">
-                            <option value="verylow">Very Low</option>
-                            <option value="low">Low</option>
-                            <option value="medium" selected>Medium</option>
-                            <option value="high">High</option>
-                            <option value="veryhigh">Very High</option>
+                        <select id="prioritySelect" name="priority" class="form-control" onchange="changetextbox()">
+                            <option value="Very Low">Very Low</option>
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                            <option value="Very High">Very High</option>
                         </select>
                     </div>
                     <!-- todo: allow only usernames (like in add collabs) -->
@@ -57,16 +49,17 @@ $('.datepicker').datepicker();
                         <label for="projectTags">Associated Milestone</label>
                         <!-- TODO: CHANGE THIS TO usernames -->
                       <div id="milestones-type">
-                    <input class="typeahead form-control" type="text" placeholder="Enter a username">
+                    <input class="typeahead form-control" type="text" placeholder="Enter a milestone">
             </div>
               </div>
-          </form>
+          
       </div>
       <div class="row">
         <div class="modal-footer col-md-4 col-md-offset-4">
-            <button type="button" id="proj_btn" class="btn btn-default create_in_modal">Create Task</button>
+            <button type="submit" id="proj_btn" class="btn btn-default create_in_modal">Create Task</button>
         </div>
     </div>
+    </form>
 </div>
 </div>
 </div>
@@ -121,45 +114,6 @@ $('.datepicker').datepicker();
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content" id="createTaskModalContent">
-        <div class="modal-header">
-            <h3 class="modal-title" id="createTaskModalTitle">New Task</h3>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group">
-                    <label for="taskTitle">Task Title</label>
-                    <input type="title" class="form-control" id="taskTitleInput"
-                    placeholder="Choose a title for your task">
-                </div>
-                <div class="form-group">
-                    <label for="taskContent">Task Description</label>
-                    <input type="description" class="form-control" id="taskContentInput"
-                    placeholder="Describe your task here">
-                </div>
-                <div class="form-group">
-                    <label for="taskDeadline">Task Deadline</label>
-                    <div class="input-group date" data-provide="datepicker">
-                        <input type="text" class="form-control">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <div class="modal-footer col-md-4 col-md-offset-4">
-                <button type="button" id="proj_btn" class="btn btn-default create_in_modal">Create Task</button>
             </div>
         </div>
     </div>
