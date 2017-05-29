@@ -319,8 +319,7 @@
                                                             <div class="media">
                                                                 <div class="media-body">
                                                                     <h4 class="title">{$message.subject}</h4>
-                                                                    <span class="media-meta pull-right">20 Feb 2017</span>
-                                                                    <p class="summary">{$message.text|truncate:20}</p>
+                                                                    <p class="summary">{$message.text}</p>
                                                                     <div class="info">
                                                                         <div class="sender">
                                                                             <i class="fa fa-user"
@@ -386,8 +385,7 @@
                                                         <div class="media">
                                                             <div class="media-body">
                                                                 <h4 class="title">{$message.subject}</h4>
-                                                                <span class="media-meta pull-right">20 Feb 2017</span>
-                                                                <p class="summary">{$message.text|truncate:20}</p>
+                                                                <p class="summary">{$message.text}</p>
                                                                 <div class="info">
                                                                     <div class="sender">
                                                                         <i class="fa fa-user" aria-hidden="true"></i>
