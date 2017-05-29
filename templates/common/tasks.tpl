@@ -2,6 +2,55 @@
 $('.datepicker').datepicker();
 </script>
 
+<script>
+$(document).ready(function () {
+    var substringMatcher = function (strs) {
+        return function findMatches(q, cb) {
+            var matches, substrRegex;
+
+            // an array that will be populated with substring matches
+            matches = [];
+
+            // regex used to determine if a string contains the substring `q`
+            substrRegex = new RegExp(q, 'i');
+
+            // iterate through the pool of strings and for any string that
+            // contains the substring `q`, add it to the `matches` array
+            $.each(strs, function (i, str) {
+                if (substrRegex.test(str)) {
+                    matches.push(str);
+                }
+            });
+
+            cb(matches);
+        };
+    }
+
+    console.log('sending ajax...')
+    $.ajax('../actions/get_users.php', {
+        method: 'POST'
+    }).done(function (response) {
+        var objects = JSON.parse(response);
+        var states=[];
+
+        for(var i=0; i<objects.length; i++){
+            states.push(objects[i].username);
+        }
+
+        console.log('a' + states)
+        $('#milestones-type .typeahead').typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        },
+        {
+            name: 'states',
+            source: substringMatcher(states)
+        });
+    });
+});
+</script>
+
 <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="createTaskModalContent">
@@ -56,10 +105,9 @@ $('.datepicker').datepicker();
                     <div class="form-group">
                         <label for="projectTags">Associated Milestone</label>
                         <!-- TODO: CHANGE THIS TO usernames -->
-                        <div id="task-milestone">
-                          <input class="typeahead form-control" type="text" placeholder="Enter the name of the milestone you want to associate this task to (optional)">
-                      </small>
-                  </div>
+                      <div id="milestones-type">
+                    <input class="typeahead form-control" type="text" placeholder="Enter a username">
+            </div>
               </div>
           </form>
       </div>
