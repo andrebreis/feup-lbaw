@@ -141,3 +141,32 @@ function getProjectMilestones($projectId)
     $statement->execute([$projectId]);
     return $statement->fetchAll();
 }
+
+function getProjectStatistics($projectId)
+{
+  global $conn;
+  
+  $stats = [];
+  
+  $statement = $conn->prepare('SELECT count(*) AS num_tasks FROM task INNER JOIN state ON task.state_id = state.id WHERE task.project_id = ? AND state.name = \'Finished\'');
+  $statement->execute([$projectId]);
+  $stats['num_tasks'] = $statement->fetch()['num_tasks'];
+  $statement = $conn->prepare('SELECT count(*) AS num_likes FROM task_like INNER JOIN task ON task_like.task_id = task.id WHERE task.project_id = ?');
+  $statement->execute([$projectId]);
+  $stats['num_likes'] = $statement->fetch()['num_likes'];
+  $statement = $conn->prepare('SELECT count(*) AS num_coordinators FROM project_user_role WHERE project_id = ? AND role=\'Coordinator\'');
+  $statement->execute([$projectId]);
+  $stats['num_coordinators'] = $statement->fetch()['num_coordinators'];
+  $statement = $conn->prepare('SELECT count(*) AS num_milestones FROM milestone WHERE project_id = ? AND milestone.end_date < now()');
+  $statement->execute([$projectId]);
+  $stats['num_milestones'] = $statement->fetch()['num_milestones'];
+  $statement = $conn->prepare('SELECT count(*) as num_posts FROM post WHERE project_id = ?');
+  $statement->execute([$projectId]);
+  $stats['num_posts'] = $statement->fetch()['num_posts'];
+  $statement = $conn->prepare('SELECT count(*) AS num_comments FROM comment INNER JOIN post ON comment.post_id = post.id WHERE project_id = ?');
+  $statement->execute([$projectId]);
+  $stats['num_comments'] = $statement->fetch()['num_comments'];
+
+
+  return $stats;
+}

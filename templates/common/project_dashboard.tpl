@@ -64,29 +64,29 @@
                     <div class="stats_row row">
                         <div class="col-md-4">
                             <i class="fa fa-check" aria-hidden="true"></i>
-                            <h4><b>58</b> Tasks Completed</h4>
+                            <h4><b>{$stats.num_tasks}</b> Tasks Completed</h4>
                         </div>
                         <div class="col-md-4">
                             <i class="fa fa-calculator" aria-hidden="true"></i>
-                            <h4><b>18</b> Tasks per Week</h4>
+                            <h4><b>{$stats.num_likes}</b> Likes on Tasks</h4>
                         </div>
                         <div class="col-md-4">
                             <i class="fa fa-briefcase" aria-hidden="true"></i>
-                            <h4><b>2</b> Coordinators</h4>
+                            <h4><b>{$stats.num_coordinators}</b> Coordinators</h4>
                         </div>
                     </div>
                     <div class="stats_row row">
                         <div class="col-md-4">
                             <i class="fa fa-check-square" aria-hidden="true"></i>
-                            <h4><b>2</b> Milestones Finished</h4>
+                            <h4><b>{$stats.num_milestones}</b> Milestones Finished</h4>
                         </div>
                         <div class="col-md-4">
                             <i class="fa fa-commenting" aria-hidden="true"></i>
-                            <h4><b>41</b> Forum Messages</h4>
+                            <h4><b>{$stats.num_posts}</b> Posts on Forum</h4>
                         </div>
                         <div class="col-md-4">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <h4> Created on 17/07/15</h4>
+                            <h4><b>{$stats.num_comments}</b> Post Comments</h4>
                         </div>
                     </div>
                 </div>
