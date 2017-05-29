@@ -1,21 +1,3 @@
-<script>
-    $(function () {
-        $('.like').click(function () {
-            likeFunction(this);
-        });
-    });
-
-    function likeFunction(caller) {
-        var postId = caller.parentElement.getAttribute('postid');
-        $.ajax({
-            type: "POST",
-            url: "rate.php",
-            data: 'Action=LIKE&PostID=' + postId,
-            success: function () {}
-        });
-    }
-</script>
-
 <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog">

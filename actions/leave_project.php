@@ -16,4 +16,3 @@ $userId = $_SESSION['userId'];
 leaveProject($userId, $projectId);
 header('Location: ../pages/index.php?page=project_dashboard.php&id=' . $projectId);
 
-?>

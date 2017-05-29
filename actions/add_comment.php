@@ -24,4 +24,3 @@ if (isset($postId) || isset($taskId)) {
     die();
 }
 
-?>
