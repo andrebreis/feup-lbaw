@@ -90,6 +90,7 @@
         </div>
     </div>
 </div>
+</div>
 <!-- end of create project modal-->
 
 
