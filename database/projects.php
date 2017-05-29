@@ -1,5 +1,4 @@
 <?php
-
 include_once('../config/init.php');
 
 /**
@@ -92,7 +91,7 @@ function getProjectTasks($projectId)
 {
     global $conn;
 
-    $statement = $conn->prepare('SELECT title, visible, state.name, end_date
+    $statement = $conn->prepare('SELECT task.id, title, visible, state.name, end_date
                                  FROM task LEFT JOIN state ON task.state_id = state.id LEFT JOIN milestone ON task.milestone_id = milestone.id
                                  WHERE task.project_id = ?');
     $statement->execute([$projectId]);
@@ -220,4 +219,21 @@ function getPostProjectId($postId){
     $statement = $conn->prepare('SELECT project_id FROM post WHERE post.id=?');
     $statement->execute([$postId]);
     return $statement->fetch()['project_id'];
+}
+
+function getMilestoneProjectId($milestoneId){
+    global $conn;
+
+    $statement = $conn->prepare('SELECT project_id FROM milestone WHERE milestone.id=?');
+    $statement->execute([$milestoneId]);
+    return $statement->fetch()['project_id'];
+}
+
+function getMilestoneDetails($milestoneId)
+{
+    global $conn;
+
+    $statement = $conn->prepare('SELECT end_date, begin_date, name FROM milestone WHERE milestone.id=?');
+    $statement->execute([$milestoneId]);
+    return $statement->fetch();
 }
