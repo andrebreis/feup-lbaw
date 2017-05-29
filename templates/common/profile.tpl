@@ -54,12 +54,14 @@
                         <div class="row">
                             <!-- TODO: CHANGE THIS TO PHP -->
                             <div class="col-md-3">
-                                <select id="select-state" class="custom-select" id="projectStateSelect"
+                                <select name="select-state" id="select-state" class="custom-select" id="projectStateSelect"
                                         onchange="changetextbox()">
                                     <option value="none" selected>Choose...</option>
-                                    <option value="Waiting for Start">Waiting for Start</option>
-                                    <option value="Under Development">Under Development</option>
-                                    <option value="Arrested Development">Arrested Development</option>
+                                    <option value="1">Waiting for Start</option>
+                                    <option value="2">Under Development</option>
+                                    <option value="3">Arrested Development</option>
+                                    <option value="4">Waiting for Investment</option>
+                                    <option value="5">Finished</option>
                                     <option value="Other">Other</option>
                                 </select>
                             </div>

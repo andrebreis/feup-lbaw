@@ -9,11 +9,11 @@ include_once('../config/init.php');
  * @param $isVisible string project's chosen visibility (true - public, false - private)
  * @return array Error info.
  */
-function createProject($creatorId, $name, $description, $isVisible)
+function createProject($creatorId, $name, $description, $isVisible, $stateId)
 {
     global $conn;
-    $statement = $conn->prepare('INSERT INTO project (name, description, visible) VALUES(?, ?, ?)');
-    $statement->execute([$name, $description, $isVisible == 'true']);
+    $statement = $conn->prepare('INSERT INTO project (name, description, visible, state_id) VALUES(?, ?, ?, ?)');
+    $statement->execute([$name, $description, $isVisible == 'true', $stateId]);
     $projectId = $conn->lastInsertId();
 
     $statement = $conn->prepare('INSERT INTO project_user_role (project_id, user_id, role) VALUES(?, ?, ?)');

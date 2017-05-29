@@ -12,10 +12,14 @@ include_once('../database/projects.php');
 
 $name = htmlspecialchars($_POST['name']);
 $description = htmlspecialchars($_POST['description']);
-$isVisible = $_POST['is-visible'];
+$isVisible = htmlspecialchars($_POST['is-visible']);
+$stateId = null;
+
+if(isset($_POST['select-state']))
+  $stateId = intval(htmlspecialchars($_POST['select-state']));
 
 if ($name && $description && $isVisible) {
-  createProject($_SESSION['userId'] , $name, $description, $isVisible);
+  createProject($_SESSION['userId'] , $name, $description, $isVisible, $stateId);
   header('Location: ../pages/index.php?page=profile.php&id=' . $_SESSION['userId']);
   die();
 }
