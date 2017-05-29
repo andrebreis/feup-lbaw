@@ -24,160 +24,129 @@
                             </div>
                             <div class="original_poster col-md-5">
                                 <img id="user_photo"
-                                     src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
-                                     class="media-photo">
+                                src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                class="media-photo">
                                 <a href="index.php?page=profile.php&id={$post.creator_id}">
                                     <h4 class="title"><p>{$post.creator_name}</p></h4>
                                 </a>
                             </div>
                             <div class="likes likes_post col-md-2 col-md-offset-5">
                                 <a id="like_btn" href="#" data-toggle="tooltip" title="Like Post"
-                                   class="btn btn-xs btn-primary"><span class="fa fa-arrow-up"></span></a>
+                                class="btn btn-xs btn-primary"><span class="fa fa-arrow-up"></span></a>
                                 <h5>{$post.likes} likes</h5>
                             </div>
                             <button id="new_proj_btn" type="button" class="btn btn-default btn-xs pull-right"
-                                    data-toggle="collapse" data-target="#commentInput99">Comment
+                            data-toggle="collapse" data-target="#commentInput99">Comment
+                        </button>
+                        <div id="commentInput99" class="collapse">
+                            <textarea type="comment" class="form-control" placeholder="Write a comment"></textarea>
+                            <button id="new_proj_btn" type="button" class="btn btn-default btn-xs" data-target="#">
+                                Save Comment
                             </button>
-                            <div id="commentInput99" class="collapse">
-                                <textarea type="comment" class="form-control" placeholder="Write a comment"></textarea>
-                                <button id="new_proj_btn" type="button" class="btn btn-default btn-xs" data-target="#">
-                                    Save Comment
-                                </button>
-                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="row comments_box">
-                        <div class="comments col-md-12">
-                            <div class="media">
-                                <div class="media-left">
-                                    <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
-                                         class="media-object align-self-center" style="width:2.5em">
+                <div class="row comments_box">
+                    <div class="comments col-md-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                class="media-object align-self-center" style="width:2.5em">
+                            </div>
+                            <div class="media-body">
+                                <div class="original_poster">
+                                    <a href="profile.php">
+                                        <h4 class="title"><p>op_username</p></h4>
+                                    </a>
                                 </div>
-                                <div class="media-body">
-                                    <div class="original_poster">
-                                        <a href="profile.php">
-                                            <h4 class="title"><p>op_username</p></h4>
-                                        </a>
-                                    </div>
-                                    <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-                                        Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+                                <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+                                    Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
                                     <div class="comment_footer">
                                         <button id="new_proj_btn" type="button"
-                                                class="btn btn-default btn-xs pull-right" data-toggle="collapse"
-                                                data-target="#commentInput">Comment
-                                        </button>
-                                    </div>
-                                    <div id="commentInput" class="collapse">
+                                        class="btn btn-default btn-xs" data-toggle="collapse"
+                                        data-target="#commentInput11">Comment
+                                    </button>
+                                </div>
+                                <div id="commentInput11" class="collapse row">
+                                    <div class="col-md-12">
                                         <textarea type="comment" class="form-control"
-                                                  placeholder="Write a comment"></textarea>
+                                        placeholder="Write a comment"></textarea>
                                         <button id="new_proj_btn" type="button" class="btn btn-default btn-xs"
-                                                data-target="#">Save Comment
-                                        </button>
+                                        data-target="#">Save Comment</button>
                                     </div>
+                                </div>
 
-                                    <!--nested comment-->
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
-                                                 class="media-object align-self-center" style="width:2.5em">
+                                <!--nested comment -->
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                        class="media-object align-self-center" style="width:2.5em">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="original_poster">
+                                            <a href="profile.php">
+                                                <h4 class="title"><p>op_username</p></h4>
+                                            </a>
                                         </div>
-                                        <div class="media-body">
-                                            <div class="original_poster">
-                                                <a href="profile.php">
-                                                    <h4 class="title"><p>op_username</p></h4>
-                                                </a>
-                                            </div>
-                                            <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
-                                                dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis
-                                                sagittis ipsum.</p>
+                                        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+                                            Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
                                             <div class="comment_footer">
                                                 <button id="new_proj_btn" type="button"
-                                                        class="btn btn-default btn-xs pull-right" data-toggle="collapse"
-                                                        data-target="#commentInput3">Comment
-                                                </button>
-                                            </div>
-                                            <div id="commentInput3" class="collapse">
+                                                class="btn btn-default btn-xs" data-toggle="collapse"
+                                                data-target="#commentInput28">Comment
+                                            </button>
+                                        </div>
+                                        <div id="commentInput28" class="collapse row">
+                                            <div class="col-md-12">
                                                 <textarea type="comment" class="form-control"
-                                                          placeholder="Write a comment"></textarea>
+                                                placeholder="Write a comment"></textarea>
                                                 <button id="new_proj_btn" type="button" class="btn btn-default btn-xs"
-                                                        data-target="#">Save Comment
-                                                </button>
-                                            </div>
-
-                                            <!--nested comment inside nested comment-->
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
-                                                         class="media-object align-self-center" style="width:2.5em">
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="original_poster">
-                                                        <a href="profile.php">
-                                                            <h4 class="title"><p>op_username</p></h4>
-                                                        </a>
-                                                    </div>
-                                                    <p style="text-align: justify;">Lorem ipsum dolor sit amet,
-                                                        consectetur adipiscing elit. Integer nec odio. Praesent libero.
-                                                        Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
-                                                        elementum imperdiet. Duis sagittis ipsum.</p>
-                                                    <div class="comment_footer">
-                                                        <button id="new_proj_btn" type="button"
-                                                                class="btn btn-default btn-xs pull-right"
-                                                                data-toggle="collapse" data-target="#commentInput2">
-                                                            Comment
-                                                        </button>
-                                                    </div>
-                                                    <div id="commentInput2" class="collapse">
-                                                        <textarea type="comment" class="form-control"
-                                                                  placeholder="Write a comment"></textarea>
-                                                        <button id="new_proj_btn" type="button"
-                                                                class="btn btn-default btn-xs" data-target="#">Save
-                                                            Comment
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                                data-target="#">Save Comment</button>
                                             </div>
                                         </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="media">
-                                <div class="media-left">
-                                    <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
-                                         class="media-object align-self-center" style="width:2.5em">
-                                </div>
-                                <div class="media-body">
-                                    <div class="original_poster">
-                                        <a href="profile.php">
-                                            <h4 class="title"><p>op_username</p></h4>
-                                        </a>
-                                    </div>
-                                    <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-                                        Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
-                                        <button id="new_proj_btn" type="button"
-                                                class="btn btn-default btn-xs pull-right" data-toggle="collapse"
-                                                data-target="#commentInput1">Comment
-                                        </button>
-                                    </div>
-                                    <div id="commentInput1" class="collapse">
-                                        <textarea type="comment" class="form-control"
-                                                  placeholder="Write a comment"></textarea>
-                                        <button id="new_proj_btn" type="button" class="btn btn-default btn-xs"
-                                                data-target="#">Save Comment
-                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                class="media-object align-self-center" style="width:2.5em">
+                            </div>
+                            <div class="media-body">
+                                <div class="original_poster">
+                                    <a href="profile.php">
+                                        <h4 class="title"><p>op_username</p></h4>
+                                    </a>
+                                </div>
+                                <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+                                    Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+                                    <div class="comment_footer">
+                                        <button id="new_proj_btn" type="button"
+                                        class="btn btn-default btn-xs" data-toggle="collapse"
+                                        data-target="#commentInput26">Comment
+                                    </button>
+                                </div>
+                                <div id="commentInput26" class="collapse row">
+                                    <div class="col-md-12">
+                                        <textarea type="comment" class="form-control"
+                                        placeholder="Write a comment"></textarea>
+                                        <button id="new_proj_btn" type="button" class="btn btn-default btn-xs"
+                                        data-target="#">Save Comment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
