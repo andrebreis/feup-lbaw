@@ -1,4 +1,8 @@
 <?php
+include_once("../database/users.php");
+include_once("../database/projects.php");
+
+$id = htmlspecialchars($_GET['id']);
 
 include_once('project_sidebar.php');
 
