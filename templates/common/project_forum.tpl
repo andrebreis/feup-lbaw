@@ -14,8 +14,7 @@
                     </div>
                     <div class="form-group">
                         <label for="postContent">Post Content</label>
-                        <input type="description" class="form-control" id="postContentInput"
-                               placeholder="Write your post here">
+                        <textarea type="text" class="form-control" id="postContentInput" placeholder="Write your post here"></textarea>
                     </div>
                 </form>
             </div>
@@ -67,7 +66,7 @@
                                         <td>
                                             <div class="forum_table_cell">
                                                 <span class="media-meta pull-right">March 12, 2017</span>
-                                                <a href="index.php?page=forum_post.php&project&id={$smarty.get.id}">
+                                                <a href="index.php?page=forum_post.php&id={$post.id}">
                                                     <h4 class="title">{$post.title}</h4>
                                                 </a>
                                                 <p class="summary">{$post.text} </p>
@@ -76,7 +75,7 @@
                                                     <img id="user_photo"
                                                          src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
                                                          class="media-photo">
-                                                    <a href="profile.php">
+                                                    <a href="index.php?page=profile.php&id={$post.creator_id}">
                                                         <h4 class="title"><p>{$post.creator_name}</p>
                                                     </a>
                                                 </div>

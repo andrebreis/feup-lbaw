@@ -117,6 +117,21 @@ function getProjectPosts($projectId)
  * @param
  * @return
  */
+function getForumPost($postId)
+{
+    global $conn;
+    $statement = $conn->prepare('SELECT post.id, title, text, authenticated_user.name AS creator_name, likes.num_likes AS likes, authenticated_user.id AS creator_id
+                                 FROM post INNER JOIN authenticated_user ON post.creator_id = authenticated_user.id, 
+                                 (SELECT post_id, count(*) AS num_likes FROM post_like GROUP BY post_id) AS likes 
+                                 WHERE likes.post_id = post.id AND post.id = ?');
+    $statement->execute([$postId]);
+    return $statement->fetch();
+}
+
+/**
+ * @param
+ * @return
+ */
 function getProjectCollaborators($projectId)
 {
     global $conn;
@@ -136,7 +151,7 @@ function getProjectMilestones($projectId)
 {
     global $conn;
 
-    $statement = $conn->prepare('SELECT end_date, begin_date, milestone.name FROM milestone WHERE milestone.project_id=?');
+    $statement = $conn->prepare('SELECT end_date, begin_date, milestone.name, milestone.id FROM milestone WHERE milestone.project_id=?');
     $statement->execute([$projectId]);
     return $statement->fetchAll();
 }
@@ -185,7 +200,7 @@ function getTaskProjectId($taskId)
 {
   global $conn;
   
-  $statement = $conn->prepare('SELECT project.id FROM project INNER JOIN task ON project.id = task.project_id WHERE task.id=?');
+  $statement = $conn->prepare('SELECT project.id FROM project INNER JOIN task WHERE task.id=?');
   $statement->execute([$taskId]);
   return $statement->fetch()['id'];
 }
@@ -197,4 +212,29 @@ function getTaskAssignees($taskId)
   $statement = $conn->prepare('SELECT name, username FROM task_assignee INNER JOIN authenticated_user ON task_assignee.user_id = authenticated_user.id WHERE task_id=?');
   $statement->execute([$taskId]);
   return $statement->fetchAll();
+}
+
+function getPostProjectId($postId){
+    global $conn;
+
+    $statement = $conn->prepare('SELECT project_id FROM post WHERE post.id=?');
+    $statement->execute([$postId]);
+    return $statement->fetch()['project_id'];
+}
+
+function getMilestoneProjectId($milestoneId){
+    global $conn;
+
+    $statement = $conn->prepare('SELECT project_id FROM milestone WHERE milestone.id=?');
+    $statement->execute([$milestoneId]);
+    return $statement->fetch()['project_id'];
+}
+
+function getMilestoneDetails($milestoneId)
+{
+    global $conn;
+
+    $statement = $conn->prepare('SELECT end_date, begin_date, name FROM milestone WHERE milestone.id=?');
+    $statement->execute([$milestoneId]);
+    return $statement->fetch();
 }
