@@ -23,40 +23,48 @@
                                     <span class="progress-value">80% - Under Development</span>
                                 </div>
                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80"
-                                aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                     aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-1">
-                        <div class="table-container">
-                            <table class="table table-filter col-md-offset-1">
-                                <tr>
-                                    <th>Assignees</th>
-                                </tr>
-                                <tr>
-                                    <td>Francisca Paupério</td>
-                                </tr>
-                                <tr>
-                                    <td>André Reis</td>
-                                </tr>
-                                <tr>
-                                    <td>Sofia Magalhães</td>
-                                </tr>
-                            </table>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-1">
+                            <div class="table-container">
+                                <table class="table table-filter col-md-offset-1">
+                                    <tr>
+                                        <th>Assignees</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Francisca Paupério</td>
+                                    </tr>
+                                    <tr>
+                                        <td>André Reis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sofia Magalhães</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <button type="button" id="new_proj_btn" class="btn btn-primary col-md-5">Assign to me
+                            </button>
                         </div>
                     </div>
-                    <div class="col-md-5 col-md-offset-1">
-                        <button type="button" id="new_proj_btn" class="btn btn-primary col-md-5">Assign to me</button>
+                    <div class="col-md-offset-10 likes">
+                        <a id="like_btn" href="#" data-toggle="tooltip" title="Like Post"
+                           class="btn btn-xs btn-primary" style="font-size: 15px"><span
+                                    class="fa fa-arrow-up"></span></a>
+                        <h5 style="font-size: 15px">15 likes</h5>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-offset-1">
-                        <button id="icon_btn" onclick="window.history.go(-1);" class="btn btn-arrow btn-sm fa fa-arrow-left" type="submit"></button>
+                    <div class="row">
+                        <div class="col-md-offset-1">
+                            <button id="icon_btn" onclick="window.history.go(-1);"
+                                    class="btn btn-arrow btn-sm fa fa-arrow-left" type="submit"></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
