@@ -153,7 +153,35 @@ function getUserMessages($userId) {
   $statement = $conn->prepare('SELECT thread.subject, authenticated_user.id, authenticated_user.username, message.text, message.seen, report, invite 
                               FROM message INNER JOIN thread ON thread.id = message.thread_id 
                               INNER JOIN authenticated_user ON message.sender_id = authenticated_user.id LEFT JOIN report ON message.id = report.message_id LEFT JOIN invite ON message.id = invite.message_id 
-                              WHERE ? IN (SELECT user_id FROM user_thread WHERE thread_id = thread.id);');
+                              WHERE ? IN (SELECT user_id FROM user_thread WHERE thread_id = thread.id)');
   $statement->execute([$userId]);
   return $statement->fetchAll();
+}
+
+function getUserStatistics($userId) {
+  global $conn;
+  
+  $stats = [];
+  
+  $statement = $conn->prepare('SELECT count(*) AS num_contributions FROM project_user_role WHERE user_id = ?');
+  $statement->execute([$userId]);
+  $stats['num_contributions'] = $statement->fetch()['num_contributions'];
+  $statement = $conn->prepare('SELECT count(*) AS num_coordinations FROM project_user_role WHERE user_id = ? AND role=\'Coordinator\'');
+  $statement->execute([$userId]);
+  $stats['num_coordinations'] = $statement->fetch()['num_coordinations'];
+  $statement = $conn->prepare('SELECT count(*) AS num_tasks FROM task INNER JOIN state ON task.state_id = state.id WHERE creator_id = ? AND state.name = \'Finished\'');
+  $statement->execute([$userId]);
+  $stats['num_tasks'] = $statement->fetch()['num_tasks'];
+  $statement = $conn->prepare('SELECT count(*) AS num_finished_projects FROM project INNER JOIN project_user_role ON project.id = project_user_role.project_id WHERE user_id = ? AND project.completion = 100');
+  $statement->execute([$userId]);
+  $stats['num_finished_projects'] = $statement->fetch()['num_finished_projects'];
+  $statement = $conn->prepare('SELECT count(*) as num_posts FROM post WHERE creator_id = ?');
+  $statement->execute([$userId]);
+  $stats['num_posts'] = $statement->fetch()['num_posts'];
+  $statement = $conn->prepare('SELECT count(*) AS num_comments FROM comment WHERE user_id = ?');
+  $statement->execute([$userId]);
+  $stats['num_comments'] = $statement->fetch()['num_comments'];
+
+
+  return $stats;
 }

@@ -22,6 +22,7 @@ if (!isset($profile_picture))
 
 $projects = getUserProjects($_GET['id']);
 $messages = getUserMessages($_GET['id']);
+$stats = getUserStatistics($id);
 
 $smarty->assign('username', $username);
 $smarty->assign('email', $email);
@@ -30,5 +31,8 @@ $smarty->assign('job', $job);
 $smarty->assign('profile_picture', $profile_picture);
 $smarty->assign('projects', $projects);
 $smarty->assign('messages', $messages);
+$smarty->assign('stats', $stats);
+
+
 
 $smarty->display('../templates/common/profile.tpl');
