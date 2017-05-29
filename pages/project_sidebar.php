@@ -10,6 +10,7 @@ $visible = getProjectField($id, 'visible');
 $state_name = getProjectState($id);
 $num_collaborators = getNumProjectCollaborators($id);
 
+$smarty->assign('project_id', $id);
 $smarty->assign('name', $name);
 $smarty->assign('completion', $completion);
 $smarty->assign('visible', $visible);

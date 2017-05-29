@@ -1,5 +1,4 @@
 <?php
-
 include_once('../config/init.php');
 
 /**
@@ -237,6 +236,4 @@ function userHasProjectPermission($userId, $projectId){
 	$statement->execute([$userId,$projectId]);
 	if($statement->fetch() == 'Coordinator' || $statement->fetch() == 'Collaborator')
 		return true;
-	
-	
 }
