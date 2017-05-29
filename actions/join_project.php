@@ -15,5 +15,3 @@ $userId = $_SESSION['userId'];
 
 joinProject($userId, $projectId);
 header('Location: ../pages/index.php?page=project_dashboard.php&id=' . $projectId);
-
-?>

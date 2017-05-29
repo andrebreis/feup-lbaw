@@ -30,6 +30,9 @@
 
     <link href="../css/login_modal.min.css" rel="stylesheet">
     <script src="../javascript/login_modal.js"></script>
+    <script src="../javascript/collaborators.js"></script>
+    <script src="../javascript/project_forum.js"></script>
+
 
     <!-- bootstrap tags plugin -->
     <script src="../lib/bootstrap-tagsinput/src/bootstrap-tagsinput.js"></script>

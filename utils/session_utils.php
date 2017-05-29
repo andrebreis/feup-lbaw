@@ -65,3 +65,7 @@ function signupVerify($username, $password, $password_repeat, $email, $name) {
         $errors[] = array('error' => 'name', 'message' => 'A name must be provided.');
     return isset($errors) ? $errors : true;
   }
+  
+  function generateRandomToken() {
+    return bin2hex(openssl_random_pseudo_bytes(16));
+}
