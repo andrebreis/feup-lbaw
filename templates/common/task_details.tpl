@@ -17,19 +17,19 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p align="justify">{$task.text}</p>
                         </div>
                     </div>
                     <div class="row taskSmallInfo">
                         <div class="col-md-4 priority">
                             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                             <h5><b>Priority: </b></h5>
-                            <h5>Medium</h5>
+                            <h5>{$task.priority}</h5>
                         </div>
                         <div class="col-md-4 effort">
                             <i class="fa fa-wrench" aria-hidden="true"></i>
                             <h5><b>Effort: </b></h5>
-                            <h5>5<b>/10</b></h5>
+                            <h5>{$task.effort}<b>/10</b></h5>
                         </div>
                         <div class="col-md-4 likes">
                             <a id="like_btn" href="#" data-toggle="tooltip" title="Like Post"
