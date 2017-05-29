@@ -151,7 +151,7 @@ function getProjectMilestones($projectId)
 {
     global $conn;
 
-    $statement = $conn->prepare('SELECT end_date, begin_date, milestone.name FROM milestone WHERE milestone.project_id=?');
+    $statement = $conn->prepare('SELECT id, end_date, begin_date, milestone.name FROM milestone WHERE milestone.project_id=?');
     $statement->execute([$projectId]);
     return $statement->fetchAll();
 }
