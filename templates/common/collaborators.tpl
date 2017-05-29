@@ -117,6 +117,7 @@ $('#the-basics .typeahead').typeahead({
                                 {$collaborator.name}
                                 {if $collaborator.role=="Coordinator"}
                                     <span class="coordinator pull-right">{$collaborator.role}</span>
+                                 {else}
                                     <span class="collaborator pull-right">{$collaborator.role}</span>
                                 {/if}
                             </h4>
@@ -127,7 +128,6 @@ $('#the-basics .typeahead').typeahead({
                                     <p>{$collaborator.email}</p>
                                 </div>
                             </div>
-                                {else}
                         </div>
                     {/foreach}
                 </div>
