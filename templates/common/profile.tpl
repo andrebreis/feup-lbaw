@@ -231,12 +231,12 @@
                                 <h4><b>10</b> Projects Finished</h4>
                             </div>
                             <div class="col-md-4">
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                <h4><b>3</b> Paused Projects</h4>
+                                <i class="fa fa-comments-o" aria-hidden="true"></i>
+                                <h4><b>3</b> Posts on Forum</h4>
                             </div>
                             <div class="col-md-4">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <h4> Signed-up on 17/07/15</h4>
+                                <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                <h4> Post Comments</h4>
                             </div>
                         </div>
 
