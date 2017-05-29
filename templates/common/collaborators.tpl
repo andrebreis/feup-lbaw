@@ -9,20 +9,18 @@ aria-hidden="true">
         <div class="modal-body">
             <form>
                 <label for="projectTags">New Collaborator</label>
-                <!-- TODO: CHANGE THIS TO usernames -->
                 <div id="the-basics">
                     <input class="typeahead form-control" type="text" placeholder="Enter a username">
-                </small>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="modal-footer col-md-4 col-md-offset-4">
+                <button type="submit" id="new_proj_btn" class="btn btn-primary create_in_modal">Submit
+                </button>
             </div>
-        </form>
-    </div>
-    <div class="row">
-        <div class="modal-footer col-md-4 col-md-offset-4">
-            <button type="submit" id="new_proj_btn" class="btn btn-primary create_in_modal">Submit
-            </button>
         </div>
     </div>
-</div>
 </div>
 </div>
 

@@ -2,72 +2,120 @@
 $('.datepicker').datepicker();
 </script>
 
+<script>
+$(document).ready(function () {
+    var substringMatcher = function (strs) {
+        return function findMatches(q, cb) {
+            var matches, substrRegex;
+
+            // an array that will be populated with substring matches
+            matches = [];
+
+            // regex used to determine if a string contains the substring `q`
+            substrRegex = new RegExp(q, 'i');
+
+            // iterate through the pool of strings and for any string that
+            // contains the substring `q`, add it to the `matches` array
+            $.each(strs, function (i, str) {
+                if (substrRegex.test(str)) {
+                    matches.push(str);
+                }
+            });
+
+            cb(matches);
+        };
+    }
+
+    console.log('sending ajax...')
+    $.ajax('../actions/get_users.php', {
+        method: 'POST'
+    }).done(function (response) {
+        var objects = JSON.parse(response);
+        var states=[];
+
+        for(var i=0; i<objects.length; i++){
+            states.push(objects[i].username);
+        }
+
+        console.log('a' + states)
+        $('#milestones-type .typeahead').typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        },
+        {
+            name: 'states',
+            source: substringMatcher(states)
+        });
+    });
+});
+</script>
+
 <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content" id="createTaskModalContent">
-        <div class="modal-header">
-            <h3 class="modal-title" id="createTaskModalTitle">New Task</h3>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group">
-                    <label for="taskTitle">Task Title</label>
-                    <input type="title" class="form-control" id="taskTitleInput"
-                    placeholder="Choose a title for your task">
-                </div>
-                <div class="form-group">
-                    <label for="taskContent">Task Description</label>
-                    <textarea type="description" class="form-control" id="taskContentInput" placeholder="Describe your task here"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="taskDeadline">Task Deadline</label>
-                    <div class="input-group date" data-provide="datepicker">
-                        <input type="text" class="form-control">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
+    <div class="modal-dialog">
+        <div class="modal-content" id="createTaskModalContent">
+            <div class="modal-header">
+                <h3 class="modal-title" id="createTaskModalTitle">New Task</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="taskTitle">Task Title</label>
+                        <input type="title" class="form-control" id="taskTitleInput"
+                        placeholder="Choose a title for your task">
+                    </div>
+                    <div class="form-group">
+                        <label for="taskContent">Task Description</label>
+                        <textarea type="description" class="form-control" id="taskContentInput" placeholder="Describe your task here"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDeadline">Task Deadline</label>
+                        <div class="input-group date" data-provide="datepicker">
+                            <input type="text" class="form-control">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="effort-input">Task Effort</label>
-                    <input class="form-control" type="number" value="5" id="effort-input" min="0" max="10">
-                    <small id="effortHelp" class="form-text text-muted">Choose a number between 0 and 10</small>
-                </div>
-                <div class="form-group">
-                    <label for="taskPriority">Task Priority</label>
-                    <!-- TODO: CHANGE THIS TO PHP -->
-                    <select id="prioritySelect" class="form-control" onchange="changetextbox()">
-                        <option value="verylow">Very Low</option>
-                        <option value="low">Low</option>
-                        <option value="medium" selected>Medium</option>
-                        <option value="high">High</option>
-                        <option value="veryhigh">Very High</option>
-                    </select>
-                </div>
-                <!-- todo: allow only usernames (like in add collabs) -->
-                <div class="form-group">
-                    <label for="assignees">Task Assignees</label>
-                    <input type="text" class="form-control" id="assigneesInput" placeholder="Enter assignees' usernames"
-                    data-role="tagsinput">
-                    <small id="tagsInputHelp" class="form-text text-muted">Add multiple assignees by pressing enter after
-                        each username
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="projectTags">Associated Milestone</label>
-                    <!-- TODO: CHANGE THIS TO usernames -->
-                    <div id="task-milestone">
-                      <input class="typeahead form-control" type="text" placeholder="Enter the name of the milestone you want to associate this task to (optional)">
-                  </small>
+                    <div class="form-group">
+                        <label for="effort-input">Task Effort</label>
+                        <input class="form-control" type="number" value="5" id="effort-input" min="0" max="10">
+                        <small id="effortHelp" class="form-text text-muted">Choose a number between 0 and 10</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskPriority">Task Priority</label>
+                        <!-- TODO: CHANGE THIS TO PHP -->
+                        <select id="prioritySelect" class="form-control" onchange="changetextbox()">
+                            <option value="verylow">Very Low</option>
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                            <option value="veryhigh">Very High</option>
+                        </select>
+                    </div>
+                    <!-- todo: allow only usernames (like in add collabs) -->
+                    <div class="form-group">
+                        <label for="assignees">Task Assignees</label>
+                        <input type="text" class="form-control" id="assigneesInput" placeholder="Enter assignees' usernames"
+                        data-role="tagsinput">
+                        <small id="tagsInputHelp" class="form-text text-muted">Add multiple assignees by pressing enter after
+                            each username
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectTags">Associated Milestone</label>
+                        <!-- TODO: CHANGE THIS TO usernames -->
+                      <div id="milestones-type">
+                    <input class="typeahead form-control" type="text" placeholder="Enter a username">
+            </div>
               </div>
-          </div>
-      </form>
-  </div>
-  <div class="row">
-    <div class="modal-footer col-md-4 col-md-offset-4">
-        <button type="button" id="proj_btn" class="btn btn-default create_in_modal">Create Task</button>
+          </form>
+      </div>
+      <div class="row">
+        <div class="modal-footer col-md-4 col-md-offset-4">
+            <button type="button" id="proj_btn" class="btn btn-default create_in_modal">Create Task</button>
+        </div>
     </div>
-</div>
 </div>
 </div>
 </div>
@@ -104,21 +152,15 @@ $('.datepicker').datepicker();
                                     <div class="media">
                                         <div class="media-body">
                                             {if isset($task.end_date)}
-                                            <span class="media-meta pull-right"><small>Deadline: </small><b>{$task.end_date}</b> </span>
+                                            <span class="media-meta pull-right">Deadline: <b>{$task.end_date}</b> </span>
                                             {/if}
                                             <h4 class="title">
                                                 {$task.title}
                                             </h4>
-                                            <div class="progress">
-                                                <div style="padding-left: 0.5em;">
-                                                    <span class="progress-value">{$task.completion}
-                                                        % - {$task.name}</span>
-                                                    </div>
-                                                    <div class="progress-bar progress-bar-success" role="progressbar"
-                                                    aria-valuenow="{$task.completion}"
-                                                    aria-valuemin="0" aria-valuemax="100"
-                                                    style="width:{$task.completion}%">
-                                                </div>
+                                            <div class="priority">
+                                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                                <h5><b>Priority: </b></h5>
+                                                <h5>Medium</h5>
                                             </div>
                                         </div>
                                     </div>
