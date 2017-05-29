@@ -122,7 +122,7 @@ function getProjectCollaborators($projectId)
 {
     global $conn;
     $statement = $conn->prepare('SELECT authenticated_user.name, authenticated_user.username, authenticated_user.picture, 
-                                authenticated_user.email, project_user_role.role FROM authenticated_user INNER JOIN project_user_role 
+                                authenticated_user.email, project_user_role.role, authenticated_user.id FROM authenticated_user INNER JOIN project_user_role 
                                 ON authenticated_user.id = project_user_role.user_id WHERE project_user_role.project_id = ?');
     $statement->execute([$projectId]);
     return $statement->fetchAll();
