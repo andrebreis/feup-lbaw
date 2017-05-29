@@ -19,9 +19,12 @@ $now = time();
 include_once("project_sidebar.php");
 
 $milestone = getMilestoneDetails($milestoneId);
+$milestoneCompletion = ((($now - strtotime($milestone['begin_date'])) * 100) / (strtotime($milestone['end_date']) - strtotime($milestone['begin_date'])));
+$milestoneTasks = getMilestoneTasks($milestoneId);
 
 $smarty->assign('milestone', $milestone);
 $smarty->assign('now', $now);
-
+$smarty->assign('milestoneCompletion', $milestoneCompletion);
+$smarty->assign('milestoneTasks', $milestoneTasks);
 
 $smarty->display('../templates/common/milestone_details.tpl');
