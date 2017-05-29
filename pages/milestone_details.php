@@ -11,21 +11,17 @@ if (!userHasProjectPermission($_SESSION['user_id'], $_SESSION['proj_id'])) {
     die();	
 }*/
 
-$id = (int)htmlspecialchars($_GET['id']);
+$milestoneId = (int)htmlspecialchars($_GET['id']);
 
-$name = getProjectField($id, 'name');
-$description = getProjectField($id, 'description');
-$completion = getProjectField($id, 'completion');
-$visible = getProjectField($id, 'visible');
-$state_name = getProjectState($id);
-$num_collaborators = getNumProjectCollaborators($id);
+$id = getMilestoneProjectId($milestoneId);
+$now = time();
 
-$smarty->assign('isCollaborator', $isCollaborator);
-$smarty->assign('name', $name);
-$smarty->assign('description', $description);
-$smarty->assign('completion', $completion);
-$smarty->assign('visible', $visible);
-$smarty->assign('state_name', $state_name);
-$smarty->assign('num_collaborators', $num_collaborators);
+include_once("project_sidebar.php");
+
+$milestone = getMilestoneDetails($milestoneId);
+
+$smarty->assign('milestone', $milestone);
+$smarty->assign('now', $now);
+
 
 $smarty->display('../templates/common/milestone_details.tpl');

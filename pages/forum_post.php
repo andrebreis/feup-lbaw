@@ -11,7 +11,5 @@ include_once("project_sidebar.php");
 $post = getForumPost($postId);
 
 $smarty->assign('post', $post);
-$smarty->assign('projectId', $projectId);
-
 
 $smarty->display('../templates/common/forum_post.tpl');

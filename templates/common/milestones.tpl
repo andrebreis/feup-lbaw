@@ -64,7 +64,7 @@
                             <tbody>
                             {foreach from=$milestones  item=milestone}
                                 <tr>
-                                    <td onclick="window.location = 'index.php?page=milestone_details.php&id={$smarty.get.id}';">
+                                    <td onclick="window.location = 'index.php?page=milestone_details.php&id={$milestone.id}';">
                                         <div class="media">
                                             <div class="media-body">
                                                 {if isset($milestone.end_date)}

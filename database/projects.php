@@ -151,7 +151,7 @@ function getProjectMilestones($projectId)
 {
     global $conn;
 
-    $statement = $conn->prepare('SELECT end_date, begin_date, milestone.name FROM milestone WHERE milestone.project_id=?');
+    $statement = $conn->prepare('SELECT end_date, begin_date, milestone.name, milestone.id FROM milestone WHERE milestone.project_id=?');
     $statement->execute([$projectId]);
     return $statement->fetchAll();
 }
@@ -200,7 +200,7 @@ function getTaskProjectId($taskId)
 {
   global $conn;
   
-  $statement = $conn->prepare('SELECT project.id FROM project INNER JOIN task ON project.id = task.project_id WHERE task.id=?');
+  $statement = $conn->prepare('SELECT project.id FROM project INNER JOIN task WHERE task.id=?');
   $statement->execute([$taskId]);
   return $statement->fetch()['id'];
 }
@@ -220,4 +220,21 @@ function getPostProjectId($postId){
     $statement = $conn->prepare('SELECT project_id FROM post WHERE post.id=?');
     $statement->execute([$postId]);
     return $statement->fetch()['project_id'];
+}
+
+function getMilestoneProjectId($milestoneId){
+    global $conn;
+
+    $statement = $conn->prepare('SELECT project_id FROM milestone WHERE milestone.id=?');
+    $statement->execute([$milestoneId]);
+    return $statement->fetch()['project_id'];
+}
+
+function getMilestoneDetails($milestoneId)
+{
+    global $conn;
+
+    $statement = $conn->prepare('SELECT end_date, begin_date, name FROM milestone WHERE milestone.id=?');
+    $statement->execute([$milestoneId]);
+    return $statement->fetch();
 }
