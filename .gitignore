@@ -117,3 +117,5 @@ templates_c/
 config/init\.php
 
 config/initlocal\.php
+
+config/init - local\.php

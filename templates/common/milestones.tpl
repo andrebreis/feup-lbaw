@@ -17,11 +17,6 @@
                                placeholder="Choose a title for your milestone">
                     </div>
                     <div class="form-group">
-                        <label for="milestoneContent">Milestone Description</label>
-                        <input type="description" class="form-control" id="milestoneContentInput"
-                               placeholder="Describe your milestone here">
-                    </div>
-                    <div class="form-group">
                         <label for="taskDeadline">Task Deadline</label>
                         <div class="input-group date" data-provide="datepicker">
                             <input type="text" class="form-control">

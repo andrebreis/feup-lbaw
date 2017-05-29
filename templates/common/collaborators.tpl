@@ -76,7 +76,7 @@ $('#the-basics .typeahead').typeahead({
   </div>
   <div class="row">
     <div class="modal-footer col-md-4 col-md-offset-4">
-        <button type="submit" id="new_proj_btn" class="btn btn-primary create_in_modal">Create Project
+        <button type="submit" id="new_proj_btn" class="btn btn-primary create_in_modal">Submit
         </button>
     </div>
 </div>
