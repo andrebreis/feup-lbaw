@@ -2,7 +2,7 @@
 include_once("../database/users.php");
 include_once("../database/projects.php");
 
-$id = (int)htmlspecialchars($_GET['id']);
+// $id = (int)htmlspecialchars($_GET['id']);
 
 $name = getProjectField($id, 'name');
 $completion = getProjectField($id, 'completion');

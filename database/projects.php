@@ -170,3 +170,32 @@ function getProjectStatistics($projectId)
 
   return $stats;
 }
+
+function getTaskDetails($taskId)
+{
+  global $conn;
+  
+  $statement = $conn->prepare('SELECT task.title, task.text, task.effort, task.priority, end_date, likes.num_likes, state.name AS state_name
+    FROM task INNER JOIN milestone ON task.milestone_id = milestone.id LEFT JOIN state ON state.id = task.state_id,
+    (SELECT count(*) AS num_likes FROM task_like WHERE task_id = ?) AS likes WHERE task.id=?');
+  $statement->execute([$taskId,$taskId]);
+  return $statement->fetch();
+}
+
+function getTaskProjectId($taskId)
+{
+  global $conn;
+  
+  $statement = $conn->prepare('SELECT project.id FROM project INNER JOIN task ON project.id = task.project_id WHERE task.id=?');
+  $statement->execute([$taskId]);
+  return $statement->fetch()['id'];
+}
+
+function getTaskAssignees($taskId)
+{
+  global $conn;
+  
+  $statement = $conn->prepare('SELECT name, username FROM task_assignee INNER JOIN authenticated_user ON task_assignee.user_id = authenticated_user.id WHERE task_id=?');
+  $statement->execute([$taskId]);
+  return $statement->fetchAll();
+}

@@ -1,5 +1,7 @@
 <?php
 
+$id = htmlspecialchars($_GET['id']);
+
 include_once('project_sidebar.php');
 
 // $projectId = htmlspecialchars($_GET['id']);
