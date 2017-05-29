@@ -106,10 +106,9 @@ function getProjectTasks($projectId)
 function getProjectPosts($projectId)
 {
     global $conn;
-    $statement = $conn->prepare('SELECT post.id, title, text, authenticated_user.name AS creator_name, likes.num_likes 
-                                 FROM post INNER JOIN authenticated_user ON post.creator_id = authenticated_user.id, 
-                                 (SELECT post_id, count(*) AS num_likes FROM post_like GROUP BY post_id) AS likes 
-                                 WHERE likes.post_id = post.id AND post.project_id = ?');
+    $statement = $conn->prepare('SELECT post.id, title, text, authenticated_user.name AS creator_name, (SELECT count(*) FROM post_like WHERE post_id = post.id) AS num_likes
+                                 FROM post INNER JOIN authenticated_user ON post.creator_id = authenticated_user.id 
+                                 WHERE post.project_id = ?');
     $statement->execute([$projectId]);
     return $statement->fetchAll();
 }
