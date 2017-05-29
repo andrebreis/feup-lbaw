@@ -49,7 +49,6 @@ function checkFields() {
     let passwordRepeat = $('#register_password_repeat').val();
     let email = $('#register_email').val();
 
-    console.log($('#register-form .modal-body').find('span'));
     $('#register-form').find('span').remove();
 
     let errors = [];

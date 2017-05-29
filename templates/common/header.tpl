@@ -32,6 +32,7 @@
     <script src="../javascript/login_modal.js"></script>
     <script src="../javascript/collaborators.js"></script>
     <script src="../javascript/project_forum.js"></script>
+    <script src="../javascript/profile.js"></script>
     <script src="../javascript/tasks.js"></script>
 
 

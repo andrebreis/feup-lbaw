@@ -237,3 +237,27 @@ function userHasProjectPermission($userId, $projectId){
 	if($statement->fetch() == 'Coordinator' || $statement->fetch() == 'Collaborator')
 		return true;
 }
+
+function updateUser($userId, $name, $job, $picture, $password) 
+{
+  global $conn;
+  
+  
+  if(isset($name)) {
+    $statement = $conn->prepare('UPDATE authenticated_user SET name = ? WHERE id = ?');
+    $statement->execute([$name, $userId]);
+  }
+  if(isset($job)) {
+    $statement = $conn->prepare('UPDATE authenticated_user SET job = ? WHERE id = ?');
+    $statement->execute([$job, $userId]);
+  }
+  if(isset($picture)) {
+    $statement = $conn->prepare('UPDATE authenticated_user SET picture = ? WHERE id = ?');
+    $statement->execute([$picture, $userId]);
+  }
+  if(isset($password)) {
+    $statement = $conn->prepare('UPDATE authenticated_user SET password = ? WHERE id = ?');
+    $statement->execute([$password, $userId]);
+  }
+  
+}
