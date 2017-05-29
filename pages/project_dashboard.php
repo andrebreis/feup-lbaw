@@ -10,6 +10,7 @@ $isCollaborator = isProjectCollaborator($_SESSION['userId'], $projectId);
 
 // $name = getProjectField($id, 'name');
 $description = getProjectField($id, 'description');
+$stats = getProjectStatistics($id);
 // $completion = getProjectField($id, 'completion');
 // $visible = getProjectField($id, 'visible');
 // $state_id = getProjectField($id, 'state_id');
@@ -17,6 +18,7 @@ $description = getProjectField($id, 'description');
 $smarty->assign('isCollaborator', $isCollaborator);
 // $smarty->assign('name', $name);
 $smarty->assign('description', $description);
+$smarty->assign('stats', $stats);
 // $smarty->assign('completion', $completion);
 // $smarty->assign('visible', $visible);
 // $smarty->assign('state_id', $state_id);
