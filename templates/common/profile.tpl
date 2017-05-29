@@ -351,13 +351,18 @@
                                                         <div class="media">
                                                             <div class="media-body">
                                                                 <h4 class="title">{$message.subject}</h4>
-                                                                <span class="media-meta pull-right">20 Feb 2017</span>
-                                                                <p class="summary">{$message.text|truncate:20}</p>
-                                                                <div class="info">
-                                                                    <div class="sender">
-                                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                                        <p>{$message.username}</p>
-                                                                    </div>
+                                                                <div class="row">
+                                                                    <p class="summary col-md-7">{$message.text}</p>
+                                                                    <button type="button" id="accept_btn"
+                                                                            class="btn btn-primary col-md-2">Accept
+                                                                    </button>
+                                                                    <button type="button" id="decline_btn"
+                                                                            class="btn btn-primary col-md-2">Decline
+                                                                    </button>
+                                                                </div>
+                                                                <div class="sender">
+                                                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                                                    <p>{$message.username}</p>
                                                                 </div>
                                                             </div>
                                                         </div>
