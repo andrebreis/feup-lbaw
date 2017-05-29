@@ -136,8 +136,10 @@
                 <ul class="menu-side nav nav-pills nav-stacked">
                     <li class="active"><a data-toggle="tab" href="#overview"><b>Overview</b></a></li>
                     <li><a data-toggle="tab" href="#my_projects"><b>My Projects</b></a></li>
+                    {if {$USERNAME == $username}}
                     <li><a data-toggle="tab" href="#notifications"><b>Notifications</b></a></li>
                     <li><a data-toggle="tab" href="#account_settings"><b>Account Settings</b></a></li>
+                    {/if}
                 </ul>
                 <!-- END MENU -->
             </div>
