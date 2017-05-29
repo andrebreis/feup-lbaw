@@ -207,3 +207,36 @@ function getUsers()
     return $statement->fetchAll();
 
 }
+
+
+function userHasUserPermission($userId){
+	global $conn;
+	
+	if(!isset($userId))
+		return false;
+	
+	$statement = $conn->prepare('SELECT is_admin FROM authenticated_user WHERE user_id = ?');
+	$statement->execute([$userId]);
+	if($statement->fetch() == true)
+		return true;
+
+}
+
+function userHasProjectPermission($userId, $projectId){
+	global $conn;
+	
+	if(!isset($userId))
+		return false;
+	
+	$statement = $conn->prepare('SELECT is_admin FROM authenticated_user WHERE user_id = ?');
+	$statement->execute([$userId]);
+	if($statement->fetch() == true)
+		return true;
+	
+	$statement = $conn->prepare('SELECT role FROM project_user_role WHERE user_id = ? AND project_id = ?');
+	$statement->execute([$userId,$projectId]);
+	if($statement->fetch() == 'Coordinator' || $statement->fetch() == 'Collaborator')
+		return true;
+	
+	
+}
