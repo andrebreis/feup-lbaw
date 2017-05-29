@@ -105,7 +105,8 @@ function getProjectTasks($projectId)
 function getProjectPosts($projectId)
 {
     global $conn;
-    $statement = $conn->prepare('SELECT post.id, title, text, authenticated_user.name AS creator_name, (SELECT count(*) FROM post_like WHERE post_id = post.id) AS num_likes
+    $statement = $conn->prepare('SELECT post.id, title, text, authenticated_user.id AS creator_id, authenticated_user.name AS creator_name, authenticated_user.picture AS creator_picture,
+                                  (SELECT count(*) FROM post_like WHERE post_id = post.id) AS num_likes
                                  FROM post INNER JOIN authenticated_user ON post.creator_id = authenticated_user.id 
                                  WHERE post.project_id = ?');
     $statement->execute([$projectId]);
@@ -116,16 +117,16 @@ function getProjectPosts($projectId)
  * @param
  * @return
  */
-function getForumPost($postId)
-{
-    global $conn;
-    $statement = $conn->prepare('SELECT post.id, title, text, authenticated_user.name AS creator_name, likes.num_likes AS likes, authenticated_user.id AS creator_id
-                                 FROM post INNER JOIN authenticated_user ON post.creator_id = authenticated_user.id, 
-                                 (SELECT post_id, count(*) AS num_likes FROM post_like GROUP BY post_id) AS likes 
-                                 WHERE likes.post_id = post.id AND post.id = ?');
-    $statement->execute([$postId]);
-    return $statement->fetch();
-}
+ function getForumPost($postId) 
+ { 
+     global $conn; 
+     $statement = $conn->prepare('SELECT post.id, title, text, authenticated_user.id AS creator_id, authenticated_user.name AS creator_name, authenticated_user.picture AS creator_picture, 
+                                   (SELECT count(*) FROM post_like WHERE post_id = post.id) AS num_likes
+                                  FROM post INNER JOIN authenticated_user ON post.creator_id = authenticated_user.id 
+                                  WHERE post.id = ?');
+     $statement->execute([$postId]); 
+     return $statement->fetch(); 
+ } 
 
 /**
  * @param

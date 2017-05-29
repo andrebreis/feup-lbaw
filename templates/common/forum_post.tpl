@@ -24,7 +24,7 @@
                             </div>
                             <div class="original_poster col-md-5">
                                 <img id="user_photo"
-                                     src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                     src="{$post.creator_picture}"
                                      class="media-photo">
                                 <a href="index.php?page=profile.php&id={$post.creator_id}">
                                     <h4 class="title"><p>{$post.creator_name}</p></h4>
