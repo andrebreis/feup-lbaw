@@ -214,64 +214,32 @@
                         <div class="stats_row row">
                             <div class="col-md-4">
                                 <i class="fa fa-wrench" aria-hidden="true"></i>
-                                <h4><b>18</b> Project Contributions</h4>
+                                <h4><b>{$stats.num_contributions}</b> Project Contributions</h4>
                             </div>
                             <div class="col-md-4">
                                 <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                <h4><b>5</b> Project Coordinations</h4>
+                                <h4><b>{$stats.num_coordinations}</b> Project Coordinations</h4>
                             </div>
                             <div class="col-md-4">
                                 <i class="fa fa-check" aria-hidden="true"></i>
-                                <h4><b>58</b> Tasks Completed</h4>
+                                <h4><b>{$stats.num_tasks}</b> Tasks Completed</h4>
                             </div>
                         </div>
                         <div class="stats_row row">
                             <div class="col-md-4">
                                 <i class="fa fa-check-square" aria-hidden="true"></i>
-                                <h4><b>10</b> Projects Finished</h4>
+                                <h4><b>{$stats.num_finished_projects}</b> Projects Finished</h4>
                             </div>
                             <div class="col-md-4">
                                 <i class="fa fa-comments-o" aria-hidden="true"></i>
-                                <h4><b>3</b> Posts on Forum</h4>
+                                <h4><b>{$stats.num_posts}</b> Posts on Forum</h4>
                             </div>
                             <div class="col-md-4">
                                 <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                                <h4> Post Comments</h4>
+                                <h4><b>{$stats.num_comments}</b> Comments</h4>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="popular_title col-md-4 col-md-offset-1">
-                                <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-                                <h3>Popular Projects</h3>
-                            </div>
-                        </div>
-                        <table class="table table-popular">
-                            <tbody>
-                            TODO: ADD POPULAR PROJECTS
-                            <!-- <tr data-status="project">
-                                <td onclick="window.location = 'project_dashboard.php';">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <h4 class="title">ScrumHub</h4>
-                                            <span class="media-meta pull-right">Updated on 20 Mar 2016</span>
-                                            <p class="summary">A project for the LBAW course</p>
-                                            <div class="info">
-                                                <div class="state">
-                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                                    <p>Under Development</p>
-                                                </div>
-                                                <div class="collaborators">
-                                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                                    <p>4 Collaborators</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr> -->
-                            </tbody>
-                        </table>
                     </div>
                 </div>
                 <!--end of overview tab-->
