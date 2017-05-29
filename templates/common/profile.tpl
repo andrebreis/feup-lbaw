@@ -258,7 +258,7 @@
                             <div class="myproj_title col-md-11 col-md-offset-1">
                                 <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
                                 <h3>My Projects</h3>
-                                {if $_SESSION['userId'] == $_GET['id']}
+                                {if {$USERNAME == $username}}
                                     <button id="new_proj_btn" type="button" class="btn btn-default pull-right"
                                             data-toggle="modal" data-target="#createProjectModal">Create Project
                                     </button>
@@ -423,48 +423,38 @@
                                 <h3>Account Settings</h3>
                             </div>
                         </div>
+                        <!-- <f -->
+                        <form id="settings-form" method="post" action="../actions/update_profile.php">
                         <div class="row changePasswordGroup">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="newpass">Change Password</label>
-                                    <input type="newpass" name="newpass" class="form-control" id="newPassInput"
+                                    <label for="newPassword">Change Password</label>
+                                    <input type="password" name="newPassword" class="form-control" id="newPassword"
                                            placeholder="Type a new password">
                                 </div>
                                 <div class="form-group">
-                                    <label for="confirmpass">Confirm Password</label>
-                                    <input type="confirmpass" name="confirmpass" class="form-control"
-                                           id="confirmPassInput" placeholder="Confirm your new password">
+                                    <label for="newPasswordRepeat">Confirm Password</label>
+                                    <input type="password" name="newPasswordRepeat" class="form-control"
+                                           id="newPasswordRepeat" placeholder="Confirm your new password">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="newUsername">Change Username</label>
-                                    <input type="newUsername" name="newUsername" class="form-control"
-                                           id="newUsernameInput" placeholder="Type a new username">
-                                </div>
-                                <div class="form-group">
-                                    <label for="newUsername">Change Display Name</label>
-                                    <form class="form-inline">
-                                        <input type="newFirstName" name="newFirstName" class="form-control"
-                                               id="newUsernameInput" placeholder="First name">
-                                        <input type="newLastName" name="newLastName" class="form-control"
-                                               id="newUsernameInput" placeholder="Last name">
-                                    </form>
-                                </div>
-                                <div class="form-check displayEmail">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" value="">
-                                        Display E-mail
-                                    </label>
+                                    <label for="newName">Change Display Name</label>
+                                    <!-- <form class="form-inline"> -->
+                                        <input type="text" name="newFirstName" class="form-control"
+                                               id="newFirstName" placeholder="First name">
+                                        <input type="text" name="newLastName" class="form-control"
+                                               id="newLastName" placeholder="Last name">
+                                    <!-- </form> -->
                                 </div>
                                 <div class="form-group">
                                     <label for="newJob">Change Job</label>
-                                    <input type="newJob" name="newJob" class="form-control"
-                                           id="newUsernameInput" placeholder="Type a new job">
+                                    <input type="text" name="newJob" class="form-control"
+                                           id="newJob" placeholder="Type a new job">
                                 </div>
-
                                 <div class="form-group">
                                     <label for="newImage">Change Profile Picture</label>
                                     <input type="file" name="img[]" class="file">
@@ -476,16 +466,16 @@
                                         <span class="input-group-btn">
                                     <button class="browse btn btn-primary" type="button"><i
                                                 class="glyphicon glyphicon-search"></i> Browse</button>
-                                </span>
+                                        </span>
                                     </div>
                                 </div>
-                                <button type="button" id="new_proj_btn"
+                                <button type="submit" id="new_proj_btn"
                                         class="btn btn-primary col-md-2 col-md-offset-5">Save Changes
                                 </button>
                             </div>
 
                         </div>
-
+                      </form>
                     </div>
                 </div>
                 <!--end of account settings tab-->

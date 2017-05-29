@@ -32,7 +32,6 @@ $(document).ready(function () {
             states.push(objects[i].username);
         }
 
-        console.log('a' + states)
         $('#the-basics .typeahead').typeahead({
                 hint: true,
                 highlight: true,
