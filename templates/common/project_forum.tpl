@@ -32,8 +32,7 @@
                     </div>
                     <div class="form-group">
                         <label for="postContent">Post Content</label>
-                        <input type="description" class="form-control" id="postContentInput"
-                               placeholder="Write your post here">
+                        <textarea type="text" class="form-control" id="postContentInput" placeholder="Write your post here"></textarea>
                     </div>
                 </form>
             </div>
