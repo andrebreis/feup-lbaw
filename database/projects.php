@@ -245,7 +245,7 @@ function getMilestoneTasks($milestoneId)
 {
     global $conn;
 
-    $statement = $conn->prepare('SELECT task.id AS task_id, task.title, end_date FROM task INNER JOIN milestone ON task.milestone_id = milestone.id WHERE milestone_id=?');
+    $statement = $conn->prepare('SELECT task.id AS task_id, task.title, task.priority, end_date FROM task INNER JOIN milestone ON task.milestone_id = milestone.id WHERE milestone_id=?');
     $statement->execute([$milestoneId]);
     return $statement->fetchAll();
 }

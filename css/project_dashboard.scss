@@ -187,6 +187,31 @@ body {
   }
 }
 
+#accept_btn{
+  border-color: #3AA08B;
+  background-color: #F2F2F2;
+  color: #16a085;
+  border-radius: 5%;
+  margin: 2px;
+}
+
+#accept_btn:hover{
+  background-color:#16a085 !important;
+  color: #F2F2F2 !important;
+}
+
+#decline_btn{
+  border-color: #f55047;
+  background-color: #F2F2F2;
+  color: #f55047;
+  border-radius: 5%;
+  margin: 2px;
+}
+
+#decline_btn:hover{
+  background-color: #f55047 !important;
+  color: #F2F2F2 !important;
+}
 
 .proj_user{
   margin: 0.5em 0.5em 1.5em 0.5em;
