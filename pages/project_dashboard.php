@@ -4,7 +4,7 @@ include_once('project_sidebar.php');
 
 // $projectId = htmlspecialchars($_GET['id']);
 
-$isCollaborator = isProjectCollaborator($_SESSION['userId'], $projectId);
+$isCollaborator = isProjectCollaborator($_SESSION['userId'], $id);
 
 // $id = (int)htmlspecialchars($_GET['id']);
 
