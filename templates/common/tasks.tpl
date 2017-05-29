@@ -95,7 +95,7 @@ aria-hidden="true">
                 </div>
                 <!-- todo: allow only usernames (like in add collabs) -->
                 <div class="form-group">
-                    <label for="assignees">Project Tags</label>
+                    <label for="assignees">Task Assignees</label>
                     <input type="text" class="form-control" id="assigneesInput" placeholder="Enter assignees' usernames"
                     data-role="tagsinput">
                     <small id="tagsInputHelp" class="form-text text-muted">Add multiple assignees by pressing enter after

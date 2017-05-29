@@ -259,3 +259,11 @@ body {
 .btn-danger{
   margin-left:1em;
 }
+
+.taskSmallInfo{
+  margin-bottom: 0.5em;
+}
+
+.priority > *, .effort > *{
+  display: inline-block;
+}
