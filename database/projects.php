@@ -250,6 +250,22 @@ function getMilestoneTasks($milestoneId)
     return $statement->fetchAll();
 }
 
+/**
+ * Searches all projects given the query sentence
+ * @param $query string The search string.
+ * @return array All results.
+ */
+function searchPost($query, $projectId)
+{
+    global $conn;
+
+    $statement = $conn->prepare(
+        'SELECT post.id, post.title, post.text FROM post 
+      WHERE post.project_id = ? AND ((to_tsvector(\'english\', post.title || \' \' || post.text) @@ to_tsquery(\'english\', ?) 
+      OR post.title ILIKE \'%\' || ? || \'%\'))');
+    $statement->execute([$projectId, $query, $query]);
+    return $statement->fetchAll();
+}
 function createTask($creatorId, $projectId, $name, $description, $effort, $priority) {
   global $conn;
   

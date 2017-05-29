@@ -34,12 +34,12 @@
                 <form action="../actions/create_project.php" method="post">
                     <div class="form-group">
                         <label for="projectName">Project Name</label>
-                        <input type="name" name="name" class="form-control" id="projectNameInput"
+                        <input type="text" name="name" class="form-control" id="projectNameInput"
                                placeholder="Choose a name for your Project">
                     </div>
                     <div class="form-group">
                         <label for="projectDescription">Project Description</label>
-                        <input type="description" name="description" class="form-control" id="projectDescriptionInput"
+                        <input type="text" name="description" class="form-control" id="projectDescriptionInput"
                                placeholder="Write a small description of your Project">
                     </div>
                     <div class="form-inline">
@@ -66,7 +66,7 @@
                                 </select>
                             </div>
                             <div class="col-md-8 col-md-offset-1">
-                                <input disabled="disabled" name="new-state" id="customState" type="state"
+                                <input disabled="disabled" name="new-state" id="customState" type="text"
                                        class="form-control-sm" id="projectStateInput"
                                        placeholder="Choose a custom State">
                             </div>

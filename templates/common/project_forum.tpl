@@ -14,7 +14,8 @@
                     </div>
                     <div class="form-group">
                         <label for="postContent">Post Content</label>
-                        <textarea type="text" class="form-control" id="postContentInput" placeholder="Write your post here"></textarea>
+                        <textarea type="text" class="form-control" id="postContentInput"
+                                  placeholder="Write your post here"></textarea>
                     </div>
                 </form>
             </div>
@@ -41,16 +42,22 @@
                             <i id="graph_chart" class="fa fa-comments fa-2x" aria-hidden="true"></i>
                             <h3> Project Forum</h3>
                         </div>
-                        <div class="col-md-4 col-xs-7 ">
-                            <div class="input-group search-input-group">
-                                <input type="text" class="form-control" placeholder="Search Post...">
-                                <span class="input-group-addon">
+
+                        <form action="index.php" method="get">
+                            <div class="col-md-4 col-xs-7 ">
+                                <div class="input-group search-input-group">
+                                    <input type="hidden" name="page" value="project_forum.php">
+                                    <input type="hidden" name="id" value="{$smarty.get.id}">
+                                    <input type="text" name="query" class="form-control" placeholder="Search Post...">
+                                    <span class="input-group-addon">
                                 <button type="submit">
                                     <span><i class="fa fa-search" aria-hidden="true"></i></span>
                                 </button>
                             </span>
+                                </div>
                             </div>
-                        </div>
+                        </form>
+
                         <div class="col-md-2">
                             <button id="new_post_btn" type="button" class="btn btn-default newPost" data-toggle="modal"
                                     data-target="#createPostModal">Create Post
