@@ -33,4 +33,4 @@ if (($ret = signupVerify($username, $password, $password_repeat, $email, $name))
       // header('Location: ../pages/index.php?page=403.html');
     echo json_encode($ret);
     }
-?>
+
