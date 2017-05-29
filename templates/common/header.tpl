@@ -187,10 +187,10 @@
                             <input type="hidden" name="page" value="search.php">
                             <input type="text" name="query" class="form-control" placeholder="Search...">
                             <span class="input-group-addon">
-              <button type="submit">
-                <span><i class="fa fa-search" aria-hidden="true"></i></span>
-              </button>
-            </span>
+                                <button type="submit">
+                                     <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                                </button>
+                            </span>
                         </div>
                     </div>
                 </form>
