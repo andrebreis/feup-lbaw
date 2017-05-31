@@ -103,7 +103,7 @@ console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scop
                 <!-- End # Login Form -->
 
                 <!-- Begin | Lost Password Form -->
-                <form id="lost-form" style="display:none;">
+                <form id="lost-form" autocomplete="off" style="display:none;">
                     <div class="modal-body">
                         <input id="lost_email" class="form-control" type="text"
                         placeholder="E-Mail" required>
@@ -121,7 +121,7 @@ console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scop
                 <!-- End | Lost Password Form -->
 
                 <!-- Begin | Register Form -->
-                <form id="register-form" style="display:none;">
+                <form id="register-form" autocomplete="off" style="display:none;">
                     <div class="modal-body">
                         <input id="register_name1" name="first-name" class="form-control" type="text"
                         placeholder="First Name" required>

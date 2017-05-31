@@ -82,7 +82,7 @@
                 <div id="div-forms">
 
 
-                    <form id="login-form" action="../actions/login.php" method="post">
+                    <form id="login-form" autocomplete="off" action="../actions/login.php" method="post">
                         <div class="modal-body">
                             <input id="login_username" name="username" class="form-control" type="text"
                                    placeholder="Username" required>
@@ -124,7 +124,7 @@
                         </div>
                     </form>
 
-                    <form id="register-form" style="display:none;">
+                    <form id="register-form" autocomplete="off" style="display:none;">
                         <div class="modal-body">
                             <input id="register_name1" name="first-name" class="form-control" type="text"
                                    placeholder="First Name" required>
