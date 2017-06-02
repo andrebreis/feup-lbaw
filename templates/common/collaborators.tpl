@@ -50,7 +50,7 @@ aria-hidden="true">
                     {foreach from=$collaborators  item=collaborator}
                     <div class="proj_user col-md-6 col-md-offset-1">
                         <a id="href" href="index.php?page=profile.php&id={$collaborator.id}" class="pull-left">
-                            <img src="{$collaborator.picture}"
+                            <img src="../../images/assets/default.png"
                             class="media-photo">
                         </a>
                         <h4 class="title">

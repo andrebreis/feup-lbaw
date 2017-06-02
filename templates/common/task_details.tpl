@@ -80,18 +80,16 @@
                     <div class="comments col-md-12">
                         <div class="media">
                             <div class="media-left">
-                                <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                <img src="../../images/assets/default.png"
                                 class="media-object align-self-center" style="width:2.5em">
                             </div>
                             <div class="media-body">
                                 <div class="original_poster">
                                     <a href="profile.php">
-                                        <h4 class="title"><p>op_username</p></h4>
+                                        <h4 class="title"><p>André Reis</p></h4>
                                     </a>
                                 </div>
-                                <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-                                    Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+                                <p style="text-align: justify;">Francisca podes tratar tu desta parte?</p>
                                     <div class="comment_footer">
                                         <button id="new_proj_btn" type="button"
                                         class="btn btn-default btn-xs" data-toggle="collapse"
@@ -110,18 +108,16 @@
                                 <!--nested comment -->
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                        <img src="../../images/assets/default.png"
                                         class="media-object align-self-center" style="width:2.5em">
                                     </div>
                                     <div class="media-body">
                                         <div class="original_poster">
                                             <a href="profile.php">
-                                                <h4 class="title"><p>op_username</p></h4>
+                                                <h4 class="title"><p>Francisca Paupério</p></h4>
                                             </a>
                                         </div>
-                                        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-                                            Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+                                        <p style="text-align: justify;">Claro que sim, não te preocupes! Eu trato rápido disso!</p>
                                             <div class="comment_footer">
                                                 <button id="new_proj_btn" type="button"
                                                 class="btn btn-default btn-xs" data-toggle="collapse"
@@ -142,18 +138,16 @@
                         </div>
                         <div class="media">
                             <div class="media-left">
-                                <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                <img src="../../images/assets/default.png"
                                 class="media-object align-self-center" style="width:2.5em">
                             </div>
                             <div class="media-body">
                                 <div class="original_poster">
                                     <a href="profile.php">
-                                        <h4 class="title"><p>op_username</p></h4>
+                                        <h4 class="title"><p>André Reis</p></h4>
                                     </a>
                                 </div>
-                                <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-                                    Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+                                <p style="text-align: justify;">Pronto óptimo!! Vê se arranjas skins diferentes para termos vários bonecos para escolher.</p>
                                     <div class="comment_footer">
                                         <button id="new_proj_btn" type="button"
                                         class="btn btn-default btn-xs" data-toggle="collapse"

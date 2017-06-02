@@ -75,7 +75,7 @@
                                                 </h4>
                                                 <div class="progress">
                                                     <div style="padding-left: 0.5em;">
-                                                        <span class="progress-value">{((($now-strtotime($milestone.begin_date))*100) / (strtotime($milestone.end_date)-strtotime($milestone.begin_date)))}%</span>
+                                                        <span class="progress-value"></span>
                                                     </div>
                                                     <div class="progress-bar progress-bar-success" role="progressbar"
                                                          aria-valuemin="0" aria-valuemax="100" style="width:{(($now-strtotime($milestone.begin_date))*100) / (strtotime($milestone.end_date)-strtotime($milestone.begin_date))}%">

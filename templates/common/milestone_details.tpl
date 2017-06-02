@@ -19,7 +19,7 @@
                         <div class="col-md-12">
                             <div class="progress">
                                 <div style="padding-left: 0.5em;">
-                                    <span class="progress-value">{$milestoneCompletion}%</span>
+                                    <span class="progress-value"></span>
                                 </div>
                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80"
                                 aria-valuemin="0" aria-valuemax="100" style="width:{$milestoneCompletion}%">

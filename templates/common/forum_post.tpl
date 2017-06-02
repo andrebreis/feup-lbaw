@@ -24,7 +24,7 @@
                             </div>
                             <div class="original_poster col-md-5">
                                 <img id="user_photo"
-                                     src="{$post.creator_picture}"
+                                     src="../../images/assets/default.png"
                                      class="media-photo">
                                 <a href="index.php?page=profile.php&id={$post.creator_id}">
                                     <h4 class="title"><p>{$post.creator_name}</p></h4>
@@ -51,18 +51,16 @@
                         <div class="comments col-md-12">
                             <div class="media">
                                 <div class="media-left">
-                                    <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                    <img src="../../images/assets/default.png"
                                          class="media-object align-self-center" style="width:2.5em">
                                 </div>
                                 <div class="media-body">
                                     <div class="original_poster">
                                         <a href="profile.php">
-                                            <h4 class="title"><p>op_username</p></h4>
+                                            <h4 class="title"><p>André Reis</p></h4>
                                         </a>
                                     </div>
-                                    <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-                                        Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+                                    <p style="text-align: justify;">Claro que sim!!!</p>
                                     <div class="comment_footer">
                                         <button id="new_proj_btn" type="button"
                                                 class="btn btn-default btn-xs" data-toggle="collapse"
@@ -82,20 +80,16 @@
                                     <!--nested comment -->
                                     <div class="media">
                                         <div class="media-left">
-                                            <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                            <img src="../../images/assets/default.png"
                                                  class="media-object align-self-center" style="width:2.5em">
                                         </div>
                                         <div class="media-body">
                                             <div class="original_poster">
                                                 <a href="profile.php">
-                                                    <h4 class="title"><p>op_username</p></h4>
+                                                    <h4 class="title"><p>Francisca Paupério</p></h4>
                                                 </a>
                                             </div>
-                                            <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing
-                                                elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
-                                                Sed nisi.
-                                                Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+                                            <p style="text-align: justify;">Boa! Estás a trabalhar muito bem, continua assim! Tenho a certeza que vais longe!</p>
                                             <div class="comment_footer">
                                                 <button id="new_proj_btn" type="button"
                                                         class="btn btn-default btn-xs" data-toggle="collapse"
@@ -118,18 +112,16 @@
                             </div>
                             <div class="media">
                                 <div class="media-left">
-                                    <img src="https://pbs.twimg.com/profile_images/457331442503000064/oBHblcgZ.png"
+                                    <img src="../../images/assets/default.png"
                                          class="media-object align-self-center" style="width:2.5em">
                                 </div>
                                 <div class="media-body">
                                     <div class="original_poster">
                                         <a href="profile.php">
-                                            <h4 class="title"><p>op_username</p></h4>
+                                            <h4 class="title"><p>André Reis</p></h4>
                                         </a>
                                     </div>
-                                    <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-                                        Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+                                    <p style="text-align: justify;">Obrigado, espero que sim! Esforço-me por isso! Se precisares de mais alguma coisa diz!</p>
                                     <div class="comment_footer">
                                         <button id="new_proj_btn" type="button"
                                                 class="btn btn-default btn-xs" data-toggle="collapse"

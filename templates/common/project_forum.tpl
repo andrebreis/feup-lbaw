@@ -80,7 +80,7 @@
                                                 <span class="badge badge-default badge-pill pull-right">2</span>
                                                 <div class="original_poster">
                                                     <img id="user_photo"
-                                                         src="{$post.creator_picture}"
+                                                         src="../../images/assets/default.png"
                                                          class="media-photo">
                                                     <a href="index.php?page=profile.php&id={$post.creator_id}">
                                                         <h4 class="title"><p>{$post.creator_name}</p>
